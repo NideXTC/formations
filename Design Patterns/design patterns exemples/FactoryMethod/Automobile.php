@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: nidextc
- * Date: 20/09/15
- * Time: 17:23
- */
 class Automobile
 {
     private $vehicle_make;

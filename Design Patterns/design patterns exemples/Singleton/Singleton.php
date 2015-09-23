@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: nidextc
- * Date: 20/09/15
- * Time: 17:28
- */
 class Singleton
 {
     public static function getInstance()

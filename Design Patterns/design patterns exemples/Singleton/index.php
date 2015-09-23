@@ -1,12 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: nidextc
- * Date: 20/09/15
- * Time: 17:30
- */
 
 require 'Singleton.php';
+require 'SingletonChild.php';
 
 $obj = Singleton::getInstance();
+$child = SingletonChild::getInstance();
+
+
 var_dump($obj === Singleton::getInstance());
+var_dump($obj === SingletonChild::getInstance());
+var_dump($child === SingletonChild::getInstance());
+
