@@ -1,6 +1,6 @@
 <?php
 
-class Equide
+abstract class Equide
 {
     protected $_legs;
     protected $_color;
@@ -18,7 +18,7 @@ class Equide
         $this->_color = $_color;
         $this->_head = $_head;
 
-        echo  'Equide';
+        echo 'Equide';
     }
 
     /**

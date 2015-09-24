@@ -1,6 +1,6 @@
 <?php
 
-class Horse extends Equide
+class Horse extends Equide implements HorseInterface
 {
     private $height;
 
@@ -16,4 +16,8 @@ class Horse extends Equide
     }
 
 
+    public function run()
+    {
+        // TODO: Implement run() method.
+    }
 }
