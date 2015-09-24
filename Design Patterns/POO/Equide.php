@@ -2,9 +2,9 @@
 
 class Equide
 {
-    private $_legs;
-    private $_color;
-    private $_head;
+    protected $_legs;
+    protected $_color;
+    protected $_head;
 
     /**
      * Equide constructor.
@@ -17,6 +17,8 @@ class Equide
         $this->_legs = $_legs;
         $this->_color = $_color;
         $this->_head = $_head;
+
+        echo  'Equide';
     }
 
     /**
