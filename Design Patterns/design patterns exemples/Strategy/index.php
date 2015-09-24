@@ -1,19 +1,11 @@
 <?php
 
+require 'OutputInterface.php';
+require 'FeeTwenty.php';
 require 'Client.php';
 
 $client = new Client();
-$array = ['GTA V','Fallout','FIFA'];
+$price= 5;
 
-$client->setOutput(new ArrayOutput());
-var_dump($client->loadOutput($array));
-
-echo '<br>';
-
-$client->setOutput(new JsonStringOutput());
-var_dump($client->loadOutput($array));
-
-echo '<br>';
-
-$client->setOutput(new SerializedArrayOutput());
-var_dump($client->loadOutput($array));
+$client->setOutput(new FeeTwenty());
+var_dump($client->loadOutput($price));

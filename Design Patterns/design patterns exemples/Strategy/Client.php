@@ -1,9 +1,6 @@
 <?php
 
-require 'OutputInterface.php';
-require 'SerializedArrayOutput.php';
-require 'JsonStringOutput.php';
-require 'ArrayOutput.php';
+
 
 class Client
 {

@@ -3,5 +3,5 @@
 
 interface OutputInterface
 {
-    public function load($array);
+    public function load($price);
 }
