@@ -1,6 +1,8 @@
 <?php
 
-class TV implements SplSubject
+
+
+class TV implements \SplSubject
 {
     private $name;
     private $observers = array();

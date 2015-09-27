@@ -8,3 +8,5 @@ $engine = new Engine();
 
 $engine->start();
 $wheel->roll();
+$wheel->drift();
+$engine->stop();

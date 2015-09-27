@@ -26,4 +26,13 @@ class Car
         $this->wheel->drift();
     }
 
+    public function all()
+    {
+        $this->engine->start();
+        $this->engine->stop();
+
+        $this->wheel->roll();
+        $this->wheel->drift();
+    }
+
 }

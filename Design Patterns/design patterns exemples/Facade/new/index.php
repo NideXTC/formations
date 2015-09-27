@@ -6,5 +6,10 @@ require 'Car.php';
 
 $car = new Car();
 
-$car->startAndStop();
-$car->rollAndDrift();
+//$car->startAndStop();
+//$car->rollAndDrift();
+
+$car->all();
+
+
+
