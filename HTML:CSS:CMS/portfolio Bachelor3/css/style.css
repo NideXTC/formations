@@ -1,0 +1,10 @@
+p {
+	color: purple; 
+}
+
+#content {
+	width: 300px;
+	margin: auto;
+	background: url("http://www.pension-chez-vagabond.com/gifs/reglement_chien.jpg") no-repeat center center fixed orange;
+	background-size: cover;
+}

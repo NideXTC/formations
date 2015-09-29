@@ -14,7 +14,21 @@
 
         <img src="images/4 Karl Marc.jpg" height="200" alt="Mon tatouage">
 
-
+        <h2>
+            Mes compétences
+        </h2>
+       
+       <table border="1">
+           <tr>
+               <th>Compétence</th>
+               <th>Note</th>
+           </tr>
+           <tr>
+               <td>Illustrator</td>
+               <td>4/10</td>
+           </tr>
+       </table>          
+       
         <h2>
             Mon experience
         </h2>
@@ -52,12 +66,38 @@
             <label for="prenom">Entrez votre prénom : </label>
             <input type="text" name="first name" placeholder="Prénom" id="prenom">
             
+            <br>
+            
             <label>
                  Entrez votre nom : 
                 <input type="text" name="name" >
             </label>
             
+            <br> 
+            
+            <label>
+               Sujet : 
+                <select name="subject">
+                    <option value="infos">Demande d'informations</option>
+                    <option value="other">Autre</option>
+                </select>
+            </label>
+            
+            <br>
+            
+            <input type="radio" name="gender" value="M" checked> Homme
+            <br>
+            <input type="radio" name="gender" value="F"> Femme
+            
+            <br>
+            
+            <textarea placeholder="message" name="message" id="" cols="30" rows="10"></textarea>
+            
+            <br>
+            
+            
             <button type="submit">Valider</button>
+            
         </form>
 
     <br>

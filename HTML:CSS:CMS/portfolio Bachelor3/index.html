@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
 	<meta charset="UTF-8">
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
 	<title>Portfolio Alexis Ducerf</title>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+
+	<section id="content">
+	
 	<h1>Portfolio Alexis Ducerf</h1>
 
 	<h2>Présentation</h2>
@@ -12,6 +27,20 @@
 	<p>
 	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia fugiat inventore ab eos molestias! Accusantium perspiciatis itaque eos quos, libero nisi possimus aliquid repellendus! Iure doloribus sint, sapiente debitis. Tempora.
 	</p>	
+
+	<h2>Compétences</h2>
+
+	<table border="1">
+		<tr>
+			<th>Compétence</th>
+			<th>Note</th>
+		</tr>
+		<tr>
+			<td>Photoshop</td>
+			<td>4/10</td>
+		</tr>
+	</table>
+	
 
 	<h2>Projets</h2>
 	
@@ -41,12 +70,26 @@
 		<input type="text" name="Name" id="name" placeholder="Nom">
 		
 		<br>
+		
+		<select name="subject">
+			<option value="renseignement">Demande de renseignements</option>
+			<option value="other">Autres</option>
+		</select>
+
+		<input type="radio" name="sexe" value="M">Homme
+		<input type="radio" name="sexe" value="F">Femme
+
+		
+		<br>
+		<br>
 
 		<textarea name="message" cols="30" rows="10" placeholder="Message"></textarea>
+
+		
 
 		<br>
 		<button type="submit">Valider le formulaire</button>
 	</form>
-
+</section>
 </body>
 </html>
