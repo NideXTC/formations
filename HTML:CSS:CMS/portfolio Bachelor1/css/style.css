@@ -1,0 +1,11 @@
+
+
+body {
+    background-color: aliceblue;
+}
+
+#content {
+    background-color: aqua;
+    width: 300px;     
+    margin: auto;
+}
