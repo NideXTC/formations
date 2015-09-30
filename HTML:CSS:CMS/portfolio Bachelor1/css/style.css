@@ -4,8 +4,43 @@ body {
     background-color: aliceblue;
 }
 
-#content {
-    background-color: aqua;
-    width: 300px;     
-    margin: auto;
+h2 {
+    color:red;
 }
+
+h2.first {
+    color: green;
+}
+
+
+#content {
+    
+    background: url(http://www.one-voice.fr/wp-content/uploads/2011/04/Portrait-de-chat-1024x795.jpg) no-repeat green;
+    width: 980px;     
+    margin: auto;
+    text-align: center;
+}
+
+button {
+    background: blue;
+}
+
+button:hover {
+    background: grey;
+}
+
+button:active {
+    background: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
