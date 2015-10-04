@@ -2,16 +2,16 @@
 
 class Movie
 {
-    private $name;
+    private $_name;
 
     public function __construct($name)
     {
-        $this->name = $name;
+        $this->_name = $name;
     }
 
     public function getName()
     {
-        return $this->name;
+        return $this->_name;
     }
 
 }
