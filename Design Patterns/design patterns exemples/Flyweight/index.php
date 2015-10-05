@@ -27,3 +27,17 @@ foreach ($bigList as $v) {
 
     echo $product2->getName() . '<br>';
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

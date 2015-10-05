@@ -20,3 +20,18 @@ while ($booksIterator->hasNextBook()) {
     $book = $booksIterator->getNextBook();
     echo $book->getAuthorAndTitle();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
