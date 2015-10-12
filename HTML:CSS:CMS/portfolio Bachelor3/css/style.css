@@ -9,7 +9,6 @@ p {
 	background-size: cover;
 }
 
-
-.glyphicon-user {
-	font-size: 40px;
+.carousel-inner img{
+	margin:auto;
 }
