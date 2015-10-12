@@ -3,7 +3,7 @@
 require 'BookMark.php';
 require 'BookReader.php';
 
-$bookReader = new BookReader('Martine à la plage', '103');
+$bookReader = new BookReader('Martine ï¿½ la plage', '103');
 $bookMark = new BookMark($bookReader);
 
 echo $bookReader->getTitle() . $bookReader->getPage();
