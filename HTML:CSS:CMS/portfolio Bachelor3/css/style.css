@@ -8,3 +8,8 @@ p {
 	background: url("http://www.pension-chez-vagabond.com/gifs/reglement_chien.jpg") no-repeat center center fixed orange;
 	background-size: cover;
 }
+
+
+.glyphicon-user {
+	font-size: 40px;
+}
