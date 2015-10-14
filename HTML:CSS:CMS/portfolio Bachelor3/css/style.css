@@ -1,5 +1,11 @@
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
 p {
 	color: purple; 
+	font-family: 'Engagement', cursive;
+	font-size: 60px;
 }
 
 #content {
