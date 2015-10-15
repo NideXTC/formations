@@ -5,23 +5,45 @@
 		<title>Document</title>
 
 		<style>
-			p {
-				background-image: url('http://www.chiens-online.com/_upload/ressources/global/vignettes/presentations/chiot_jack_russell_432_323_filled.jpg');
-				min-height: 2000px;
-				color : black;
-				background-repeat: no-repeat;
+
+			body { 
+				margin : 0;
+				padding : 0;
+			}
+
+			div { 
 				background-color: red;
-				background-position: top right;
+				color : white;
+				padding: 20px;
+				margin-left : 30px;
+				margin : 100px;
 				
+			}
+			
+			.dotted {
+				border: 10px dotted blue;
+			}
+			
+			.solid {
+				border: 10px solid blue;
+			}
+			
+			.dashed {
+				border: 10px dashed blue;
 			}
 		</style>
 
 	</head>
 	<body>
 
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae accusamus libero natus corporis dolores fugiat, nesciunt quibusdam adipisci enim beatae dolorum cum numquam maxime nisi a laudantium explicabo, voluptate, harum.
-		</p>
-
+		<div class="dashed">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, libero hic cumque qui voluptatem autem, commodi quo quam et enim aut praesentium mollitia possimus officia ipsam ea totam vero vel.
+		</div>
+		<div class="solid">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, libero hic cumque qui voluptatem autem, commodi quo quam et enim aut praesentium mollitia possimus officia ipsam ea totam vero vel.
+		</div>
+		<div class="dotted">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, libero hic cumque qui voluptatem autem, commodi quo quam et enim aut praesentium mollitia possimus officia ipsam ea totam vero vel.
+		</div>
 	</body>
 </html>
