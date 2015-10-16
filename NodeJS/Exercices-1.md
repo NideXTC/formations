@@ -149,6 +149,7 @@ Déplacez le dossier _routes_ et _views_ dans le dossier _app/_. Vous devriez av
 ```
 .
 ├── app.js
+├── app
 | 	└── controllers
 | 	└── models
 | 	└── resources
@@ -199,7 +200,6 @@ __________
 * [Codecademy](https://www.codecademy.com/tracks/javascript)
 * [OpenClassroom - 1](https://openclassrooms.com/courses/tout-sur-le-javascript)
 * [OpenClassroom - 2](https://openclassrooms.com/courses/dynamisez-vos-sites-web-avec-javascript)
-* [Developpez.com](http://javascript.developpez.com/cours/)
 * [Developpez.com](http://javascript.developpez.com/cours/)
 
 #### jQuery
