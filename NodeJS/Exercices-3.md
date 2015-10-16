@@ -111,7 +111,7 @@ $ node bin/www
 
 Puis lancez plusieurs fenêtres Chrome sur `http://localhost:3000`. Vous voyez le nombre se modifier en temps réel ? Vous avez donc désormais votre première application en temps réel ! \o/ 
 
-
+En arrivant ici votre code devrait ressembler à ça : [github](https://github.com/NideXTC/CoursYNov/tree/d9e67368ea57896298808a502ede5f7857e5ee70/NodeJS/morpion)
 
 __________
 __________
