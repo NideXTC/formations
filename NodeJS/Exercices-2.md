@@ -84,16 +84,16 @@ var router = express.Router();
 
 var users = require('../controllers/Users'); // Nous allons récuperer notre controlleur fait précédement
 
-/* GET la liste des utilisateurs */
+/* GET Récupère la liste des utilisateurs */
 router.get('/', users.index);
 
-/* POST la création d'un nouvel utilisateur */
+/* POST Création d'un nouvel utilisateur */
 router.post('/', users.create);
 
-/* GET la liste des utilisateurs */
+/* PUT Modification d'un utilisateur */
 router.put('/:id(\\d+)', users.update); 
 
-/* GET la liste des utilisateurs */
+/* DELETE Suppression d'un utilisateur */
 router.delete('/:id(\\d+)', users.delete);
 
 module.exports = router;
@@ -102,6 +102,8 @@ module.exports = router;
 Ici le `:id(\\d+)` permettra de récupérer la valeur passé en url dans une variable _id_, le `(\\d+)` est une expression régulière pour dire qu'on ne veut que des chiffres. Si vous ne savez pas ce qu'est une expression régulière je vous invite à regarder ce memento : [ici](https://openclassrooms.com/courses/concevez-votre-site-web-avec-php-et-mysql/memento-des-expressions-regulieres).
 
 #### Vous avez votre première architecture MVC.
+
+En arrivant ici votre code devrait ressembler à ça : [github](https://github.com/NideXTC/CoursYNov/tree/6893e945e86cfc797330dbdf1241c36d5b798200/NodeJS/morpion)
 
 __________
 __________
