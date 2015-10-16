@@ -119,7 +119,7 @@ Je vous laisse découvrir la syntax ici : [Jade](http://jade-lang.com/).
 Pourquoi utiliser un moteur de template ? Car il va permettre de minifier le fichier, de créer des templates, d'améliorer la sécurité et d'ajouter dynamiquement des variables. Il faut savoir que la plupart des frameworks utilisent des moteurs de template, par exemple Symfony utilise [Twig](http://twig.sensiolabs.org/) et Laravel utilise [Blade](http://laravel.com/docs/5.1/blade). 
 
 
-Vous voulez tester votre site ? Il va d'abord falloir installer les dépendances listés dans le package.json. Pour cela il faut faire (ça peut être long):
+Vous voulez tester votre site ? Il va d'abord falloir installer les dépendances listés dans le package.json. Pour cela il faut aller dans le dossier _morpion_ et faire (ça peut être long):
 
 ```
 $ npm install  
