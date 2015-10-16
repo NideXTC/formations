@@ -20,6 +20,10 @@ app.set('port', port);
  */
 
 var server = http.createServer(app);
+var io = require('socket.io')(server);
+
+// Nous créons une accès au socket
+require('../app/sockets/Base').set(io);
 
 /**
  * Listen on provided port, on all network interfaces.
