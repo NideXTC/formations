@@ -184,6 +184,8 @@ app.set('views', path.join(__dirname, 'app/views'));
 
 #### Vous avez désormais un framework complet et fonctionnel. 
 
+En arrivant ici votre code devrait ressembler à ça : [github](https://github.com/NideXTC/CoursYNov/tree/7946a143bf15661eeb68c7263531b18b1b0dc31e/NodeJS/morpion)
+
 __________
 __________
 
