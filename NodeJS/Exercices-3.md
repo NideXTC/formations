@@ -65,7 +65,7 @@ module.exports = app;
 
 **/!\ Pensez bien à démarrer votre serveur MongoDB avant de lancer NodeJS sinon il renverra une erreur /!\**
 
-Nous allons désormais pouvoir se servir de ces fonctions dans notre controlleur _Users.js_.
+Nous allons désormais pouvoir nous servir de ces fonctions dans notre controlleur _Users.js_.
 
 ```
 require('../models/User');
@@ -85,7 +85,7 @@ var Users = {
         });
 
         res.render('users/index', {
-            title: 'ICI C LA HOME MAGUEULE',
+            title: 'home',
             active: 'account'
         });
     },
@@ -123,7 +123,7 @@ var Users = {
         });
 
         res.render('users/index', {
-            title: 'ICI C LA HOME MAGUEULE',
+            title: 'home',
             active: 'account'
         });
     },
@@ -141,7 +141,7 @@ var Users = {
         });
 
         res.render('users/index', {
-            title: 'ICI C LA HOME MAGUEULE',
+            title: 'home',
             active: 'account'
         });
     }
