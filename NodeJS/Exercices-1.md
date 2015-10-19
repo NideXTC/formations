@@ -25,8 +25,8 @@ var server = http.createServer(function (request, response) {
 response.writeHead(200, {"Content-Type": "text/plain"});
 response.end("Hello World\n");
 });
-server.listen(80); // Le serveur va donc écouter sur le port 80
-console.log("Server running at http://127.0.0.1:80/");
+server.listen(3000); // Le serveur va donc écouter sur le port 3000
+console.log("Server running at http://127.0.0.1:3000/");
 ```
 
 Rentrez dans votre dossier _test\_vanilla_ en ligne de commande, puis faites la commande  : 
@@ -35,7 +35,7 @@ Rentrez dans votre dossier _test\_vanilla_ en ligne de commande, puis faites la 
 $ node app.js
 ```
 
-Pour voir si votre serveur fonctionne bien, accédez à l'url _127.0.0.1_ depuis votre navigateur. 
+Pour voir si votre serveur fonctionne bien, accédez à l'url _127.0.0.1:3000_ depuis votre navigateur. 
 Vous voyez bien _Hello World_ ? 
 
 ....

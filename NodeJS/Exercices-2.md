@@ -101,7 +101,6 @@ module.exports = router;
 
 Ici le `:id(\\d+)` permettra de récupérer la valeur passé en url dans une variable _id_, le `(\\d+)` est une expression régulière pour dire qu'on ne veut que des chiffres. Si vous ne savez pas ce qu'est une expression régulière je vous invite à regarder ce memento : [ici](https://openclassrooms.com/courses/concevez-votre-site-web-avec-php-et-mysql/memento-des-expressions-regulieres).
 
-#### Vous avez votre première architecture MVC.
 
 En arrivant ici votre code devrait ressembler à ça : [github](https://github.com/NideXTC/CoursYNov/tree/63560560eac1372a896d09a4cdda71dc49547fd1/NodeJS/morpion)
 
