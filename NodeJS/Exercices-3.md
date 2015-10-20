@@ -56,6 +56,7 @@ Ce schéma nous donne accès à une liste de [fonctions](http://mongoosejs.com/d
 Nous devons, pour commencer, mettre en place la connection à notre base dans le fichier `app.js`, en fin de fichier il faut donc rajouter : 
 
 ```
+var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/morpion', function(err) {
   if (err) { throw err; }
 }); 
