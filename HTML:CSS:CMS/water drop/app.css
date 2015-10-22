@@ -1,0 +1,40 @@
+
+
+
+.round {
+	/** centrer l'élément **/
+	left : 50%;
+	margin-left: -50px;
+	
+	width : 200px;
+	height: 100px;
+	background: red;
+	
+	/** faire un cercle **/ 
+	border-radius:50%;
+	
+	position: absolute;
+	
+	/** Appeler la keyframe **/
+	animation: fall 2s  infinite ;
+}
+
+@keyframes fall {
+	0% {
+		opacity: 0;
+		top : 10%;
+		/** revenir à une taille normale **/ 
+		transform: scale(1);
+	}
+	50% {
+		opacity: 1;
+		top : 50%;
+		/** doubler la taille **/ 
+		transform: scale(2);
+	}
+	100% {
+		opacity: 0;
+		top : 10%;
+		transform: scale(1);
+	}
+}

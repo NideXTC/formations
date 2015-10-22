@@ -4,6 +4,13 @@
 		<meta charset="UTF-8">
 		<title>Document</title>
 
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+
 		<style>
 
 			body { 
@@ -17,24 +24,38 @@
 				padding: 20px;
 				margin-left : 30px;
 				margin : 100px;
-				
+
 			}
-			
+
 			.dotted {
 				border: 10px dotted blue;
 			}
-			
+
 			.solid {
 				border: 10px solid blue;
 			}
-			
+
 			.dashed {
-				border: 10px dashed blue;
+				border: 10px dashed  blue;
 			}
 		</style>
 
 	</head>
 	<body>
+
+		
+		<!-- HTML to write -->
+<a href="#" data-toggle="tooltip" title="Some tooltip text!">Hover over me</a>
+
+<!-- Generated markup by the plugin -->
+<div class="tooltip top" role="tooltip">
+  <div class="tooltip-arrow"></div>
+  <div class="tooltip-inner">
+    Some tooltip text!
+  </div>
+</div>
+
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/WhiteCat.jpg/220px-WhiteCat.jpg" alt="" data-toggle="tooltip" title="Chat de merde">
 
 		<div class="dashed">
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, libero hic cumque qui voluptatem autem, commodi quo quam et enim aut praesentium mollitia possimus officia ipsam ea totam vero vel.
@@ -45,5 +66,15 @@
 		<div class="dotted">
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, libero hic cumque qui voluptatem autem, commodi quo quam et enim aut praesentium mollitia possimus officia ipsam ea totam vero vel.
 		</div>
+		
+		
+		<iframe src="https://www.google.fr/maps/place/Ynov+Paris/@48.858391,2.4004673,17z/data=!4m7!1m4!3m3!1s0x47e66d86446af157:0xf72670be0152e1f8!2sYnov+Paris!3b1!3m1!1s0x47e66d86446af157:0xf72670be0152e1f8" frameborder="0"></iframe>
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script>
+			$('img').tooltip()
+		</script>
 	</body>
 </html>
