@@ -20,10 +20,10 @@ Tout au long de ces exercices nous allons créer un jeu de morpion en ligne (mul
  Faites un dossier _test\_vanilla_ puis dans un fichier _app.js_ mettre le code suivant :
 
 ```
-var http = require('http');
-var server = http.createServer(function (request, response) {
-response.writeHead(200, {"Content-Type": "text/plain"});
-response.end("Hello World\n");
+var http = require('http'); // on importe le module http
+var server = http.createServer(function (request, response) { // on creer le serveur qui attendra une request et renverra une response
+response.writeHead(200, {"Content-Type": "text/plain"}); // On renvoie une entête avec le code HTTP 200 (OK) et disant qu'on renvoit du text
+response.end("Hello World\n"); // On renvoie le texte "Hello World" dans la response
 });
 server.listen(3000); // Le serveur va donc écouter sur le port 3000
 console.log("Server running at http://127.0.0.1:3000/");
