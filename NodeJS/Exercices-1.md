@@ -13,6 +13,8 @@ Avant de commencer, faites un dossier _NodeJS_, tout votre travail se trouvera d
 
 Par convention lorsque vous verrez _$_ dans les exercices, la ligne est à jouer en ligne de commande.
 
+Tout au long de ces exercices nous allons créer un jeu de morpion en ligne (multijoueur).
+
 ## Mettre en place un serveur NodeJS
 
  Faites un dossier _test\_vanilla_ puis dans un fichier _app.js_ mettre le code suivant :
@@ -23,8 +25,8 @@ var server = http.createServer(function (request, response) {
 response.writeHead(200, {"Content-Type": "text/plain"});
 response.end("Hello World\n");
 });
-server.listen(80); // Le serveur va donc écouter sur le port 80
-console.log("Server running at http://127.0.0.1:80/");
+server.listen(3000); // Le serveur va donc écouter sur le port 3000
+console.log("Server running at http://127.0.0.1:3000/");
 ```
 
 Rentrez dans votre dossier _test\_vanilla_ en ligne de commande, puis faites la commande  : 
@@ -33,7 +35,7 @@ Rentrez dans votre dossier _test\_vanilla_ en ligne de commande, puis faites la 
 $ node app.js
 ```
 
-Pour voir si votre serveur fonctionne bien, accédez à l'url _127.0.0.1_ depuis votre navigateur. 
+Pour voir si votre serveur fonctionne bien, accédez à l'url _127.0.0.1:3000_ depuis votre navigateur. 
 Vous voyez bien _Hello World_ ? 
 
 ....
@@ -119,7 +121,7 @@ Je vous laisse découvrir la syntax ici : [Jade](http://jade-lang.com/).
 Pourquoi utiliser un moteur de template ? Car il va permettre de minifier le fichier, de créer des templates, d'améliorer la sécurité et d'ajouter dynamiquement des variables. Il faut savoir que la plupart des frameworks utilisent des moteurs de template, par exemple Symfony utilise [Twig](http://twig.sensiolabs.org/) et Laravel utilise [Blade](http://laravel.com/docs/5.1/blade). 
 
 
-Vous voulez tester votre site ? Il va d'abord falloir installer les dépendances listés dans le package.json. Pour cela il faut faire (ça peut être long):
+Vous voulez tester votre site ? Il va d'abord falloir installer les dépendances listés dans le package.json. Pour cela il faut aller dans le dossier _morpion_ et faire (ça peut être long):
 
 ```
 $ npm install  
@@ -149,6 +151,7 @@ Déplacez le dossier _routes_ et _views_ dans le dossier _app/_. Vous devriez av
 ```
 .
 ├── app.js
+├── app
 | 	└── controllers
 | 	└── models
 | 	└── resources
@@ -183,6 +186,8 @@ app.set('views', path.join(__dirname, 'app/views'));
 
 #### Vous avez désormais un framework complet et fonctionnel. 
 
+En arrivant ici votre code devrait ressembler à ça : [github](https://github.com/NideXTC/CoursYNov/tree/3cb9f6565a977f0e12f2f279fab10de25a9eabbf/NodeJS/morpion)
+
 __________
 __________
 
@@ -199,7 +204,6 @@ __________
 * [Codecademy](https://www.codecademy.com/tracks/javascript)
 * [OpenClassroom - 1](https://openclassrooms.com/courses/tout-sur-le-javascript)
 * [OpenClassroom - 2](https://openclassrooms.com/courses/dynamisez-vos-sites-web-avec-javascript)
-* [Developpez.com](http://javascript.developpez.com/cours/)
 * [Developpez.com](http://javascript.developpez.com/cours/)
 
 #### jQuery
