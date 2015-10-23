@@ -1,11 +1,3 @@
-h1.dream {
-	color: darkmagenta;
-}
-
-p.dream {
-	color: green;
-}
-
-p .dream {
-	color: skyblue;
+.carousel-inner img {
+	margin: auto;
 }
