@@ -1,3 +1,9 @@
 .carousel-inner img {
 	margin: auto;
 }
+
+
+.glyphicon-star-empty, .glyphicon-star {
+	font-size :50px; 
+	color: yellow;
+}
