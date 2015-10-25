@@ -226,6 +226,86 @@ var number = {"random" : "1"};
 
 Nous voulons qu'il nous ressorte un nombre aléatoire. Placez une fonction pour qu'en faisant `number.random();` elle affiche un nombre aléatoire en console.   
 
+## Express 
+
+### Exercice 9.1
+
+Nous souhaitons installer Express et qu'en cas de suppression du dossier `node_modules` nous puissions tout télécharger simplement. Comment faire ? Quel fichier sera obligatoire ? 
+
+### Exercice 9.2 [aide](http://expressjs.com/guide/routing.html)
+
+Installez express dans votre dossier avec la commande `npm install express`. 
+Nous souhaitons modifier notre code suivant pour qu'il affiche un message lorsque la personne arrive sur la page avec son navigateur _(http://localhost:3000)_.
+
+```
+var express = require('express');
+var app = express();
+var server = app.listen(3000,function(){
+  console.log('Hello');
+});
+
+```
+
+### Exercice 9.3 
+
+_Pour cet exercice nous aurons besoin d'un petit 'logiciel' sur chrome qui s'appelle [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop), il nous permettra de tester nos URL._
+
+Nous souhaitons desormais que lorsque l'utilisateur envoie une requête _PUT_ sur la home il lui renvoie un fichier HTML avec : 
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>COUCOU</title>
+</head>
+<body>
+  bien ou bien ? 
+</body>
+</html>
+```
+
+### Exercice 9.4
+
+_Pour cet exercice nous aurons besoin d'un petit 'logiciel' sur chrome qui s'appelle [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop), il nous permettra de tester nos URL._
+
+Nous souhaitons desormais que lorsque l'utilisateur envoie une requête _DELETE_ sur la home il lui renvoie un JSON (parfaitement formatté) avec : 
+
+```
+{"bien" : "bien?"}
+```
+
+### Exercice 9.5
+
+Installez mongoose dans votre dossier avec la commande `npm install mongoose`. 
+
+En reprenant le code de l'exercice précédent, rajouter une connexion à une base qui se nomme `basics`. 
+
+### Exercice 9.6 ([aide](http://mongoosejs.com/docs/2.7.x/docs/schematypes.html))
+
+En reprenant le code de l'exercice précédent, créez un schéma mongoose `student` pour enregistrer un élève avec : 
+* name (string)
+* first_name (string)
+* email (string)
+
+Si l'utilisateur envoie une requête _POST_, créer un entrée en base avec : 
+* name : "Bob"
+* first_name : "Sponge"
+* email : "sponge.bob@square.com"
+
+### Exercice 9.7 ([aide](http://mongoosejs.com/docs/2.7.x/docs/finding-documents.html))
+
+En reprenant le code de l'exercice précédent, lorsque l'utilisateur envoie une requête _GET_, lui renvoyer en JSON de toutes les entrées en BDD. 
+
+
+### Exercice 9.8 ([aide](http://mongoosejs.com/docs/2.7.x/docs/updating-documents.html))
+
+En reprenant le code de l'exercice précédent, si l'utilisateur envoie une requête _PUT_, modifier toutes les entrées en base pour changer le nom en "Bobby". 
+
+Vérifiez en faisant une requête _GET_.
+
+
+
 __________
 __________
 
