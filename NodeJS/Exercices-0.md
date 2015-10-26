@@ -305,6 +305,42 @@ En reprenant le code de l'exercice précédent, si l'utilisateur envoie une requ
 Vérifiez en faisant une requête _GET_.
 
 
+### Exercice 9.9 ([aide](http://jade-lang.com/))
+
+Renvoyez ce code si l'utilisateur accède à l'URL `/test-jade` et faire en sorte de voir le message `Good ;)`: 
+
+```
+doctype html
+html(lang="en")
+  head
+    title Coucou
+  body
+      if itsABoolean
+        p Good ;) 
+      else
+        p Nope !
+```
+
+### Exercice 9.10 ([aide](http://jade-lang.com/reference/code/))
+
+Renvoyez ce code si l'utilisateur accède à l'URL `/test-jade2` en passant la variable `paramHTML` avec comme valeur `coucou <strong>TOI</strong>`  et faire en sorte que le message ne soit pas échappé : 
+
+```
+doctype html
+html(lang="en")
+  head
+    title Coucou
+  body
+      p= paramHTML
+```
+
+
+### Exercice 9.11 ([aide](http://jade-lang.com/reference/iteration/))
+
+Nous souhaitons désormais voir la liste des personnes en BDD au format HTML quand on accède à la home. 
+
+
+
 
 __________
 __________
