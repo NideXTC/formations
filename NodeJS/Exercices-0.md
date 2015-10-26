@@ -104,7 +104,7 @@ Afficher en console la valeur de PI (via une constante javascript).
 
 Afficher en console la valeur arrondie de PI à la valeur supérieure et inférieure. 
 
-## Regexp ([aide](http://www.w3schools.com/jsref/jsref_obj_regexp.asp))
+## Regexp ([aide](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/RegExp))
 
 #### Exercice 4.1
 
