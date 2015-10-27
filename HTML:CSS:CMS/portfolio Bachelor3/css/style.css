@@ -1,5 +1,9 @@
 body {
 	font-family: 'Roboto Condensed', sans-serif;
+	background: url("../images/4%20Karl%20Marc.jpg");
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
 }
 
 p {
