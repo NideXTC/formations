@@ -228,6 +228,8 @@ Nous voulons qu'il nous ressorte un nombre aléatoire. Placez une fonction pour 
 
 ## Express 
 
+Faites un dossier `exercice_express`.
+
 ### Exercice 9.1
 
 Nous souhaitons installer Express et qu'en cas de suppression du dossier `node_modules` nous puissions tout télécharger simplement. Comment faire ? Quel fichier sera obligatoire ? 
