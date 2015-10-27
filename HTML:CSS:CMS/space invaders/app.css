@@ -1,0 +1,6 @@
+.space {
+	display: block;
+	width: 5px;
+	height: 5px;
+	box-shadow: 25px 25px 0 #f00,60px 25px 0 #f00,30px 30px 0 #f00,55px 30px 0 #f00,25px 35px 0 #f00,30px 35px 0 #f00,35px 35px 0 #f00,40px 35px 0 #f00,45px 35px 0 #f00,50px 35px 0 #f00,55px 35px 0 #f00,60px 35px 0 #f00,20px 40px 0 #f00,25px 40px 0 #f00,35px 40px 0 #f00,40px 40px 0 #f00,45px 40px 0 #f00,50px 40px 0 #f00,60px 40px 0 #f00,65px 40px 0 #f00,15px 45px 0 #f00,20px 45px 0 #f00,25px 45px 0 #f00,30px 45px 0 #f00,35px 45px 0 #f00,40px 45px 0 #f00,45px 45px 0 #f00,50px 45px 0 #f00,55px 45px 0 #f00,60px 45px 0 #f00,65px 45px 0 #f00,70px 45px 0 #f00,15px 50px 0 #f00,25px 50px 0 #f00,30px 50px 0 #f00,35px 50px 0 #f00,40px 50px 0 #f00,45px 50px 0 #f00,50px 50px 0 #f00,55px 50px 0 #f00,60px 50px 0 #f00,70px 50px 0 #f00,15px 55px 0 #f00,25px 55px 0 #f00,60px 55px 0 #f00,70px 55px 0 #f00,30px 60px 0 #f00,35px 60px 0 #f00,50px 60px 0 #f00,55px 60px 0 #f00;
+}
