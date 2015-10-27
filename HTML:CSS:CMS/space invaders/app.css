@@ -1,3 +1,8 @@
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
 .space {
 	display: block;
 	width: 5px;
@@ -6,18 +11,92 @@
 	position: absolute;
 	top: 5%;
 	left: 5%;
+}
+
+.wrapper {
+	position: absolute;
+	height: 100%;
 	animation : banane 3s infinite linear;
+	transform-style: preserve-3d
+}
+
+.space1 {
+	transform : translateZ(1px);
+}
+
+.space2 {
+	transform : translateZ(2px);
+}
+
+.space3 {
+	transform : translateZ(3px);
+}
+
+.space4 {
+	transform : translateZ(4px);
+}
+
+.space5 {
+	transform : translateZ(5px);
+}
+
+.space6 {
+	transform : translateZ(6px);
+}
+
+.space7 {
+	transform : translateZ(7px);
+}
+
+.space8 {
+	transform : translateZ(8px);
+}
+
+.space9 {
+	transform : translateZ(9px);
+}
+
+.space10 {
+	transform : translateZ(10px);
+}
+
+.space11 {
+	transform : translateZ(11px);
+}
+
+.space12 {
+	transform : translateZ(12px);
+}
+
+.space13 {
+	transform : translateZ(13px);
+}
+
+.space14 {
+	transform : translateZ(14px);
+}
+
+.space15 {
+	transform : translateZ(15px);
 }
 
 @keyframes banane {
 	0% {
 		left: 5%;
+		top : 5%;
 	}
-	50% {
+	40% {
+		left: 85%;
+		top : 5%;
+		transform : rotateY(360deg);
+	}
+	50%{
+		top : 20%;
 		left: 85%;
 	}
 	100% { 
 		left: 5%;
+		top : 20%;
 	}
 }
 
