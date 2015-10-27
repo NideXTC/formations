@@ -228,6 +228,8 @@ Nous voulons qu'il nous ressorte un nombre aléatoire. Placez une fonction pour 
 
 ## Express 
 
+Faites un dossier `exercice_express`.
+
 ### Exercice 9.1
 
 Nous souhaitons installer Express et qu'en cas de suppression du dossier `node_modules` nous puissions tout télécharger simplement. Comment faire ? Quel fichier sera obligatoire ? 
@@ -303,6 +305,42 @@ En reprenant le code de l'exercice précédent, lorsque l'utilisateur envoie une
 En reprenant le code de l'exercice précédent, si l'utilisateur envoie une requête _PUT_, modifier toutes les entrées en base pour changer le nom en "Bobby". 
 
 Vérifiez en faisant une requête _GET_.
+
+
+### Exercice 9.9 ([aide](http://jade-lang.com/))
+
+Renvoyez ce code si l'utilisateur accède à l'URL `/test-jade` et faire en sorte de voir le message `Good ;)`: 
+
+```
+doctype html
+html(lang="en")
+  head
+    title Coucou
+  body
+      if itsABoolean
+        p Good ;) 
+      else
+        p Nope !
+```
+
+### Exercice 9.10 ([aide](http://jade-lang.com/reference/code/))
+
+Renvoyez ce code si l'utilisateur accède à l'URL `/test-jade2` en passant la variable `paramHTML` avec comme valeur `coucou <strong>TOI</strong>`  et faire en sorte que le message ne soit pas échappé : 
+
+```
+doctype html
+html(lang="en")
+  head
+    title Coucou
+  body
+      p= paramHTML
+```
+
+
+### Exercice 9.11 ([aide](http://jade-lang.com/reference/iteration/))
+
+Nous souhaitons désormais voir la liste des personnes en BDD au format HTML quand on accède à la home. 
+
 
 
 
