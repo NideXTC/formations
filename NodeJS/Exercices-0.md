@@ -228,6 +228,8 @@ Nous voulons qu'il nous ressorte un nombre aléatoire. Placez une fonction pour 
 
 ## Express 
 
+Faites un dossier `exercice_express`.
+
 ### Exercice 9.1
 
 Nous souhaitons installer Express et qu'en cas de suppression du dossier `node_modules` nous puissions tout télécharger simplement. Comment faire ? Quel fichier sera obligatoire ? 
@@ -235,7 +237,7 @@ Nous souhaitons installer Express et qu'en cas de suppression du dossier `node_m
 ### Exercice 9.2 [aide](http://expressjs.com/guide/routing.html)
 
 Installez express dans votre dossier avec la commande `npm install express`. 
-Nous souhaitons modifier notre code suivant pour qu'il affiche un message lorsque la personne arrive sur la page avec son navigateur _(http://localhost:3000)_.
+Nous souhaitons modifier notre code suivant pour qu'il affiche un message lorsque la personne arrive sur la page avec son navigateur _(http://localhost:3000)_, faire un fichier `app.js` avec :
 
 ```
 var express = require('express');

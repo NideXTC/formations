@@ -1,0 +1,111 @@
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+.space {
+	display: block;
+	width: 5px;
+	height: 5px;
+	box-shadow: 25px 25px 0 #f00,60px 25px 0 #f00,30px 30px 0 #f00,55px 30px 0 #f00,25px 35px 0 #f00,30px 35px 0 #f00,35px 35px 0 #f00,40px 35px 0 #f00,45px 35px 0 #f00,50px 35px 0 #f00,55px 35px 0 #f00,60px 35px 0 #f00,20px 40px 0 #f00,25px 40px 0 #f00,35px 40px 0 #f00,40px 40px 0 #f00,45px 40px 0 #f00,50px 40px 0 #f00,60px 40px 0 #f00,65px 40px 0 #f00,15px 45px 0 #f00,20px 45px 0 #f00,25px 45px 0 #f00,30px 45px 0 #f00,35px 45px 0 #f00,40px 45px 0 #f00,45px 45px 0 #f00,50px 45px 0 #f00,55px 45px 0 #f00,60px 45px 0 #f00,65px 45px 0 #f00,70px 45px 0 #f00,15px 50px 0 #f00,25px 50px 0 #f00,30px 50px 0 #f00,35px 50px 0 #f00,40px 50px 0 #f00,45px 50px 0 #f00,50px 50px 0 #f00,55px 50px 0 #f00,60px 50px 0 #f00,70px 50px 0 #f00,15px 55px 0 #f00,25px 55px 0 #f00,60px 55px 0 #f00,70px 55px 0 #f00,30px 60px 0 #f00,35px 60px 0 #f00,50px 60px 0 #f00,55px 60px 0 #f00;
+	position: absolute;
+	top: 5%;
+	left: 5%;
+}
+
+.wrapper {
+	position: absolute;
+	height: 100%;
+	animation : banane 3s infinite linear;
+	transform-style: preserve-3d
+}
+
+.space1 {
+	transform : translateZ(1px);
+}
+
+.space2 {
+	transform : translateZ(2px);
+}
+
+.space3 {
+	transform : translateZ(3px);
+}
+
+.space4 {
+	transform : translateZ(4px);
+}
+
+.space5 {
+	transform : translateZ(5px);
+}
+
+.space6 {
+	transform : translateZ(6px);
+}
+
+.space7 {
+	transform : translateZ(7px);
+}
+
+.space8 {
+	transform : translateZ(8px);
+}
+
+.space9 {
+	transform : translateZ(9px);
+}
+
+.space10 {
+	transform : translateZ(10px);
+}
+
+.space11 {
+	transform : translateZ(11px);
+}
+
+.space12 {
+	transform : translateZ(12px);
+}
+
+.space13 {
+	transform : translateZ(13px);
+}
+
+.space14 {
+	transform : translateZ(14px);
+}
+
+.space15 {
+	transform : translateZ(15px);
+}
+
+@keyframes banane {
+	0% {
+		left: 5%;
+		top : 5%;
+	}
+	40% {
+		left: 85%;
+		top : 5%;
+		transform : rotateY(360deg);
+	}
+	50%{
+		top : 20%;
+		left: 85%;
+	}
+	100% { 
+		left: 5%;
+		top : 20%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
