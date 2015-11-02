@@ -17,7 +17,7 @@ html, body {
 	position: absolute;
 	height: 100%;
 	animation : banane 3s infinite linear;
-	transform-style: preserve-3d
+	transform-style: preserve-3d;
 }
 
 .space1 {

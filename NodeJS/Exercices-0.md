@@ -341,7 +341,10 @@ html(lang="en")
 
 Nous souhaitons désormais voir la liste des personnes en BDD au format HTML quand on accède à la home. 
 
+### Exercice 9.12 ([aide](https://github.com/expressjs/session))
 
+/!\ Nous allons utiliser les sessions sans stockage de session, il  
+Nous souhaitons garder en mémoire les informations du client. Quand l'utilisateur appelle la page "/setname" en GET on enregistre en session son nom (Josay) et si l'utilisateur appelle la page "/getname", on affiche son nom.  
 
 
 __________

@@ -2,6 +2,10 @@
 	margin: auto;
 }
 
+/* Retire la marge sous la navbar */
+.navbar {
+	margin-bottom: 0;
+}
 
 .glyphicon-star-empty, .glyphicon-star {
 	font-size :50px; 
@@ -10,4 +14,12 @@
 
 button.collapsed {
 	background: purple;
+}
+
+/* décale l'ancre vers le haut dans le cas d'une fixed-navbar */
+a.anchor {
+	display: block;
+	height: 50px; 
+	margin-bottom: -50px;
+	visibility: hidden;
 }
