@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "express": "^4.13.3",
+    "jade": "^1.11.0",
     "mongoose": "^4.2.3"
   },
   "devDependencies": {},

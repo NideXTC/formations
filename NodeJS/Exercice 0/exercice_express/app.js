@@ -6,6 +6,8 @@ mongoose.connect('mongodb://localhost/test',function(err){
 	if(err) throw err;
 });
 
+app.set('view engine', 'jade');
+
 var schema = mongoose.Schema;
 
 var Student = mongoose.model('Student' , new schema({
@@ -25,6 +27,10 @@ app.get('/',function(req, res){
 		res.json(user);
 	});
 	
+});
+
+app.get('/test-jade',function(req,res){
+	res.render(path.join(__dirname,'index'), {itsABoolean : true});
 });
 
 app.put('/',function(req, res){
