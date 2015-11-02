@@ -307,7 +307,7 @@ En reprenant le code de l'exercice précédent, si l'utilisateur envoie une requ
 Vérifiez en faisant une requête _GET_.
 
 
-### Exercice 9.9 ([aide](http://jade-lang.com/))
+### Exercice 9.9 ([aide](http://jade-lang.com/) && [aide](http://expressjs.com/guide/using-template-engines.html))
 
 Renvoyez ce code si l'utilisateur accède à l'URL `/test-jade` et faire en sorte de voir le message `Good ;)`: 
 
