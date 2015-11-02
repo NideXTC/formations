@@ -2,6 +2,14 @@ var express = require('express');
 var app = express();
 var path = require('path'); 
 var mongoose = require('mongoose');
+var session = require('express-session'); 
+
+app.use(session({
+  secret: 'CestSuper SECRET',
+  resave: false,
+  saveUninitialized: true
+}))
+
 mongoose.connect('mongodb://localhost/test',function(err){
 	if(err) throw err;
 });
@@ -29,8 +37,28 @@ app.get('/',function(req, res){
 	
 });
 
+app.get('/set-name',function(req,res){
+	req.session.name = "Josay";
+	res.send('TT');
+});
+
+app.get('/get-name',function(req,res){
+	res.send(req.session.name);
+});
+
+app.get('/destroy',function(req,res){
+	req.session.destroy(function(){
+		res.send('FINI');
+	});
+});
+
+
 app.get('/test-jade',function(req,res){
 	res.render(path.join(__dirname,'index'), {itsABoolean : true});
+});
+
+app.get('/test-jade2',function(req,res){
+	res.render(path.join(__dirname,'index2'), {paramHTML : "<strong>TOI</strong>"});
 });
 
 app.put('/',function(req, res){
