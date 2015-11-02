@@ -14,14 +14,16 @@ var Student = mongoose.model('Student' , new schema({
 	email : String
 }));
 
-
-
 var server = app.listen(3000,function(){
 	console.log('Hello');
 });
 
 app.get('/',function(req, res){
-	res.send('Hello');
+	Student.find({},function(err, user){
+		if(err) throw err;
+		res.json(user);
+	});
+	
 });
 
 app.put('/',function(req, res){
