@@ -21,6 +21,7 @@ var server = app.listen(3000,function(){
 app.get('/',function(req, res){
 	Student.find({},function(err, user){
 		if(err) throw err;
+
 		res.json(user);
 	});
 	
@@ -28,7 +29,10 @@ app.get('/',function(req, res){
 
 app.put('/',function(req, res){
 	// chemin abolu vers le fichier index.html
-	res.sendFile( path.join(__dirname, 'index.html')); 
+	
+	 Student.update({}, { name: 'bobby' }, {multi :true},function(){
+		res.send('done');
+	});
 });
 
 app.post('/',function(req,res){
