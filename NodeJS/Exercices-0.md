@@ -343,8 +343,17 @@ Nous souhaitons désormais voir la liste des personnes en BDD au format HTML qua
 
 ### Exercice 9.12 ([aide](https://github.com/expressjs/session))
 
-/!\ Nous allons utiliser les sessions sans stockage de session, il  
+/!\ Nous allons utiliser les sessions sans stockage de session, pour plus de stabilité il est obligatoire d'utiliser un [système de stockage](https://github.com/expressjs/session#compatible-session-stores) 
 Nous souhaitons garder en mémoire les informations du client. Quand l'utilisateur appelle la page "/setname" en GET on enregistre en session son nom (Josay) et si l'utilisateur appelle la page "/getname", on affiche son nom.  
+
+### Exercice 9.13 
+
+Grâce au [MethodOverride](https://github.com/expressjs/method-override) mettre en place un formulaire qui envoie une requête en PUT. 
+
+### Exercice 9.14 
+
+Créer un formulaire avec deux champs input:text pour saisir le nom et le prénom et l'envoyer sur la route _/showPost_.
+Afficher en console le résultat du POST. 
 
 
 __________
