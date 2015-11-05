@@ -1,0 +1,9 @@
+#1 afficher une alert au clic sur un bouton (click())
+
+#2 Au clic ajouter/supprimer une classe CSS qui passe la div en rouge (toggleClass())
+
+#3 Afficher une alert si le input:text est vide ou contient un espace ($.trim())
+
+#4 Changer une image vers une autre au survol (via data- et hover())
+
+#5 Faire bouger une div via le animate
