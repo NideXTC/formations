@@ -9,6 +9,14 @@ $('#change').click(function(){
 	$(this).toggleClass('red');
 });
 
+// Exercice 3 
+
+$('.verifyEmpty').click(function(){
+	if($.trim($('.maybeEmpty').val()) === ''){
+		alert('C\'est vide');
+	}
+});
+
 
 
 
