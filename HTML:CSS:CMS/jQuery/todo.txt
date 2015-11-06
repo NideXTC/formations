@@ -10,7 +10,7 @@
 
 #6 À chaque clic rajouter le texte "TOTO" dans une div (append() / appendTo())
 
-#7 Bloquer la validation d'un formulaire et à l'envoie afficher une alert (submit())
+#7 Bloquer la validation d'un formulaire et à l'envoie afficher une alert (preventdefault() / submit())
 
 #8 Faire disparaitre une div au bout de 2s (setTimeout / fadeOut())
 
