@@ -12,4 +12,6 @@
 
 #7 Bloquer la validation d'un formulaire et à l'envoie afficher une alert (submit())
 
-#8 Récupérer la météo de Paris en ajax ($.ajax / $.get) -> http://api.openweathermap.org/data/2.5/weather?q=Paris,fr&appid=2de143494c0b295cca9337e1e96b00e0
+#8 Faire disparaitre une div au bout de 2s (setTimeout / fadeOut())
+
+#9 Récupérer la météo de Paris en ajax ($.ajax / $.get) -> http://api.openweathermap.org/data/2.5/weather?q=Paris,fr&appid=2de143494c0b295cca9337e1e96b00e0
