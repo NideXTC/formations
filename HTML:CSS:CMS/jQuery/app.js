@@ -38,6 +38,19 @@ $('.appendTo').click(function(){
 	$('.append').append('TOTO');
 });
 
+// Exercice 7 
+
+$('form').submit(function(e){
+	e.preventDefault();
+	alert('Formulaire envoyé (presque)');
+});
+
+
+
+
+
+
+
 
 
 
