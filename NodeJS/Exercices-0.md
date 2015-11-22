@@ -355,6 +355,37 @@ Grâce au [MethodOverride](https://github.com/expressjs/method-override) mettre 
 Créer un formulaire avec deux champs input:text pour saisir le nom et le prénom et l'envoyer sur la route _/showPost_.
 Afficher en console le résultat du POST. 
 
+### Exercice 9.15 
+
+Créer un formulaire avec deux champs input:text pour saisir le nom et le prénom et l'envoyer sur la route _/showGet_.
+Afficher en console le résultat du GET. 
+
+### Exercice 9.16 
+
+Créer une route du type `/number/1` où le nombre sera une variable `:id` et sera affiché sur la page. exemple :  
+Sur la route `/number/1337` nous verrons sur la page : 
+
+```
+Le nombre est 1337
+```
+
+### Exercice 9.17 
+
+Installer le package [`pm2`](https://github.com/Unitech/pm2) en global et mettre en place un serveur web avec votre site actuel puis afficher la liste des serveurs. 
+
+
+### Exercice 9.18
+
+Mettre en place un serveur en mode cluster sur 1 cluster puis y ajouter 2 clusters. 
+
+### Exercice 9.19
+
+Mettre en place un serveur qui se relance automatiquement lors de la modification de fichiers. 
+
+### Exercice 9.20
+
+Afficher l'ensemble des logs de votre serveur puis afficher l'utilisation en RAM/CPU de votre application. 
+
 
 __________
 __________
