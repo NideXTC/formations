@@ -369,7 +369,7 @@ Sur la route `/number/1337` nous verrons sur la page :
 Le nombre est 1337
 ```
 
-### Exercice 9.17 
+### Exercice 9.17 ([aide](https://github.com/Unitech/pm2))
 
 Installer le package [`pm2`](https://github.com/Unitech/pm2) en global et mettre en place un serveur web avec votre site actuel puis afficher la liste des serveurs. 
 
