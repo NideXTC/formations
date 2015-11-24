@@ -352,8 +352,49 @@ Grâce au [MethodOverride](https://github.com/expressjs/method-override) mettre 
 
 ### Exercice 9.14 
 
-Créer un formulaire avec deux champs input:text pour saisir le nom et le prénom et l'envoyer sur la route _/showPost_.
+Créez un formulaire avec deux champs input:text pour saisir le nom et le prénom et l'envoyer sur la route _/showPost_.
 Afficher en console le résultat du POST. 
+
+### Exercice 9.15 
+
+Créez un formulaire avec deux champs input:text pour saisir le nom et le prénom et l'envoyer sur la route _/showGet_.
+Afficher en console le résultat du GET. 
+
+### Exercice 9.16 
+
+Créez une route du type `/number/1` où le nombre sera une variable `:id` et sera affiché sur la page. exemple :  
+Sur la route `/number/1337` nous verrons sur la page : 
+
+```
+Le nombre est 1337
+```
+
+### Exercice 9.17 ([aide](https://github.com/request/request))
+
+Ajoutez [`request`](https://github.com/request/request) à votre projet puis faites une requête GET sur l'URL `http://api.openweathermap.org/data/2.5/weather?q=Paris,fr&appid=2de143494c0b295cca9337e1e96b00e0` 
+
+/!\ Si vous souhaitez utiliser le JSON par la suite, vous devrez vous servir de la fonction [`JSON.parse()`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/JSON/parse) /!\ 
+
+
+### Exercice 9.18 ([aide](https://nodejs.org/api/fs.html))
+
+Via la requête de l'exercice précedent écrire dans un fichier `weather.json` le résultat de la requête. 
+
+### Exercice 9.19 ([aide](https://github.com/Unitech/pm2))
+
+Installez le package [`pm2`](https://github.com/Unitech/pm2) en global et mettre en place un serveur web avec votre site actuel puis afficher la liste des serveurs. 
+
+### Exercice 9.20
+
+Mettre en place un serveur en mode cluster sur 1 cluster puis y ajouter 2 clusters. 
+
+### Exercice 9.21
+
+Mettre en place un serveur qui se relance automatiquement lors de la modification de fichiers. 
+
+### Exercice 9.22
+
+Afficher l'ensemble des logs de votre serveur puis afficher l'utilisation en RAM/CPU de votre application. 
 
 
 __________
