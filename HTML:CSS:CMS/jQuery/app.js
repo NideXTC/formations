@@ -46,6 +46,31 @@ $('form').submit(function(e){
 });
 
 
+// Exercice 8 
+
+setTimeout(function(){
+	$('.getOut').fadeOut();
+},2000);
+
+
+$.get('http://api.openweathermap.org/data/2.5/weather?q=Paris,fr&appid=2de143494c0b295cca9337e1e96b00e0',function(data){
+	$('.compteur').text(data.main.temp);
+});
+
+$('.compteur').html('<strong>COUCOU</strong>');
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

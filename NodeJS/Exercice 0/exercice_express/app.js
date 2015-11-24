@@ -31,8 +31,8 @@ var server = app.listen(3000,function(){
 app.get('/',function(req, res){
 	Student.find({},function(err, user){
 		if(err) throw err;
-
-		res.json(user);
+		// res.json(user);
+		res.render(path.join(__dirname,'BDD'),{"users" : user})
 	});
 	
 });
