@@ -11,7 +11,7 @@
 # Exercices - 0
 
 
-Téléchargez le dossier [boilerplate]() pour la suite des exercices.
+Téléchargez le dossier [boilerplate](https://github.com/NideXTC/CoursYNov/blob/master/JavaScript/Boilerplate.zip?raw=true) pour la suite des exercices.
 
 ## Variables
 
