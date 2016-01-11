@@ -17,7 +17,7 @@ Téléchargez le dossier [boilerplate](https://github.com/NideXTC/CoursYNov/blob
 
 #### Exercice 0.1
 
-Comment modifier la déclaration des variables pour que le console.log retourne 3 ?
+Comment modifier la déclaration des variables pour que le console.log retourne 4 ?
 
 ```
 myVar = 4;
@@ -55,7 +55,7 @@ Nous voulons stocker notre fonction faite dans l'exercice précédent dans une v
 
 #### Exercice  1.3 ([aide](http://www.w3schools.com/jsref/met_win_setinterval.asp))
 
-Écrire un script qui affiche _"coucou"_ en console  toutes les secondes (ctrl+c pour arrêter le script).
+Écrire un script qui affiche _"coucou"_ en console  toutes les secondesrnnnn.
 
 #### Exercice  1.4
 
