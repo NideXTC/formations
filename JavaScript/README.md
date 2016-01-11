@@ -55,7 +55,7 @@ Nous voulons stocker notre fonction faite dans l'exercice précédent dans une v
 
 #### Exercice  1.3 ([aide](http://www.w3schools.com/jsref/met_win_setinterval.asp))
 
-Écrire un script qui affiche _"coucou"_ en console  toutes les secondesrnnnn.
+Écrire un script qui affiche _"coucou"_ en console  toutes les secondes .
 
 #### Exercice  1.4
 
