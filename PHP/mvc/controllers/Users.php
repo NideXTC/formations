@@ -10,7 +10,6 @@ class Users
 {
     public function index($param1 = "toutou", $param2 = "tata")
     {
-        var_dump($param1);
-        var_dump($param2);
+        require 'views/users/index.php';
     }
 }
