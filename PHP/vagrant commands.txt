@@ -1,0 +1,13 @@
+sudo su 
+
+aptitude update
+
+aptitude upgrade
+
+aptitude install apache2 mysql-server mysql-client php5-cli php5-curl php5-dev php5-intl php5-mcrypt php5-mysql php5-sqlite
+
+mysql_secure_installation
+
+rm -rf /var/www/
+
+ln -s /vagrant ./www
