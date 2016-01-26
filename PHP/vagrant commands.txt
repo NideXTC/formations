@@ -11,3 +11,19 @@ mysql_secure_installation
 rm -rf /var/www/
 
 ln -s /vagrant /var/www
+
+
+----------- 
+
+vim /etc/apache2/sites-available/default
+
+ <Directory /var/www/>
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride all
+        Order allow,deny
+        allow from all
+</Directory>
+
+a2enmod rewrite
+
+service apache2 restart
