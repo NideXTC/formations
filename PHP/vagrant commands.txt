@@ -10,4 +10,4 @@ mysql_secure_installation
 
 rm -rf /var/www/
 
-ln -s /vagrant ./www
+ln -s /vagrant /var/www
