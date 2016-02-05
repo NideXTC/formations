@@ -33,7 +33,3 @@ function pdo_exec($db, $req, $data = [])
 
 
 
-var_dump(pdo_query($db, "SELECT * FROM users WHERE id = :id",
-    [':id' => 1]));
-
-

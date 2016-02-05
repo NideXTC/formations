@@ -1,10 +1,17 @@
 <?php
 session_start();
 
+require 'connect.php';
+
 if (!empty($_POST['login']) && !empty($_POST['password'])) {
-    if ( $_POST['password'] === 'koala') {
+    $result = pdo_query($db, 'SELECT COUNT(id) count FROM users WHERE login = :login AND password = :password', [
+        ':login' => $_POST['login'],
+        ':password' => $_POST['password']
+    ]);
+
+    if ($result[0]->count > 0) {
         $_SESSION['login'] = $_POST['login'];
-        header('Location:login/admin.php');
+        header('Location:admin.php');
     } else {
         echo 'NOT CONNECTED';
     }
