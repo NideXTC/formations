@@ -11,21 +11,29 @@ try {
     $db = new PDO('mysql:host=localhost;port=3306;dbname=test;charset=utf8', 'root', 'root');
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
-
 } catch (PDOException $pe) {
     echo $pe->getMessage();
 }
 
-$sql = "SELECT * FROM users WHERE id = :id";
-$stmt = $db->prepare($sql);
-$stmt->execute([':id' => 1]);
+function pdo_query($db, $req, $data = [], $fetch = true)
+{
+    $stmt = $db->prepare($req);
+    $stmt->execute($data);
 
-var_dump($stmt->fetchAll());
+    return ($fetch) ? $stmt->fetchAll() : true;
+}
 
-/*
- * DOC : pdo.prepare() / pdo.execute()
- * Fonction qui prend comme param la requête SQL & les valeurs
- * query('select * from toto where id = ?', [1])
- */
+
+function pdo_exec($db, $req, $data = [])
+{
+    $stmt = $db->prepare($req);
+    $stmt->execute($data);
+}
+
+
+
+
+var_dump(pdo_query($db, "SELECT * FROM users WHERE id = :id",
+    [':id' => 1]));
 
 
