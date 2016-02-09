@@ -1,6 +1,7 @@
 <?php
 
-require 'core/DB.php';
+namespace App\Models;
+use App\Core\DB;
 
 /**
  * Created by PhpStorm.
@@ -46,7 +47,7 @@ class User
 
         var_dump($params);
         if(!is_array($params)){
-            //return DB::getInstance()->query('SELECT * FROM users');
+            return DB::getInstance()->query('SELECT * FROM users');
             echo 'SELECT * FROM users';
         } else {
             echo 'SELECT * FROM users WHERE '.$params[0].' = "'.$params[1].'"';

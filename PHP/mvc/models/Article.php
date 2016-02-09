@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Models;
+
 /**
  * Created by PhpStorm.
  * User: NideXTC
@@ -98,9 +100,6 @@ class Article
         $this->_date = $date;
         return $this;
     }
-
-
-
 
 
 }

@@ -1,7 +1,13 @@
 <?php
 
+use App\Models\User ;
+
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
+require 'vendor/autoload.php';
+
+$router = new AltoRouter();
+
 
 $uri = explode( '/',str_replace('/CoursYNov/PHP/mvc/','',$_SERVER['REQUEST_URI']));
 

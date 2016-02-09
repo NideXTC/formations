@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Core;
+
 class DB
 {
     private $_connection;
