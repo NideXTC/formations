@@ -33,3 +33,25 @@ function pdo_exec($db, $req, $data = [])
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

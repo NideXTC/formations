@@ -15,6 +15,11 @@ array_splice($uri,0,2);
 //var_dump($uri);
 
 
+require 'models/User.php';
+$user = new User('josay','rayban','josay.rayban@toto.com');
+$user->findByName('Alexis');
+
+
 if(file_exists('controllers/'.$controller.'.php')){
     require 'controllers/'.$controller.'.php';
 

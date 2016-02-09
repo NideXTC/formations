@@ -30,7 +30,7 @@ class DB
                     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                 ]);
 
-        } catch(PDOException $e){
+        } catch (PDOException $e) {
             echo $e->getMessage();
         }
     }
@@ -45,4 +45,21 @@ class DB
     {
         return $this->_connection;
     }
+
+
+    function query($req, $data = [])
+    {
+        $stmt = $this->_connection->prepare($req);
+        $stmt->execute($data);
+
+        return $stmt->fetchAll();
+    }
+
+
+    function exec($req, $data = [])
+    {
+        $stmt = $this->_connection->prepare($req);
+        $stmt->execute($data);
+    }
+
 }
