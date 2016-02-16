@@ -1,7 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: NideXTC
- * Date: 16/02/2016
- * Time: 09:56
- */
+
+function index($params)
+{
+    var_dump($params);
+}
