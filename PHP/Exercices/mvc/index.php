@@ -10,6 +10,19 @@ $explode = explode('/', $uri);
 $params = $explode;
 array_splice($params,0,2);
 
+require 'models/User.php';
+
+$u = new User();
+$u->setName('toto')->setPassword('123');
+
+echo '<pre>';
+var_dump($u);
+echo '</pre>';
+
+User::findAll();
+
+
+/*
 if (file_exists('controllers/' . $explode[0] . '.php')) {
     require 'controllers/' . $explode[0] . '.php';
     $explode[1]($params);
@@ -17,3 +30,11 @@ if (file_exists('controllers/' . $explode[0] . '.php')) {
 } else {
     http_response_code(404);
 }
+*/
+
+
+
+
+
+
+
