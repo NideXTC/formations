@@ -6,7 +6,8 @@ class User
 {
     private $_id,
         $_name,
-        $_password;
+        $_password,
+        $_db;
 
     /**
      * User constructor.
@@ -19,6 +20,7 @@ class User
         $this->_id = $_id;
         $this->_name = $_name;
         $this->_password = $_password;
+        $this->_db = new DB();
     }
 
     public function getAccess()
@@ -26,6 +28,35 @@ class User
         return 'admin';
     }
 
+
+    public static function findById($id)
+    {
+        $db = new DB();
+        $data = $db->pdo_query('SELECT * FROM users WHERE id = ?;', [$id]);
+        $u = new User($data[0]->login, $data[0]->password, $data[0]->id);
+        return $u;
+    }
+
+    public function delete()
+    {
+        $this->_db->pdo_exec('DELETE FROM users WHERE id = ?', [$this->_id]);
+    }
+
+    public function save()
+    {
+        if($this->_id){
+            $this->_db->pdo_exec( 'UPDATE users SET login = :login, password = :password WHERE id = :id', [
+                ':login' => $this->_name,
+                ':password' => $this->_password,
+                ':id' => $this->_id
+            ]);
+        } else {
+            $this->_db->pdo_exec( 'INSERT INTO users SET login = :login, password = :password', [
+                ':login' => $this->_name,
+                ':password' => $this->_password
+            ]);
+        }
+    }
 
     public static function findAll()
     {
@@ -96,6 +127,11 @@ class User
     {
         $this->_password = $password;
         return $this;
+    }
+
+    public function __toString()
+    {
+        return $this->_id . ' - ' . $this->_name;
     }
 }
 

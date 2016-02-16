@@ -12,10 +12,17 @@ array_splice($params, 0, 2);
 
 require 'models/User.php';
 
+$u  = User::findById(2);
 
-foreach (User::findAll() as $v) {
-    echo $v->getName() . ' ' . $v->getAccess().'<br />';
-}
+echo $u;
+
+$u->setName('Django')->save();
+
+$u2 = new User('Alexis','superpassword');
+$u2->save();
+
+
+
 
 
 
