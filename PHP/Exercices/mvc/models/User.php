@@ -28,6 +28,11 @@ class User
         return 'admin';
     }
 
+    public function toto(User $u)
+    {
+
+    }
+
 
     public static function findById($id)
     {
@@ -44,14 +49,14 @@ class User
 
     public function save()
     {
-        if($this->_id){
-            $this->_db->pdo_exec( 'UPDATE users SET login = :login, password = :password WHERE id = :id', [
+        if ($this->_id) {
+            $this->_db->pdo_exec('UPDATE users SET login = :login, password = :password WHERE id = :id', [
                 ':login' => $this->_name,
                 ':password' => $this->_password,
                 ':id' => $this->_id
             ]);
         } else {
-            $this->_db->pdo_exec( 'INSERT INTO users SET login = :login, password = :password', [
+            $this->_db->pdo_exec('INSERT INTO users SET login = :login, password = :password', [
                 ':login' => $this->_name,
                 ':password' => $this->_password
             ]);
