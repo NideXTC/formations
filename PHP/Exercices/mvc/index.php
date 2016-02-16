@@ -8,18 +8,16 @@ $uri = str_replace('/CoursYNov/PHP/Exercices/mvc/', '', $_SERVER['REQUEST_URI'])
 $explode = explode('/', $uri);
 
 $params = $explode;
-array_splice($params,0,2);
+array_splice($params, 0, 2);
 
 require 'models/User.php';
 
-$u = new User();
-$u->setName('toto')->setPassword('123');
 
-echo '<pre>';
-var_dump($u);
-echo '</pre>';
+foreach (User::findAll() as $v) {
+    echo $v->getName() . ' ' . $v->getAccess().'<br />';
+}
 
-User::findAll();
+
 
 
 /*

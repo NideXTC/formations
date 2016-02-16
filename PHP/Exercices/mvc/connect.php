@@ -7,16 +7,10 @@ ini_set("display_errors", 1);
  * Wrap try/catch
  * Jeter des exceptions
  */
-try {
-    $db = new PDO('mysql:host=localhost;port=3306;dbname=test;charset=utf8', 'root', 'root');
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
-} catch (PDOException $pe) {
-    echo $pe->getMessage();
-}
 
 function pdo_query($req, $data = [], $fetch = true)
 {
+    global $db;
     $stmt = $db->prepare($req);
     $stmt->execute($data);
 
@@ -24,8 +18,9 @@ function pdo_query($req, $data = [], $fetch = true)
 }
 
 
-function pdo_exec($req, $data = [])
+function pdo_exec( $req, $data = [])
 {
+    global $db;
     $stmt = $db->prepare($req);
     $stmt->execute($data);
 }

@@ -1,5 +1,7 @@
 <?php
 
+require 'core/DB.php';
+
 class User
 {
     private $_id,
@@ -29,11 +31,16 @@ class User
     {
         $array = [];
 
-        // recupération des utilisateurs en BDD
-        //
-        // boucle / ajouter dans le tableau une nouvelle instance de user
-        //
-        // renvoyer le tableau
+        $db = new DB();
+
+        $data = $db->pdo_query('SELECT * FROM users;');
+
+        foreach ($data as $k => $v) {
+            $u = new User($v->login, $v->password, $v->id);
+
+            array_push($array, $u);
+        }
+
         return $array;
     }
 
