@@ -1,4 +1,9 @@
 var express = require('express');
+var mongoose = require('mongoose');
+
+
+mongoose.connect('mongodb://localhost/test');
+
 var app = express();
 var server = app.listen(3000, function () {
     console.log('Hello');
@@ -13,7 +18,8 @@ app.put('/',  function (req, res) {
 });
 
 app.delete('/',  function (req, res) {
-    res.send('delete');
+    var json = {bien : "bien?"};
+    res.json(json);
 });
 
 app.post('/',  function (req, res) {
