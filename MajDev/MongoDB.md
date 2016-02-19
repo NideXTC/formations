@@ -7,7 +7,6 @@
                                                     
                                                     
                                                     
-# Exercices - 3
 
 ## MongoDB
 
@@ -57,7 +56,7 @@ Nous devons, pour commencer, mettre en place la connection à notre base dans le
 
 ```
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/morpion', function(err) {
+mongoose.connect('mongodb://localhost/test', function(err) {
   if (err) { throw err; }
 }); 
 
