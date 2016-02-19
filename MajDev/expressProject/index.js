@@ -3,6 +3,7 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var Schema = mongoose.Schema;
+var path = require('path');
 
 mongoose.connect('mongodb://localhost/test');
 
@@ -12,8 +13,11 @@ var server = app.listen(3000, function () {
 });
 
 
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
+
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extend: true}));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser());
 
 var schema = new Schema({
@@ -39,15 +43,37 @@ app.get('/', function (req, res) {
 
 
 app.put('/', function (req, res) {
-    User.find({}, function (err, users) {
-        if (!err) {
-            users[0].email = 'toto';
-            users[0].save();
-            res.send(users);
-        } else {
-            console.error(err);
-        }
+    console.log(req.query);
+
+    User.findById(req.query.id, function (err, user) {
+        console.log(user);
+
+        user.name = 'Nom';
+
+        user.save(function (err) {
+            if (err) console.log(err);
+        });
     });
+
+    res.end();
+});
+
+
+app.put('/:id', function (req, res) {
+
+    console.log(req.body);
+
+    User.findOne({_id: req.params.id}, function (err, user) {
+
+
+        user.name = req.body.name || '';
+
+        user.save(function (err) {
+            if (err) console.log(err);
+        });
+    });
+
+    res.end();
 });
 
 app.delete('/', function (req, res) {
@@ -91,7 +117,9 @@ app.get('/test', function (req, res) {
     res.end();
 });
 
-
+app.get('/jade', function (req, res) {
+    res.render('index', {title: 'coucou'});
+});
 
 
 

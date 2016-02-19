@@ -107,7 +107,7 @@ var Users = {
     },
     update: function (req, res) {
 
-        User.findById(req.params.id, function (err, user) {
+        User.findById(req.query.id, function (err, user) {
             if (err) throw err;
 
             // change the users location
@@ -129,7 +129,7 @@ var Users = {
     },
     delete: function (req, res) {
 
-        User.findById(req.params.id, function (err, user) {
+        User.findById(req.query.id, function (err, user) {
             if (err) throw err;
 
             // delete him
