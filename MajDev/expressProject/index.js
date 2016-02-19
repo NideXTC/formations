@@ -4,6 +4,8 @@ var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var Schema = mongoose.Schema;
 var path = require('path');
+var session = require('express-session');
+var lusca = require('lusca');
 
 mongoose.connect('mongodb://localhost/test');
 
@@ -12,12 +14,13 @@ var server = app.listen(3000, function () {
     console.log('Hello');
 });
 
+app.disable('x-powered-by');
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 
 var schema = new Schema({
@@ -28,13 +31,68 @@ var schema = new Schema({
     createdOn: {type: Date, default: Date.now}
 });
 
+
+
+app.use(session({
+    secret: 'abc',
+    resave: true,
+    saveUninitialized: true
+}));
+
+
+app.use(lusca({
+    csrf: true,
+    csp: {/* ... */},
+    xframe: 'SAMEORIGIN',
+    p3p: 'ABCDEF',
+    hsts: {maxAge: 31536000, includeSubDomains: true, preload: true},
+    xssProtection: true
+}));
+
 var User = mongoose.model('User', schema, 'users');
 
-app.get('/', function (req, res) {
+app.get('/register', function (req, res) {
+    res.render('register');
+});
+
+app.post('/register', function (req, res) {
+    console.log(req.body);
+
+    var u = new User({
+        name: req.body.name,
+        firstName: req.body.first_name,
+        email: req.body.email,
+        password: req.body.password
+    });
+
+    //test
+    res.render('register', {user: req.body});
+
+
+    u.save(function (err) {
+        if (err) throw err;
+        res.redirect('back');
+    });
+});
+
+
+app.get('/', function (req, res, next) {
+    console.log(req.session);
+        if (!req.cookies.token) {
+            res.cookie('token', req.session._csrfSecret, {httpOnly: 'true'});
+        }
+
+        if (req.cookies.token !== req.session._csrfSecret) {
+            return res.redirect(403, '/');
+        }
+
+        return next();
+    }
+    , function (req, res) {
 
     User.find({}, function (err, users) {
         if (!err) {
-            res.send(users);
+            res.render(users);
         } else {
             console.error(err);
         }
@@ -77,7 +135,7 @@ app.put('/:id', function (req, res) {
 });
 
 app.delete('/', function (req, res) {
-    User.find({_id: '56c6d90b196b51e30274492e'}, function (err, user) {
+    User.find({}, function (err, user) {
         if (!err) {
             user[0].remove();
         } else {
@@ -120,7 +178,6 @@ app.get('/test', function (req, res) {
 app.get('/jade', function (req, res) {
     res.render('index', {title: 'coucou'});
 });
-
 
 
 
