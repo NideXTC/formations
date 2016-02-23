@@ -1,0 +1,55 @@
+[
+    {
+        "name": "altorouter/altorouter",
+        "version": "v1.1.0",
+        "version_normalized": "1.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/dannyvankooten/AltoRouter.git",
+            "reference": "09d9d946c546bae6d22a7654cdb3b825ffda54b4"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/dannyvankooten/AltoRouter/zipball/09d9d946c546bae6d22a7654cdb3b825ffda54b4",
+            "reference": "09d9d946c546bae6d22a7654cdb3b825ffda54b4",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2014-04-16 09:44:40",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "AltoRouter.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Danny van Kooten",
+                "email": "dannyvankooten@gmail.com",
+                "homepage": "http://dannyvankooten.com/"
+            },
+            {
+                "name": "Koen Punt",
+                "homepage": "https://github.com/koenpunt"
+            },
+            {
+                "name": "niahoo",
+                "homepage": "https://github.com/niahoo"
+            }
+        ],
+        "description": "A lightning fast router for PHP",
+        "homepage": "https://github.com/dannyvankooten/AltoRouter",
+        "keywords": [
+            "lightweight",
+            "router",
+            "routing"
+        ]
+    }
+]
