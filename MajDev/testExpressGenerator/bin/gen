@@ -1,0 +1,159 @@
+var fs = require('fs');
+var path = require('path');
+var appDir = path.join(__dirname, '../app/');
+var baseDir = path.join(__dirname, '../');
+
+
+if ((process.argv[2] && process.argv[3] ) || (process.argv[2] && process.argv[2].trim().toLowerCase() == 'routing')) {
+
+    if (process.argv[3]) {
+        var singular = capitalize(process.argv[3]);
+        var plural = (process.argv[4]) ? capitalize(process.argv[4]) : capitalize(process.argv[3] + 's');
+    }
+
+    switch (process.argv[2].toLowerCase().trim()) {
+        case 'api':
+            controller(plural);
+            model(singular, plural);
+            view(plural.toLowerCase());
+            route(plural);
+            break;
+        case 'controller':
+            controller(plural);
+            break;
+        case 'view':
+            view(plural.toLowerCase());
+            break;
+        case 'route':
+            route(plural);
+            break;
+        case 'model':
+            model(singular, plural);
+            break;
+        case 'routing':
+            routing();
+            break;
+        default :
+            console.log('Undefined function ' + process.argv[2]);
+            break;
+    }
+} else {
+    console.info('Invalid number of parameters');
+}
+
+
+function controller(name) {
+    var template = '\'use strict\';\n\nvar ' + name + ' = {\n   index: function (req, res) {\n    ' +
+        '    res.render(\'index\', {});\n    },\n    create: function (req, res) {\n     ' +
+        '   res.render(\'create\', {});\n    },\n    update: function (req, res) {\n      ' +
+        '  res.render(\'delete\', {});\n    },\n    delete: function (req, res) {\n   ' +
+        ' }\n};\n\nmodule.exports = ' + name + ';';
+
+
+    fs.writeFile(appDir + 'controllers/' + name + '.js', template, function (err) {
+        if (err) {
+            return console.log(err);
+        }
+
+        console.log('Controller ' + name + ' created.');
+    });
+}
+
+
+function model(singular, plural) {
+    var template = '\'use strict\';\n\nvar mongoose = require(\'mongoose\'),\n    Schema = mongoose.Schema;\n\n\n' +
+        'var schema = new Schema({\n    name: {type: String, required: true},\n    createdOn: {type: Date, default:' +
+        ' Date.now}\n});\n\nexports.model = mongoose.model(\'' + singular + '\', schema, \'' + plural.toLowerCase() + '\');';
+
+
+    fs.writeFile(appDir + 'models/' + singular + '.js', template, function (err) {
+        if (err) {
+            return console.log(err);
+        }
+
+        console.log('Model ' + singular + ' created.');
+    });
+}
+
+
+function view(name) {
+
+    if (!fs.existsSync(appDir + 'views/' + name)) {
+        fs.mkdirSync(appDir + 'views/' + name);
+    }
+
+    fs.writeFile(appDir + 'views/' + name + '/index.jade', '', function (err) {
+        if (err) {
+            return console.log(err);
+        }
+    });
+
+    fs.writeFile(appDir + 'views/' + name + '/create.jade', '', function (err) {
+        if (err) {
+            return console.log(err);
+        }
+    });
+
+    fs.writeFile(appDir + 'views/' + name + '/update.jade', '', function (err) {
+        if (err) {
+            return console.log(err);
+        }
+    });
+
+    console.log('Views directory ' + name + ' created.')
+}
+
+function route(name) {
+
+    var lower = name.toLowerCase();
+
+    var template = 'var path = require(\'path\');\nvar router = require(\'express\')();\nvar security = require(\'../middlewares/security\');\nrequire(\'express-reverse\')' +
+        '(router);\nrouter.disable(\'x-powered-by\');\nrouter.set(\'views\',path.join(__dirname, \'..\/..\/app\/views\/' + lower + '\'));\n\n' +
+        'var ' + lower + ' = require(\'..\/controllers\/' + name + '\');\n\nrouter.get(\'' + lower + '.index\',\'\/' + lower + '\', security.csrf, ' + lower + '.index );' +
+        '\nrouter.post(\'' + lower + '.create\',\'\/' + lower + '\', security.csrf, ' + lower + '.create );\nrouter.put(\'' + lower + '.update\',\'\/' + lower + '\', security.csrf, ' + lower + '.update );' +
+        '\nrouter.delete(\'' + lower + '.delete\',\'\/' + lower + '\', security.csrf, ' + lower + '.delete );\n\nmodule.exports = router;\n';
+
+
+    fs.writeFile(appDir + 'routes/' + lower + '.js', template, function (err) {
+        if (err) {
+            return console.log(err);
+        }
+
+        routing();
+
+        console.log('Route ' + name + ' created.');
+    });
+
+}
+
+function routing() {
+    fs.readdir(appDir + 'routes/', function (err, data) {
+        if (err) {
+            return console.log(err);
+        }
+
+        r = [];
+
+        for(var i=0; i<data.length; i++){
+        	if(/(.*).js$/.test(data[i].toString()) ){
+        		r.push("'" + data[i] + "'");
+        	}
+        }
+
+        var routing = 'var array = [' + r.join() + '];\nmodule.exports =  array;';
+
+        fs.writeFile(baseDir + 'conf/routing.js', routing, function (err) {
+            if (err) {
+                return console.log(err);
+            }
+
+            console.log('Routing generated.');
+        });
+
+    });
+}
+
+function capitalize(string) {
+    var tempstr = string.toLowerCase();
+    return tempstr.replace(tempstr[0], tempstr[0].toUpperCase());
+}
