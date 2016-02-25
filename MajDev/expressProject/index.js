@@ -1,4 +1,3 @@
-var express = require('express');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
@@ -9,13 +8,43 @@ var lusca = require('lusca');
 
 mongoose.connect('mongodb://localhost/test');
 
+
+var express = require('express');
 var app = express();
-var server = app.listen(3000, function () {
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
+
+server.listen(3000, function () {
     console.log('Hello');
 });
 
-app.disable('x-powered-by');
+io.on('connection', function (socket) {
+    console.log('new user');
 
+    socket.broadcast.emit('Users', io.engine.clientsCount);
+    socket.emit('Users', io.engine.clientsCount);
+
+    console.log(io.sockets.length);
+
+    socket.on('tata', function () {
+        console.log("tata");
+    });
+
+    socket.on('form', function (d) {
+        console.log(d);
+        socket.emit('form', 'good');
+    });
+
+
+    io.on('disconnect', function () {
+        socket.broadcast.emit('Users', io.engine.clientsCount);
+        socket.emit('Users', io.engine.clientsCount);
+    });
+});
+
+
+app.disable('x-powered-by');
+app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
@@ -30,7 +59,6 @@ var schema = new Schema({
     password: {type: String, required: false},
     createdOn: {type: Date, default: Date.now}
 });
-
 
 
 app.use(session({
@@ -77,26 +105,8 @@ app.post('/register', function (req, res) {
 
 
 app.get('/', function (req, res, next) {
-    console.log(req.session);
-        if (!req.cookies.token) {
-            res.cookie('token', req.session._csrfSecret, {httpOnly: 'true'});
-        }
+    res.render('index');
 
-        if (req.cookies.token !== req.session._csrfSecret) {
-            return res.redirect(403, '/');
-        }
-
-        return next();
-    }
-    , function (req, res) {
-
-    User.find({}, function (err, users) {
-        if (!err) {
-            res.render(users);
-        } else {
-            console.error(err);
-        }
-    }).select('-__v');
 });
 
 
