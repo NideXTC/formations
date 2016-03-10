@@ -74,3 +74,19 @@ ufw enable
 
 
 ## Fail2Ban
+
+Installation :
+
+```
+sudo apt-get install fail2ban
+```
+
+La configuration se fait ensuite par le fichier `fail2ban.conf` et `jail.conf`.
+
+Plusieurs exemples ici : http://reseau.developpez.com/tutoriels/fail2ban/
+
+Il faut ensuite redémarrer fail2ban _via_ :
+
+```
+service fail2ban restart
+```
