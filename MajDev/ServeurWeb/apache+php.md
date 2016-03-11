@@ -30,7 +30,7 @@ vim /etc/apache2/sites-available/default.conf
     DocumentRoot "/var/www/html/example1"
     ServerName example.com
     ServerAlias www.example.com
-    Options -Indexes FollowSymLinks MultiViews
+    Options -Indexes FollowSymLinks -MultiViews
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
