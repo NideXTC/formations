@@ -4,7 +4,7 @@ var Users = {
      * @param res Ce qui est renvoyé au navigateur
      */
     index: function (req, res) {
-        res.render('users/index', {"title": "Coucou"});
+        res.render('users/index', {"error": "Coucou"});
         // Nous allons donc appeler le fichier qui est dans app/views/users/index avec un tableau de valeurs
     },
     create: function (req, res) {
