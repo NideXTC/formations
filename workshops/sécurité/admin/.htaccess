@@ -1,0 +1,6 @@
+AuthType Basic
+AuthName "My Protected Area"
+AuthUserFile /var/www/admin/.htpasswd
+<Limit GET POST>
+    require valid-user
+</Limit>
