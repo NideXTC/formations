@@ -3,27 +3,25 @@ var casper = require('casper').create({
   logLevel: "debug"
 });
 
-casper.start('http://ynov.com/'); 
+casper.start('https://www.ynov.com'); 
 
-casper.then(function(){
-	this.echo(this.getTitle());
-}); 
-
-casper.then(function(res){
-	//require('utils').dump(res); 
-	this.echo(res.headers[0].value); // apache version 
+casper.then(function getLinks(){
+     links = this.evaluate(function(){
+        var links = document.getElementsByTagName('a');
+        links = Array.prototype.map.call(links,function(link){
+            return link.getAttribute('href');
+        });
+        return links;
+    });
 });
 
 casper.then(function(){
-	this.capture('ynov-home.png')
+    this.each(links,function(self,link){
+        self.thenOpen(link,function(a){
+            this.echo(this.getCurrentUrl());
+        });
+    });
 });
 
-casper.then(function(){
-	this.clickLabel('Contact', 'a');
-});
-
-casper.then(function(){
-	this.capture('ynov-contact.png')
-});
 
 casper.run();
