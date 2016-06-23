@@ -371,7 +371,7 @@ Le nombre est 1337
 
 ### Exercice 9.17 ([aide](https://github.com/request/request))
 
-Ajoutez [`request`](https://github.com/request/request) à votre projet puis faites une requête GET sur l'URL `http://api.openweathermap.org/data/2.5/weather?q=Paris,fr&appid=2de143494c0b295cca9337e1e96b00e0` 
+Ajoutez [`request`](https://github.com/request/request) à votre projet puis faites une requête GET sur l'URL `http://jsonplaceholder.typicode.com/posts/1` 
 
 /!\ Si vous souhaitez utiliser le JSON par la suite, vous devrez vous servir de la fonction [`JSON.parse()`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/JSON/parse) /!\ 
 
