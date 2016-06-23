@@ -350,7 +350,7 @@ Nous souhaitons garder en mémoire les informations du client. Quand l'utilisate
 
 Grâce au [MethodOverride](https://github.com/expressjs/method-override) mettre en place un formulaire qui envoie une requête en PUT. 
 
-### Exercice 9.14 
+### Exercice 9.14 ([aide](https://github.com/expressjs/body-parser)) 
 
 Créez un formulaire avec deux champs input:text pour saisir le nom et le prénom et l'envoyer sur la route _/showPost_.
 Afficher en console le résultat du POST. 
