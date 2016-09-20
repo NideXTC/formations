@@ -13,7 +13,6 @@ Avant de commencer, faites un dossier _NodeJS_, tout votre travail se trouvera d
 
 Par convention lorsque vous verrez _$_ dans les exercices, la ligne est à jouer en ligne de commande.
 
-Tout au long de ces exercices nous allons créer un jeu de morpion en ligne (multijoueur).
 
 ## Mettre en place un serveur NodeJS
 
