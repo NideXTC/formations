@@ -7,6 +7,14 @@ mongoose.connect('mongodb://localhost/chocolat');
 
 var app = express();
 
+var studentSchema = {
+	name: String,
+	password: String,
+	email : String
+};
+
+var Student = mongoose.model('Student', studentSchema);
+
 app.set('view engine', 'pug');
 
 app.use(session({
@@ -25,7 +33,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/liste', (req, res) => {
-	res.render('index');
+	res.render('liste');
 });
 
 app.get('/connect', (req, res) => {
@@ -38,11 +46,18 @@ app.get('/sub', (req, res) => {
 
 app.post('/sub', (req, res) => {
 	// Ajouter l'utilisateur en BDD
+    var Alexis = new Student({
+        name: 'Alexis',
+        password: 'azerty',
+        email : 'a.d@a.fr'
+    });
+
+    Alexis.save(err => console.log(err));
 	// Redirection
 });
 
 // POST 
-app.post('/liste', (req, res) => {
+app.post('/list', (req, res) => {
 	req.session.toto = "tata";
 	res.end(); 
 }); 
