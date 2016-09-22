@@ -33,7 +33,9 @@ app.get('/', (req, res) => {
 });
 
 app.get('/liste', (req, res) => {
-	res.render('liste');
+	Student.find({}, (err, students) => {
+	  console.log(students);
+    });
 });
 
 app.get('/connect', (req, res) => {
