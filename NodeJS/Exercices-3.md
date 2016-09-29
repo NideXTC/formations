@@ -104,7 +104,7 @@ var Users = {
             }
         });
 
-        res.json(u);
+        res.end();
     },
     update: function (req, res) {
 
@@ -123,10 +123,7 @@ var Users = {
 
         });
 
-        res.render('users/index', {
-            title: 'home',
-            active: 'account'
-        });
+        res.end();
     },
     delete: function (req, res) {
 
@@ -141,10 +138,7 @@ var Users = {
             });
         });
 
-        res.render('users/index', {
-            title: 'home',
-            active: 'account'
-        });
+        res.end();
     }
 };
 

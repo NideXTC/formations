@@ -76,9 +76,9 @@ var IO = {
     connection: function (callback) {
         io.on('connection', function (s) {
             // On envoie le nombre de personnes actuellement sur le socket à tout le monde (sauf la personne qui vient de se connecter)
-            s.broadcast.emit('UserState', io.sockets.sockets.length);
+            s.broadcast.emit('UserState', io.engine.clientsCount);
             // On envoie le nombre de personnes actuellement sur le socket à la personne qui vient de se connecter
-            s.emit('UserState', io.sockets.sockets.length);
+            s.emit('UserState', io.engine.clientsCount);
 
             callback(s);
         });
@@ -87,7 +87,7 @@ var IO = {
         if (s) {
             s.on('disconnect', function () {
               // On prévient tout le monde qu'une personne s'est deconnectée 
-                s.broadcast.emit('UserState', io.sockets.sockets.length);
+                s.broadcast.emit('UserState', io.engine.clientsCount);
             });
         }
     }
