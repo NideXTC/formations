@@ -2,10 +2,15 @@ const express = require('express');
 const session = require('express-session');
 const path = require('path');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 
 mongoose.connect('mongodb://localhost/chocolat');
 
 var app = express();
+
+app.use(bodyParser.urlencoded({extended: false}));
+
+app.use(bodyParser.json());
 
 var studentSchema = {
     name: String,
@@ -49,14 +54,20 @@ app.get('/sub', (req, res) => {
 
 app.post('/sub', (req, res) => {
     // Ajouter l'utilisateur en BDD
-    var Alexis = new Student({
-        name: 'Alexis',
-        password: 'azerty',
-        email: 'a.d@a.fr'
-    });
+    if (req.body.lastname && req.body.pass && req.body.email) {
 
-    Alexis.save(err => console.log(err));
-    // Redirection
+        var Alexis = new Student({
+            name: req.body.lastname,
+            password: req.body.pass,
+            email: req.body.email
+        });
+
+        Alexis.save(err => {
+            if (!err) {
+                res.redirect('back');
+            }
+        });
+    }
 });
 
 // POST 
