@@ -78,7 +78,7 @@ var IO = {
             // On envoie le nombre de personnes actuellement sur le socket à tout le monde (sauf la personne qui vient de se connecter)
             s.broadcast.emit('UserState', io.sockets.sockets.length);
             // On envoie le nombre de personnes actuellement sur le socket à la personne qui vient de se connecter
-            s.emit('UserState', io.sockets.sockets.length);
+            s.emit('UserState', io.engine.clientsCount);
 
             callback(s);
         });
