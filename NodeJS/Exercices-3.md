@@ -57,6 +57,9 @@ Nous devons, pour commencer, mettre en place la connection à notre base dans le
 
 ```
 var mongoose = require('mongoose');
+
+mongoose.Promise = global.Promise;
+
 mongoose.connect('mongodb://localhost/morpion', function(err) {
   if (err) { throw err; }
 }); 
