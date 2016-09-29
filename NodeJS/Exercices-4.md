@@ -87,7 +87,7 @@ var IO = {
         if (s) {
             s.on('disconnect', function () {
               // On prévient tout le monde qu'une personne s'est deconnectée 
-                s.broadcast.emit('UserState', io.sockets.sockets.length);
+                s.broadcast.emit('UserState', io.engine.clientsCount);
             });
         }
     }
