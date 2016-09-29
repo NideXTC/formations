@@ -114,7 +114,7 @@ Votre dossier s'est bien fait ? Prenez le temps de regarder un peu son contenu. 
 ```
 
 
-J'ai précisé "HTML" car le framework Express n'utilise pas directement du HTML, il passse par des fichiers _Jade_. 
+J'ai précisé "HTML" car le framework Express n'utilise pas directement du HTML, il passe par des fichiers _Jade_. 
 Je vous laisse découvrir la syntax ici : [Jade](http://jade-lang.com/).
 
 Pourquoi utiliser un moteur de template ? Car il va permettre de minifier le fichier, de créer des templates, d'améliorer la sécurité et d'ajouter dynamiquement des variables. Il faut savoir que la plupart des frameworks utilisent des moteurs de template, par exemple Symfony utilise [Twig](http://twig.sensiolabs.org/) et Laravel utilise [Blade](http://laravel.com/docs/5.1/blade). 
