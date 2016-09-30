@@ -4,11 +4,18 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
 
 var routes = require('./app/routes/index');
 var users = require('./app/routes/users');
 
 var app = express();
+
+mongoose.Promise = global.Promise;
+
+mongoose.connect('mongodb://localhost/potato', function(err) {
+  if (err) { throw err; }
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'app/views'));

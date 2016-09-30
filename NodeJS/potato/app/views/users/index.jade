@@ -4,3 +4,14 @@ extends ../layout
 block content
     // Nous affichons une variable title, le = nous permet d'échapper le caractère
     h1=title
+
+    form(method='post')
+        input(type="text" name="name" placeholder="name")
+        input(type="text" name="firstname" placeholder="fistname")
+        input(type="text" name="email" placeholder="email")
+        button(type="submit") valider
+
+    ul
+        each user in users
+            li= user.name
+            li= user._id

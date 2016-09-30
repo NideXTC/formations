@@ -57,43 +57,19 @@ Le paramètre _--save_ permet de rajouter ce paquet dans le package.json, la pro
 Pour gagner en lisibilité dans notre code nous allons faire un fichier pour gérer les sockets, nous allons donc créer un dossier `app/sockets` et dans ce dossier vous allez créer un fichier _Base.js_ avec : 
 
 ```
-var io; 
-
-var IO = {
-    set: function (IO) { // Cette fonction sera appelé dans le fichier app.js et valorisera la variable io
-        io = IO;
-        var $this = this; // On enregistre le contexte actuel dans une variable
-
-        //on appelle cette function à chaque connection d'un nouvel utilisateur
-        this.connection(function (socket) {
-          // Toutes les fonctions que l'on va rajouter devront être ici
-            $this.disconnect(socket);
-        });
-    },
-    get: function () {
-        return io;
-    },
-    connection: function (callback) {
-        io.on('connection', function (s) {
+module.exports = function(io) {
+    io.on('connection', function (socket) {
             // On envoie le nombre de personnes actuellement sur le socket à tout le monde (sauf la personne qui vient de se connecter)
-            s.broadcast.emit('UserState', io.engine.clientsCount);
+            socket.broadcast.emit('UserState', io.engine.clientsCount);
             // On envoie le nombre de personnes actuellement sur le socket à la personne qui vient de se connecter
-            s.emit('UserState', io.engine.clientsCount);
+            socket.emit('UserState', io.engine.clientsCount);
 
-            callback(s);
-        });
-    },
-    disconnect: function (s) {
-        if (s) {
-            s.on('disconnect', function () {
+             socket.on('disconnect', function () {
               // On prévient tout le monde qu'une personne s'est deconnectée 
-                s.broadcast.emit('UserState', io.engine.clientsCount);
+                socket.broadcast.emit('UserState', io.engine.clientsCount);
             });
-        }
     }
-};
-
-module.exports = IO;
+}; 
 ```
 
 Nous allons désormais modifier notre fichier `bin/www` pour que notre fonction `set` soit appelé dès qu'un client se connecte au site, pour cela il faut ajouter ces lignes dans votre fichier sous `var server = http.createServer(app);` :

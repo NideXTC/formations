@@ -10,7 +10,7 @@ router.get('/', users.index);
 router.post('/', users.create);
 
 /* PUT Modification d'un utilisateur */
-router.put('/:toto(\\d+)', users.update);
+router.put('/:id', users.update);
 
 /* DELETE Suppression d'un utilisateur */
 router.delete('/:id(\\d+)', users.delete);
