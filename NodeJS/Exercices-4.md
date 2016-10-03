@@ -68,7 +68,7 @@ module.exports = function(io) {
               // On prévient tout le monde qu'une personne s'est deconnectée 
                 socket.broadcast.emit('UserState', io.engine.clientsCount);
             });
-    }
+    });
 }; 
 ```
 
@@ -78,7 +78,7 @@ Nous allons désormais modifier notre fichier `bin/www` pour que notre fonction 
 var io = require('socket.io')(server);
 
 // Nous créons une accès au socket
-require('../app/sockets/Base').set(io); 
+require('../app/sockets/Base')(io); 
 ``` 
 
 Lancez votre serveur via : 
