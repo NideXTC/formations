@@ -6,6 +6,13 @@ module.exports = function(io) {
         // On envoie le nombre de personnes actuellement sur le socket à la personne qui vient de se connecter
         socket.emit('UserState', io.engine.clientsCount);
 
+        socket.on('message', data => {
+            socket.emit('message', data);
+            socket.broadcast.emit('message', data);
+        });
+
+
+
         socket.on('disconnect', function () {
             console.log('User gone');
             // On prévient tout le monde qu'une personne s'est deconnectée
