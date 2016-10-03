@@ -24,7 +24,7 @@ npm install -g mocha
 
 ### Chai 
 
-Pour notre projet nous allons tester les fonctions mais aussi l'accès à l'API, pour cela nous allons passer par une bibliothèque d'assertions. Nous allons installer en _devDependencies_ chai et chai-http _via_ : 
+Pour notre projet nous allons tester les fonctions mais aussi l'accès à l'API, pour cela nous allons passer par une bibliothèque d'assertions. Nous allons installer en _devDependencies_ `chai` et `chai-http _via_ : 
 
 ```
 npm install chai chai-http --save-dev 
@@ -54,7 +54,7 @@ describe('Users', _ => {
 });
 ```
 
-Nous allons devoir faire une petite modification sur notre fichier `bin/www` en rajoutant à la fin du fichier un exports _via_ : 
+Nous allons devoir faire une petite modification sur notre fichier `bin/www` en rajoutant à la fin du fichier un exports pour l'utiliser dans `chai` _via_ : 
 
 ```
 module.exports = app;

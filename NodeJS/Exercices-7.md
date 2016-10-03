@@ -11,11 +11,11 @@
 
 ## Déploiement
 
-Il exite plusieurs outils pour déployer un projet ([supervisor](https://github.com/petruisfan/node-supervisor), [forever](https://github.com/foreverjs/forever)), ici nous allons nous concentrer sur [PM2](https://github.com/Unitech/pm2).
+Il existe plusieurs outils pour déployer un projet ([supervisor](https://github.com/petruisfan/node-supervisor), [forever](https://github.com/foreverjs/forever)), ici nous allons nous concentrer sur [PM2](https://github.com/Unitech/pm2).
 
 ### PM2
 
-##### Installation 
+#### Installation 
 
 Nous allons installer PM2 en global _via_ : 
 
@@ -23,7 +23,7 @@ Nous allons installer PM2 en global _via_ :
 npm install pm2 -g
 ```
 
-##### Lancement 
+#### Lancement 
 
 Vous pouvez lancer votre application en faisant simplement : 
 
@@ -31,7 +31,7 @@ Vous pouvez lancer votre application en faisant simplement :
 pm2 start bin/www 
 ```
 
-ou bien la faire démarer sur cluster, ce qui vous permettra de rajouter des clusters à chaud, de recharger l'application instantanément et d'avoir un load balancing: 
+ou bien la faire démarer sur cluster, ce qui vous permettra de rajouter des clusters à chaud, de recharger l'application instantanément et d'avoir du load balancing: 
 
 ```
 pm2 start bin/www -i 0 #démarre avec le nombre max de processeurs sur l'ordinateur 
@@ -39,13 +39,13 @@ pm2 start bin/www -i 0 #démarre avec le nombre max de processeurs sur l'ordinat
 pm2 start bin/www -i 2 #démarre sur 2 processeurs
 ```
 
-Vous pouvez aussi faire redémarrer le serveur à chaque modification et lui donner un nom : 
+Vous pouvez aussi faire redémarrer le serveur à chaque modification et lui donner un nom en faisant : 
 
 ```
 pm2 start bin/www --watch --name="site"
 ```
 
-##### Monitoring 
+#### Monitoring 
 
 Il est possible 
 
@@ -82,7 +82,7 @@ Il est aussi possible moniter son site directement _via_ une interface web grâc
 
 ### Sécurité 
 
-##### Helmet 
+#### Helmet 
 
 [Helmet](https://github.com/helmetjs/helmet) permet de sécuriser le site _via_ les headers. Il suffit de l'installer _via_ : 
 
@@ -101,7 +101,7 @@ var app = express();
 app.use(helmet());
 ```
 
-##### Csurf
+#### Csurf
 
 [Csurf](https://github.com/expressjs/csurf) permet de gérer les failles CSRF, pour cela il faut l'installer _via_ : 
 
@@ -127,14 +127,14 @@ Il n'y aura par la suite qu'à rajouter un input:hidden avec la value contenue d
 
 ```
  form(action="/toto" method="POST")
- 	# La variable _csrf est automatiquement envoyé au fichier de vue
+ 	# La variable _csrf est automatiquement envoyée au fichier de vue
     input(name="_csrf" type="hidden" value=`#{_csrf}`)
     button(type="submit") envoyer
 ```
 
-##### Nsp 
+#### Nsp 
 
-[NodeSecurity.io](https://nodesecurity.io/) est un projet visant à améliorer la sécuriter sur les sites en node. Ils proposent des outils comme [nsp](https://nodesecurity.io/opensource) et [nsp Live](https://nodesecurity.io/services). 
+[NodeSecurity.io](https://nodesecurity.io/) est un projet visant à améliorer la sécurité sur les sites en node. Ils proposent des outils comme [nsp](https://nodesecurity.io/opensource) et [nsp Live](https://nodesecurity.io/services). 
 
 Nous allons utiliser `nsp`, pour l'installer il est nécessaire de le faire en global _via_ : 
 ```
@@ -145,6 +145,8 @@ puis à l'intérieur de votre projet, faire :
 ```
 nsp check
 ```
+
+Enjoy ;) 
 __________
 __________
 
