@@ -1,4 +1,7 @@
-module.exports = function(io) {
+var messages = [];
+
+
+module.exports = function (io) {
     io.on('connection', function (socket) {
         console.log('New user');
         // On envoie le nombre de personnes actuellement sur le socket à tout le monde (sauf la personne qui vient de se connecter)
@@ -9,9 +12,15 @@ module.exports = function(io) {
         socket.on('message', data => {
             socket.emit('message', data);
             socket.broadcast.emit('message', data);
+
+            messages.push(data);
+
+            if (messages.length > 10) {
+                messages.shift();
+            }
         });
 
-
+        socket.emit('init', messages);
 
         socket.on('disconnect', function () {
             console.log('User gone');

@@ -7,17 +7,22 @@ socket.on('UserState', function (data) {
 });
 
 //ES6
-document.querySelector('form').addEventListener('change', function(e){
+document.querySelector('form').addEventListener('submit', function(e){
     e.preventDefault();
     socket.emit('message', document.querySelector('#message').value);
-    document.querySelector('form input').value =''; 
+    document.querySelector('form input').value ='';
     return false;
 });
 
 socket.on('message', function(data){
-
     document.querySelector('ul').innerHTML += `<li>${data}</li>`;
 });
+
+
+socket.on('init', function(data){
+    data.forEach(v => document.querySelector('ul').innerHTML += `<li>${v}</li>`) ;
+});
+
 
 //jQuery
 /*
