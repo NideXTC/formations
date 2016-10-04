@@ -128,7 +128,7 @@ Il n'y aura par la suite qu'à rajouter un input:hidden avec la value contenue d
 ```
  form(action="/toto" method="POST")
  	# La variable _csrf est automatiquement envoyée au fichier de vue
-    input(name="_csrf" type="hidden" value=`#{_csrf}`)
+    input(name="_csrf" type="hidden" value="#{_csrf}")
     button(type="submit") envoyer
 ```
 
