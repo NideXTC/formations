@@ -42,7 +42,7 @@ Nous allons désormais utiliser les commandes de [Sequelize-cli](https://github.
 Nous allons créer une voiture, pour cela en ligne de commande faire : 
 
 ```
-sequelize model:create --name Car --attributes 'brand:string, km:integer'
+sequelize model:create --name Car --attributes "brand:string, km:integer"
 ```
 
 Votre modèle est disponible dans `app/models/car.js` et devrait ressembler à ça : 
