@@ -1,4 +1,4 @@
-require('../models/User');
+require('./User');
 
 var mongoose = require('mongoose'),
     User = mongoose.model('User');
