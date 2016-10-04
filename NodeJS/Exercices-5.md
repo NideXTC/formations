@@ -165,11 +165,11 @@ const models  = require('../models');
 var Cars = {
     index: function (req, res) {
          models
-            .User
+            .Car
             .findAll()
-            .then(function(users) {
+            .then(function(cars) {
                 res.render('index', {
-                  users: users
+                  cars: cars
                 });
           });
      
