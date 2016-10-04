@@ -7,6 +7,7 @@
 var app = require('../app');
 var debug = require('debug')('potato:server');
 var http = require('http');
+const models = require("../app/models");
 
 /**
  * Get port from environment and store in Express.
@@ -29,7 +30,11 @@ var io = require('socket.io')(server);
 // Nous créons une accès au socket
 require('../app/sockets/Base')(io);
 
-server.listen(port);
+
+models.sequelize.sync().then(function () {
+  server.listen(port);
+});
+
 server.on('error', onError);
 server.on('listening', onListening);
 
