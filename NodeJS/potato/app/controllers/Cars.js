@@ -11,6 +11,13 @@ var Cars = {
                 });
             });
 
+    },
+    create : function(req, res) {
+        models.Car.create({ brand: 'foo', km: '12'}).then(function() {
+            res.send({error : null});
+        }, function () {
+            res.send({error : '1'});
+        });
     }
 };
 
