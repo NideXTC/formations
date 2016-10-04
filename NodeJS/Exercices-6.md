@@ -60,6 +60,11 @@ Nous allons devoir faire une petite modification sur notre fichier `bin/www` en 
 module.exports = app;
 ```
 
+Puis nous allons lancer notre fichier _via_ mocha :
+
+```
+mocha test/
+```
 
 #### GET 
 
