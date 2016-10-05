@@ -78,7 +78,6 @@ process.env.NODE_ENV = 'test';
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const server = require('../bin/www');
-const should = chai.should();
 
 chai.use(chaiHttp);
 
@@ -87,7 +86,7 @@ describe('GET /users', _ => {
         chai.request(server)
             .get('/users')
             .end(function (err, res) {
-                res.should.have.status(200);
+                expect(res).to.have.status(200);
                 done();
             });
     });
@@ -122,7 +121,7 @@ describe('GET /users ', _ => {
         chai.request(server)
             .get('/users')
             .end(function (err, res) {
-                res.should.have.status(200);
+                expect(res).to.have.status(200);
                 done();
             });
     });
@@ -137,7 +136,7 @@ describe('POST /users ', _ => {
             .post('/users')
             .send(user)
             .end((err, res) => {
-                res.should.have.status(200);
+                expect(res).to.have.status(200);
                 /*res.body.should.be.a('object');
                  res.body.user.should.have.property('name');
                  res.body.user.should.have.property('firstname');
@@ -158,7 +157,7 @@ describe('POST /users ', _ => {
             .post('/users')
             .send(user)
             .end((err, res) => {
-                res.should.have.status(200);
+                expect(res).to.have.status(200);
                 /*res.body.should.be.a('object');
                 res.body.user.should.have.property('name');
                 res.body.user.should.have.property('firstname');
