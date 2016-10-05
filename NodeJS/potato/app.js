@@ -9,8 +9,24 @@ var mongoose = require('mongoose');
 var routes = require('./app/routes/index');
 var users = require('./app/routes/users');
 var cars = require('./app/routes/cars');
+const helmet = require('helmet');
+const csrf = require('csurf');
 
 var app = express();
+
+app.use(require('compression')());
+
+app.use(csrf());
+
+app.use(helmet());
+
+
+app.use(function (req, res, next) {
+  res.locals._csrf = req.csrfToken();
+  res.cookie('XSRF-TOKEN', req.csrfToken());
+  next();
+});
+
 
 mongoose.Promise = global.Promise;
 

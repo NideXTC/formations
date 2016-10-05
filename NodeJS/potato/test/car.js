@@ -14,7 +14,7 @@ describe('/GET cars', _ => {
         chai.request(server)
             .get('/users')
             .end(function (err, res) {
-                res.should.have.status(200);
+                expect(res).to.have.status(200);
                 done();
             });
     });
@@ -30,15 +30,15 @@ describe('POST /cars ', _ => {
             .post('/cars')
             .send(car)
             .end((err, res) => {
-                res.should.have.status(200);
-                res.body.should.be.a('object');
-                res.body.user.should.have.property('error');
-                res.body.user.should.have.property('error').eql('toto');
-                /*res.body.should.be.a('object');
-                 res.body.user.should.have.property('name');
-                 res.body.user.should.have.property('firstname');
-                 res.body.user.should.have.property('email');
-                 res.body.should.have.property('message').eql('User successfully added!');*/
+                expect(res).to.have.status(200);
+                expect(res.body).to.be.a('object');
+                expect(res.body).to.have.property('error');
+                expect(res.body).to.have.property('error').eql('toto');
+                /*expect(res.body).to.be.a('object');
+                 expect(res.body.car).to.have.property('name');
+                 expect(res.body.car).to.have.property('firstname');
+                 expect(res.body.car).to.have.property('email');
+                 expect(res.body.car).to.property('message').eql('User successfully added!');*/
                 done();
             });
     });
@@ -54,12 +54,12 @@ describe('POST /cars ', _ => {
             .post('/cars')
             .send(car)
             .end((err, res) => {
-                res.should.have.status(200);
-                /*res.body.should.be.a('object');
-                 res.body.user.should.have.property('name');
-                 res.body.user.should.have.property('firstname');
-                 res.body.user.should.have.property('email');
-                 res.body.should.have.property('message').eql('User successfully added!');*/
+                expect(res).to.have.status(200);
+                /*expect(res.body).to.be.a('object');
+                 expect(res.body.car).to.have.property('name');
+                 expect(res.body.car).to.have.property('firstname');
+                 expect(res.body.car).to.have.property('email');
+                 expect(res.body.car).to.property('message').eql('User successfully added!');*/
                 done();
             });
     });

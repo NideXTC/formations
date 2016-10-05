@@ -11,6 +11,8 @@ var Cars = {
                 });
             });
 
+        console.log('toto');
+
     },
     create : function(req, res) {
         models.Car.create({ brand: 'foo', km: '12'}).then(function() {
