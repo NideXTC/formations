@@ -7,6 +7,7 @@ body {
 
 
 article {
+    margin-bottom: 5px;
     background: white;
     color: black;
     padding: 20px;
@@ -93,7 +94,13 @@ input[type="text"]:hover {
 
 nav {
     background: white;
+    text-align: center;
 }
+
+nav ul {
+    padding: 0;
+}
+
 nav li a {
     color: yellow;
     text-decoration: none;
@@ -110,6 +117,12 @@ nav li {
     height: 50px;
     transition: background 0.5s;
 }
+
+/*
+nav li:last-child {
+    float: right
+}
+*/
 
 nav li:hover {
     background: green;
