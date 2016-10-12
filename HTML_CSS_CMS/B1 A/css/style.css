@@ -118,6 +118,28 @@ nav li {
     transition: background 0.5s;
 }
 
+@media screen and (min-width:617px) and (max-width:923px) {
+    nav li {
+        width: 100px;
+    }
+}
+@media screen and  (max-width:617px) {
+    nav li {
+        width: 100%;
+    }
+}
+
+
+
+footer {
+    position:fixed; 
+    bottom: 0;
+    background: red;
+    width: 100%;
+    color: black;
+    
+}
+
 /*
 nav li:last-child {
     float: right
