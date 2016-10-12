@@ -32,6 +32,7 @@ table td button:active {
 }
 
 
+
 table td.tata {
     background: blue;
 }
@@ -61,3 +62,31 @@ nav {
 
     */ 
 }
+
+
+
+/* FORM */ 
+
+input[type="text"] {
+    width: 150px;
+    padding: 0;
+}
+
+input[type="text"]:active, input[type="text"]:focus {
+    border : 2px solid blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
