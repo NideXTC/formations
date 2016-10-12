@@ -15,6 +15,35 @@ article {
     padding-right: 20px;*/
 }
 
+table td .tata {
+    background: red;
+}
+
+table td button {
+    background: red;
+}
+
+table td button:hover {
+    background: yellow;
+}
+
+table td button:active {
+    background: green;
+}
+
+
+table td.tata {
+    background: blue;
+}
+
+/*
+table.t1 td{
+    background: red;
+}
+
+table.t2 td{
+    background: yellow;
+}*/
 
 h1#title {
     text-align: center; 
