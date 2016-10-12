@@ -67,13 +67,26 @@ nav {
 
 /* FORM */ 
 
+.circle {
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 50%;
+}
+
 input[type="text"] {
     width: 150px;
     padding: 0;
+    border-radius: 3px;
+    /* background: transparent; */
 }
 
 input[type="text"]:active, input[type="text"]:focus {
     border : 2px solid blue;
+}
+
+input[type="text"]:hover {
+    border-color: lightblue;
 }
 
 
