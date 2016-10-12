@@ -5,6 +5,7 @@ body {
     color: white;
 }
 
+
 article {
     background: white;
     color: black;
@@ -39,11 +40,11 @@ table td.tata {
 
 /*
 table.t1 td{
-    background: red;
+background: red;
 }
 
 table.t2 td{
-    background: yellow;
+background: yellow;
 }*/
 
 h1#title {
@@ -93,14 +94,31 @@ input[type="text"]:hover {
 nav {
     background: white;
 }
+nav li a {
+    color: yellow;
+    text-decoration: none;
+    height: 50px;
+    display: block;
+    line-height: 50px;
+    text-align: center;
+}
 
 nav li {
     background: red;
     display: inline-block;
     width: 300px;
+    height: 50px;
+    transition: background 0.5s;
+}
+
+nav li:hover {
+    background: green;
 }
 
 
+nav li:active {
+    background: purple;
+}
 
 
 
