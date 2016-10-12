@@ -11,6 +11,35 @@ body {
     box-sizing: border-box;
 } 
 
+
+.toto {
+    width: 200px; 
+    height: 200px; 
+    background: red;
+}
+
+@media screen and (max-width:200px) {
+    .toto {
+        background: blue;
+    }
+}
+
+@media screen and (min-width:201px) and (max-width:400px)   {
+    .toto {
+        background: black;
+    }
+}
+
+@media screen and (min-width:401px) and (max-width:600px)   {
+    .toto {
+        background: green;
+    }
+}
+
+
+
+
+
 article {
     margin-bottom: 5px;
     background: white;
