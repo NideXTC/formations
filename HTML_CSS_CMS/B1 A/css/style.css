@@ -90,6 +90,16 @@ input[type="text"]:hover {
 }
 
 
+nav {
+    background: white;
+}
+
+nav li {
+    background: red;
+    display: inline-block;
+    width: 300px;
+}
+
 
 
 
