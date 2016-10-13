@@ -1,8 +1,24 @@
 .move {
     width: 200px; 
     height: 200px; 
-    background: #333; 
-    position: absolute;
-    left: 10px; 
-    top: 10px;
+    background: #ff00d8; 
+    transition: all 2s ease ;
 }
+
+.move:hover {
+    background: yellow;
+    left: 100px;
+    left: 200px;
+}
+
+
+.move1 {
+    background: #0aff00; 
+}
+
+
+.move2 {
+    background: #0909f7; 
+}
+
+
