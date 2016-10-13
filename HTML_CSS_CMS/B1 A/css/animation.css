@@ -1,8 +1,20 @@
+@keyframes go {
+    0% {
+        top : 10px; 
+        right: 10px; 
+    }
+    50% {
+        top : 400px; 
+        right: 400px; 
+    }
+}
+
 .move {
     width: 200px; 
     height: 200px; 
     background: #ff00d8; 
     transition: all 2s ease ;
+    animation: go 2s linear infinite;
 }
 
 .move:hover {
@@ -23,4 +35,14 @@
 .move2:hover {
     right: 50px;
 }
+
+
+
+
+
+
+
+
+
+
 
