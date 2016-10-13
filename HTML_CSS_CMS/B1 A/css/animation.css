@@ -1,42 +1,59 @@
 @keyframes go {
     0% {
         top : 10px; 
-        right: 10px; 
+        right: 10px;
+        background: yellow;
+        transform: rotate(90deg);
     }
-    50% {
+    25% {
+        top : 10px; 
+        right: 400px; 
+        background: green;
+        
+        transform: rotate(180deg);
+    }
+    50%{
         top : 400px; 
         right: 400px; 
+        background: purple;
+        transform: rotateZ(360deg);
     }
+    100%{
+        top : 400px; 
+        right: 10px; 
+        background: red;
+    }
+    
 }
-
+body {
+    transform-style :preserve-3d;
+}
 .move {
     width: 200px; 
     height: 200px; 
+      right: 10px; 
+    top: 10px;
+    position: absolute;
     background: #ff00d8; 
     transition: all 2s ease ;
-    animation: go 2s linear infinite;
+    animation: go 2s ease-in-out infinite;
 }
 
-.move:hover {
-    background: yellow;
-}
 
+
+
+.move0 {
+    transform: translateZ(1px);
+}
 .move1 {
-    background: #0aff00; 
+    transform: translateZ(2px);
 }
-
 .move2 {
-    position: absolute;
-    background: #0909f7; 
-    right: 10px; 
-    top: 10px;
+    transform: translateZ(3px);
 }
-
-.move2:hover {
-    right: 50px;
+.move3 {
+    transform: translateZ(4px);
 }
-
-
 
 
 
