@@ -13,9 +13,19 @@ header a {
 }
 
 /** 
-- image de fond  
+H1    
+    - Mettre en gras 
+    - Changer la taille du texte (30px)
+    - Changer la couleur 
 
-
+NAV 
+    - Fond de couleur 
+    - Lien alignés (display : inline-block)
+    - Retirer les puces (list-style : none)
+    
+    A 
+        - Sans soulignement 
+        - Couleur verte 
 **/ 
 
 
