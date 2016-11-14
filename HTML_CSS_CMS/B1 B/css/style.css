@@ -4,12 +4,12 @@ body {
     background-size: cover;
 }
 
-a {
-    color : red;
-}
-
-header a {
-    color : aqua;
+h1 {
+    font-weight: bold; 
+    font-size: 30px; 
+    color: blue;
+    text-align: center;
+    font-family: "arial black";
 }
 
 /** 
@@ -20,7 +20,7 @@ H1
 
 NAV 
     - Fond de couleur 
-    - Lien alignés (display : inline-block)
+    - Lien alignés (display : inline-block) sur nav ul li 
     - Retirer les puces (list-style : none)
     
     A 
@@ -28,6 +28,9 @@ NAV
         - Couleur verte 
 **/ 
 
+nav ul li {
+    display: inline-block;
+}
 
 
 
