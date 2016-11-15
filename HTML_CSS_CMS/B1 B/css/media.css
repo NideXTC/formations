@@ -1,23 +1,38 @@
 @keyframes toto {
     0% {
-         top: 0px; 
+        top: 0px; 
         left: 0px; 
+        transform: rotate(0deg);
+    }
+    25% {
+        top: 0px;
+        left : calc(100% - 300px);
+    }
+    50%{
+        top: calc(100% - 300px);
+        left : calc(100% - 300px);
+        /** Cercle **/
+        border-radius: 50%;
+    }
+    75% {
+        top: calc(100% - 300px);
+        left : 0;
     }
     100% {
-        top: 0px;
-        left : 100%;
+        top: 0px; 
+        left: 0px; 
+        transform: rotate(360deg);
     }
 }
 
-
-
 .shape {
+    
     position: absolute;
     width: 300px;
     height : 300px; 
     background-color: red;
-    /*transition: all 4s cubic-bezier(.09,.3,1,-0.92);*/
-    animation: toto 10s linear infinite; 
+    animation: toto 2s linear infinite; 
+    box-shadow: 2px 2px 0 #000;
 }
 
 
@@ -26,23 +41,23 @@
 }
 
 /*input:focus {
-    border : 1px solid red;
+border : 1px solid red;
 }
 
 a {
-    color : green; 
+color : green; 
 }
 
 a:hover {
-    color : yellow;
+color : yellow;
 }
 
 a:visited {
-    color : purple;
+color : purple;
 }
 
 a:active {
-    color : blue;
+color : blue;
 }*/ 
 
 /*******
@@ -58,21 +73,21 @@ a:active {
 
 @media screen and (max-width: 600px)
 {
-   .shape {
+    .shape {
         background-color: blue;
     }
 }
 
 @media screen and (min-width: 600px) and (max-width: 900px)
 {
-   .shape {
+    .shape {
         background-color: green;
     }
 }
 
 @media screen and (min-width: 900px)
 {
-   .shape {
+    .shape {
         background-color: red;
     }
 }
