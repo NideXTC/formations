@@ -8,7 +8,7 @@
     outline: none;
 }
 
-input:focus {
+/*input:focus {
     border : 1px solid red;
 }
 
@@ -26,7 +26,10 @@ a:visited {
 
 a:active {
     color : blue;
-}
+}*/ 
+
+
+
 
 
 @media screen and (max-width:700px) {
