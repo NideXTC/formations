@@ -26,10 +26,42 @@ NAV
     A 
         - Sans soulignement 
         - Couleur verte 
+
+FOOTER 
+
+    
 **/ 
+
+nav {
+    background: red;
+}
 
 nav ul li {
     display: inline-block;
+    background: white;
+}
+
+
+nav ul li a {
+    padding-right: 50px;       
+}
+
+article {
+    background-color: red; 
+    /*display: inline-block;*/
+    
+    height: 300px;
+    margin : auto;
+    
+    padding: 10px;
+    
+    /*border-style: solid;
+    border-color: black;
+    border: 1px; */ 
+    
+    border : 1px solid black;
+    
+    
 }
 
 
