@@ -20,14 +20,14 @@
 
 		play.addEventListener('click', e => {
 			e.preventDefault(); 
-			if(play.getAttribute('data-play') == '0'){
-				audio.play(); 	
-				play.setAttribute('data-play', 1);
-				play.innerHTML = 'Pause';
-			} else {
+			if(play.getAttribute('data-play') == '1'){
 				audio.pause(); 
 				play.setAttribute('data-play', 0);
 				play.innerHTML = 'Play';
+			} else {
+				audio.play(); 	
+				play.setAttribute('data-play', 1);
+				play.innerHTML = 'Pause';
 			}
 		}); 
 
