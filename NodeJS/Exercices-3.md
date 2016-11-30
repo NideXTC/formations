@@ -72,10 +72,8 @@ module.exports = app;
 Nous allons désormais pouvoir nous servir de ces fonctions dans notre controlleur _Users.js_.
 
 ```
-require('../models/User');
-
 var mongoose = require('mongoose'),
-    User = mongoose.model('User');
+    User = require('../models/User');
 
 
 var Users = {
