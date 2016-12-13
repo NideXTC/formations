@@ -69,11 +69,30 @@ for ($i = 0; $i < $size; $i++) {
 
 echo PHP_EOL;
 
-foreach ($ar as $k => $v){
-    echo $k . ' ' . $v;
+foreach ($ar as $key => $value) {
+    echo $key . ' ' . $value;
 }
 
 
+/**
+ * Exercice 5
+ */
+
+
+function maj($text)
+{
+    $size = strlen($text); // Toto -> 4
+    for ($i = 0; $i < $size; $i++) {
+        $ascii = ord($text[$i]);
+        if($ascii > 96 && $code < 123){
+            $text[$i] = chr($ascii - 32);
+        }
+    }
+
+    echo $text;
+}
+
+maj('Coucou !');
 
 
 
