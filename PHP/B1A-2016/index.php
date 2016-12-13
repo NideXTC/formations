@@ -81,14 +81,24 @@ foreach ($ar as $key => $value) {
 
 function maj($text)
 {
-    $size = strlen($text); // Toto -> 4
+    // Retourne la taille de la chaîne de caractères
+    $size = strlen($text);
+
+    // On boucle sur chaque caractère
     for ($i = 0; $i < $size; $i++) {
+
+        // On récupère le code ASCII de chaque lettre
         $ascii = ord($text[$i]);
-        if($ascii > 96 && $code < 123){
+
+        // On vérifie que la lettre est bien en minuscule
+        if($ascii > 96 && $ascii < 123){
+
+            // On transforme le code ASCII en lettre
             $text[$i] = chr($ascii - 32);
         }
     }
 
+    // On affiche le texte modifié 
     echo $text;
 }
 
