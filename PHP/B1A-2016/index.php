@@ -2,6 +2,8 @@
 /***
  * EXERCICE 1
  ***/
+
+
 // function
 /*function show()
 {
@@ -39,7 +41,7 @@ show3("voiture");
  * EXERCICE 3
  ***/
 
-
+/*
 for ($i = 0; $i < 10; $i++) {
     echo $i;
 }
@@ -50,7 +52,31 @@ $j = 0;
 while ($j < 10) {
     echo $j;
     $j++;
+}*/
+
+
+/**
+ * Exercice 4
+ */
+
+
+$ar = ['a', 'b', 'c'];
+$size = sizeof($ar);
+
+for ($i = 0; $i < $size; $i++) {
+    echo $ar[$i];
 }
+
+echo PHP_EOL;
+
+foreach ($ar as $k => $v){
+    echo $k . ' ' . $v;
+}
+
+
+
+
+
 
 
 
