@@ -98,12 +98,31 @@ function maj($text)
         }
     }
 
-    // On affiche le texte modifié 
+    // On affiche le texte modifié
     echo $text;
 }
 
 maj('Coucou !');
 
+
+
+function fibonacci($start = 0, $next = 1, $limit = 10){
+
+    // On additionne les deux valeurs
+    echo $new = $start + $next;
+
+    // On retire 1 à $limit
+    $limit--;
+
+    // Si $limit est égale à 0, on sort de la fonction
+    if($limit === 0) return false;
+
+    // On appelle à nouveau la même fonction avec les nouvelles valeurs
+    fibonacci($next, $new, $limit);
+}
+
+// on initialise la fonction
+fibonacci();
 
 
 
