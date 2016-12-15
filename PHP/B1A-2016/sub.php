@@ -1,5 +1,5 @@
 <?php
-
+// Initialisation de la session
 session_start();
 
 // Forcer l'affichage des erreurs
@@ -18,10 +18,25 @@ ini_set('error_reporting', E_ALL);
 if(isset($_POST['first_name']) && isset($_POST['name'])
     && !empty($_POST['password']) &&  !empty($_POST['email']) ) {
 
+    // Enregistrement du post dans une session
+
+    $_SESSION = $_POST;
+
+    /*
+        $_SESSION['password'] = $_POST['password']
+        ....
+    */
+
+    // Redirection vers une autre page
+
+    header('Location:page2.php');
+
+    // l'affichage en web des valeurs du post
     echo 'Le prénom est : ' . $_POST['first_name'] . '<br>';
     echo 'Le nom est : ' . $_POST['name'] . '<br>';
     echo 'Le mot de passe est : ' . htmlentities($_POST['password']) . '<br>';
     echo 'L\'email est : ' . htmlentities($_POST['email']) . '<br>';
+
 
 } else if (isset($_POST['password'])) {
     echo 'Champs vides';
