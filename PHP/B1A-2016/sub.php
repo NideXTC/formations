@@ -1,4 +1,11 @@
 <?php
+
+session_start();
+
+// Forcer l'affichage des erreurs
+ini_set('display_errors', 1);
+ini_set('error_reporting', E_ALL);
+
 /*
     echo '<pre>';
     var_dump($_POST);
@@ -13,8 +20,8 @@ if(isset($_POST['first_name']) && isset($_POST['name'])
 
     echo 'Le prénom est : ' . $_POST['first_name'] . '<br>';
     echo 'Le nom est : ' . $_POST['name'] . '<br>';
-    echo 'Le mot de passe est : ' . $_POST['password'] . '<br>';
-    echo 'L\'email est : ' . $_POST['email'] . '<br>';
+    echo 'Le mot de passe est : ' . htmlentities($_POST['password']) . '<br>';
+    echo 'L\'email est : ' . htmlentities($_POST['email']) . '<br>';
 
 } else if (isset($_POST['password'])) {
     echo 'Champs vides';
@@ -31,13 +38,13 @@ if(isset($_POST['first_name']) && isset($_POST['name'])
 </head>
 <body>
 <form action="" method="post">
-    <input type="text" name="name" id="name" placeholder="name" required>
+    <input type="text" name="name" id="name" placeholder="name" >
     <br>
-    <input type="text" name="first_name" id="first_name"  placeholder="first_name" required>
+    <input type="text" name="first_name" id="first_name"  placeholder="first_name" >
     <br>
-    <input  type="text" name="email" id="email"  placeholder="email" required>
+    <input  type="text" name="email" id="email"  placeholder="email" >
     <br>
-    <input type="text" name="password" id="password" placeholder="password" required>
+    <input type="text" name="password" id="password" placeholder="password" >
     <br>
     <button type="submit"> Enregistrer </button>
 </form>
