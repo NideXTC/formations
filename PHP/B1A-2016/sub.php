@@ -27,6 +27,9 @@ if(isset($_POST['first_name']) && isset($_POST['name'])
         ....
     */
 
+    // Écriture dans un fichier, à la suite du texte précédent
+    file_put_contents('toto.txt', print_r($_SESSION, true), FILE_APPEND);
+
     // Redirection vers une autre page
 
     header('Location:page2.php');
@@ -61,6 +64,8 @@ if(isset($_POST['first_name']) && isset($_POST['name'])
     <br>
     <input type="text" name="password" id="password" placeholder="password" >
     <br>
+
+
     <button type="submit"> Enregistrer </button>
 </form>
 </body>
