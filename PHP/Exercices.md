@@ -33,10 +33,30 @@ Créer une fonction récursive pour générer une suite de Fibonacci. Instaurer 
 3 + 5 = 8 
 .... 
 
-function fibonacci(1){
+// 
+function fibonacci($start = 0, $next = 1, $limit = 10){
 
-	fibonacci( la suite ); 
+	fibonacci(1, 1, 9); 
 }
+
+
+.
+.
+. 
+
+fibonacci(1, 2, 8);
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
