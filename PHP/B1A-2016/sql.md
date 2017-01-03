@@ -16,6 +16,9 @@ SELECT * FROM user WHERE id = 1;
 
 ```
 INSERT INTO user(name, email, password) VALUES ('Toto', 'a@a.fr', 'Titi');
+
+
+INSERT INTO user VALUES (NULL, 'Toto', 'Titi', 'a@a.fr');
 ```
 
 4 - Modifier l'utilisateur Toto et lui changer son mail en 'b@b.fr' (UPDATE + WHERE)
