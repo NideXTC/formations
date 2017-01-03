@@ -1,8 +1,27 @@
 <?php
 
-if (!empty($_POST)) {
-    //TODO insert code here 
+//include 'connect.php';
+
+//include_once 'connect.php';
+
+require 'connect.php';
+
+//require_once 'connect.php';
+
+if (!empty($_POST)){
+    $requete = $dbh->prepare('INSERT INTO user VALUES(NULL,
+      :name, :password, :email
+    )');
+
+    $requete->execute([
+        ':name' => $_POST['name'],
+        ':password' => $_POST['password'],
+        ':email' => $_POST['email']
+    ]);
 }
+
+
+// Si le résultat de la bdd n'est pas vide -> connecte (création de session)
 
 ?>
 <!doctype html>
