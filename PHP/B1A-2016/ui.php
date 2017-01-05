@@ -1,15 +1,13 @@
 <?php
 
-$result = [
-    [
-        'id' => 1,
-        'name' => 'nom 1'
-    ],
-    [
-        'id' => 2,
-        'name' => 'nom 2'
-    ]
-];
+require 'connect.php';
+
+
+$req = $dbh->prepare('SELECT * FROM products'); 
+$req->execute(); 
+
+
+$result = $req->fetchAll();
 
 echo '<table border="1">';
 echo '<tr>';
