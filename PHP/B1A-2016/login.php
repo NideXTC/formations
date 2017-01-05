@@ -2,6 +2,7 @@
 
 require 'connect.php';
 
+
 if (!empty($_POST)) {
     $req = $dbh->prepare('SELECT * FROM user 
                    WHERE email = :email 
@@ -12,10 +13,16 @@ if (!empty($_POST)) {
         ':password' => $_POST['password']
     ]);
 
-    if(count($req->fetchAll()) > 0){
-        echo 'Exists';
+    $users = $req->fetchAll();
+
+    echo '<pre>';
+    var_dump($users);
+    echo '</pre>';
+
+    if(count($users) > 0){
         $_SESSION['connected'] = true;
-        header('Location:espace-admin.php');
+        $_SESSION['id'] = $users[0]['id'];
+        //header('Location:account.php');
     } else {
         echo 'Unknown';
     }
