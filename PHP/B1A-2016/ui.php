@@ -11,7 +11,13 @@ $result = [
     ]
 ];
 
-echo '<table>';
+echo '<table border="1">';
+echo '<tr>';
+    echo '<th> id </th>';
+    echo '<th> nom </th>';
+    echo '<th> actions </th>';
+echo '</tr>';
+
 foreach ($result as $item) {
     echo '<tr>';
     echo '<td>'.$item['id'].'</td>';
