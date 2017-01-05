@@ -5,8 +5,6 @@ require 'connect.php';
 
 $req = $dbh->prepare('SELECT * FROM products'); 
 $req->execute(); 
-
-
 $result = $req->fetchAll();
 
 echo '<table border="1">';
