@@ -5,6 +5,17 @@ if (!$_SESSION['connected']) {
     // l'utilisateur n'est pas connecté
     header('Location:login.php');
 }
+
+if (!empty($_POST)) {
+    $requete = $dbh->prepare('UPDATE user SET name = :name, email = :email, password = :password WHERE id = :id');
+    $requete->execute([
+        ':name' => $_POST['name'],
+        ':email' => $_POST['email'],
+        ':password' => $_POST['password'],
+        ':id' => $_SESSION['id']
+    ]);
+}
+
 ?>
 <!doctype html>
 <html lang="en">
