@@ -1,17 +1,21 @@
 <?php
 
-require 'connect.php';
-
-
-$req = $dbh->prepare('SELECT * FROM products'); 
-$req->execute(); 
-$result = $req->fetchAll();
+$result = [
+    [
+        'id' => 1,
+        'name' => 'nom 1'
+    ],
+    [
+        'id' => 2,
+        'name' => 'nom 2'
+    ]
+];
 
 echo '<table border="1">';
 echo '<tr>';
-    echo '<th> id </th>';
-    echo '<th> nom </th>';
-    echo '<th> actions </th>';
+echo '<th> id </th>';
+echo '<th> nom </th>';
+echo '<th> actions </th>';
 echo '</tr>';
 
 foreach ($result as $item) {

@@ -33,7 +33,7 @@ if (!empty($_POST)) {
         // On accepte seulement du PNG
         if ($extension == 'png' && $mime == 'image/png') {
             move_uploaded_file($_FILES['image']['tmp_name'],
-                'upload/' . @);
+                'upload/' . $_FILES['image']['name']);
             $image = $_FILES['image']['name'];
         }
 

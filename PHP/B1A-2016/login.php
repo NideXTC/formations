@@ -3,6 +3,8 @@
 require 'connect.php';
 
 
+var_dump($_SESSION);
+
 if (!empty($_POST)) {
     $req = $dbh->prepare('SELECT * FROM user 
                    WHERE email = :email 
