@@ -1,5 +1,7 @@
+# Serveur web
 
-WINDOWS 
+
+#### WINDOWS 
 
 E (avec le carré rouge) en bas en droite -> Open dashboard 
 
@@ -8,33 +10,44 @@ Click start -> Apache -> Start 			Click start -> MySQL -> start
 
 
 
-MAC 
+#### MAC 
 
 Lancer MAMP (pas le pro) -> Démarrer les serveurs 
 
 
+
+# WORDPRESS 
 
 Télécharger WP : https://fr.wordpress.org/ 
 
 
 
 
-MAC -> Copier le dossier dezipé dans /Application/MAMP/htdocs/ 
-WINDOWS -> Copier le dossier dezipé dans C:\program files(x86)\EasyPHP-devserver....\eds-www 
+#### MAC 
+	-> Copier le dossier dezipé dans /Application/MAMP/htdocs/ 
+
+#### WINDOWS 
+	-> Copier le dossier dezipé dans C:\program files(x86)\EasyPHP-devserver....\eds-www 
 
 
-MAC -> MAMP -> Open WebStart page -> Click sur le lien PhpMyAdmin 
-Windows -> Clic droit sur le E -> Open Dashboard -> sur la page d'accueil -> Module -> PhpMyAdmin -> Open 
+#### MAC 
+	-> MAMP -> Open WebStart page -> Click sur le lien PhpMyAdmin 
+#### Windows 
+	-> Clic droit sur le E -> Open Dashboard -> sur la page d'accueil -> Module -> PhpMyAdmin -> Open 
 
 
-Bolet de gauche -> Clik sur "Nouvelle base de données" -> Vous lui donnez un nom (Sans espace) -> Créer 
+# PHPMYADMIN
+
+Volet de gauche -> Clik sur "Nouvelle base de données" -> Vous lui donnez un nom (Sans espace) -> Créer 
 
 
-MAC : http://localhost:8888 ou http://127.0.0.1:8888
-WINDOWS : http://localhost ou http://127.0.0.1 
+#### MAC : 
+	http://localhost:8888 ou http://127.0.0.1:8888
+#### WINDOWS :
+	 http://localhost ou http://127.0.0.1 
 
 
-Windows : 
+#### Windows : 
 
 Nom de la base de données : [ce que vous avez rentré dans PhpMyAdmin]
 Utilisateur : root 
@@ -43,7 +56,7 @@ Adresse de la base : localhost
 prefix : wp_
 
 
-Mac : 
+#### Mac : 
 
 Nom de la base de données : [ce que vous avez rentré dans PhpMyAdmin]
 Utilisateur : root 
@@ -52,10 +65,12 @@ Adresse de la base : localhost
 prefix : wp_
 
 
-Page d'admin : 
+## Page d'admin : 
 
-WINDOWS -> http://localhost/[nom du dossier]/wp-admin
-MAC -> http://localhost:8888/[nom du dossier]/wp-admin
+#### WINDOWS 
+	-> http://localhost/[nom du dossier]/wp-admin
+#### MAC 
+	-> http://localhost:8888/[nom du dossier]/wp-admin
 
 
 
