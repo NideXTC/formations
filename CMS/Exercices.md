@@ -93,6 +93,9 @@ mail :  tutu@yopmail.com
 4/ Gérer les paramètres des commentaires pour que l'administrateur puisse modérer les comms 
 
 
+5/ Créer un article protégé par un mot de passe 
+
+6/ Ajouter une image dans la bibliothèque d'images et l'ajouter dans l'article protégé 
 
 
 
