@@ -1,6 +1,8 @@
 # Serveur web
 
 
+https://github.com/NideXTC/CoursYNov/
+
 #### WINDOWS 
 
 E (avec le carré rouge) en bas en droite -> Open dashboard 
@@ -76,6 +78,8 @@ prefix : wp_
 
 _____________________ 
 
+# Exercices
+
 1/ Créer un utilisateur qui ne peut QUE écrire des articles [utilisateur : toto , 
 mot de passe : titi,
 mail :  tutu@yopmail.com
@@ -83,9 +87,9 @@ mail :  tutu@yopmail.com
 
 2/ Créer un nouvel article (avec l'utilisateur toto) // Passez par un autre navigatuer ou en navigation privée 
 
-3/ Modifier les URL pour que la date ne s'affiche pas dedans 
+3/ Modifier les URL pour que la date ne s'affiche pas dedans (permalinks / Liens permanents) -> Passer en "nom de l'article"
 
-4/ Gérer les paramètres des commentaires pour l'administrateur puisse modérer les comms 
+4/ Gérer les paramètres des commentaires pour que l'administrateur puisse modérer les comms 
 
 
 
