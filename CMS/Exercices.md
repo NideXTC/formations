@@ -7,8 +7,9 @@ https://github.com/NideXTC/CoursYNov/
 
 E (avec le carré rouge) en bas en droite -> Open dashboard 
 
-Server http (Apache)                      Server database (MySQL)
-Click start -> Apache -> Start 			Click start -> MySQL -> start 
+Server http (Apache) :  Click start -> Apache -> Start
+
+Server database (MySQL) : Click start -> MySQL -> start 
 
 
 
