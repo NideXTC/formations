@@ -97,6 +97,11 @@ mail :  tutu@yopmail.com
 
 6/ Ajouter une image dans la bibliothèque d'images et l'ajouter dans l'article protégé 
 
+7/ Changer de le thème du site et passer la police en rouge 
+
+8/ Charger le plugin WP Super Cache
+
+9/ Charger le plugin Yoast 
 
 
 
