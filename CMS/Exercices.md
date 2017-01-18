@@ -13,6 +13,15 @@ Server database (MySQL) : Click start -> MySQL -> start
 
 
 
+PUIS : 
+
+Aller modifier le fichier php.ini qui est dans le dossier C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-binaries\php\php56...
+
+Ensuite aux alentours de la ligne 905, il faut supprimer le ; devant extension=php_curl.dll.
+Il faut ensuite arrêter et relancer le serveur http, ainsi le changement de langue et le chargement d'extension fonctionnent.
+
+
+
 #### MAC 
 
 Lancer MAMP (pas le pro) -> Démarrer les serveurs 
@@ -33,13 +42,14 @@ Télécharger WP : https://fr.wordpress.org/
 	-> Copier le dossier dezipé dans C:\program files(x86)\EasyPHP-devserver....\eds-www 
 
 
+# PHPMYADMIN
+
 #### MAC 
 	-> MAMP -> Open WebStart page -> Click sur le lien PhpMyAdmin 
 #### Windows 
 	-> Clic droit sur le E -> Open Dashboard -> sur la page d'accueil -> Module -> PhpMyAdmin -> Open 
 
 
-# PHPMYADMIN
 
 Volet de gauche -> Clik sur "Nouvelle base de données" -> Vous lui donnez un nom (Sans espace) -> Créer 
 
