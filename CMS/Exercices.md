@@ -113,7 +113,11 @@ mail :  tutu@yopmail.com
 
 9/ Charger le plugin Yoast 
 
+10/ Charger le plugin WooCommerce 
 
+11/ Changer le thème pour un thème compatible avec WooCommerce 
+
+12/ Modifier le menu pour afficher spécialement l'article protégé 
 
 
 
