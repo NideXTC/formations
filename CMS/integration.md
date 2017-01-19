@@ -2,3 +2,7 @@
 
 
 Télécharger un thème de base en partant d'Underscores _via_ le site d'[Underscores](https://underscores.me/).
+
+Il faut préciser le nom du thème et il va vous donner un fichier .zip. 
+
+Ce site il faudra le dezipper dans le dossier de votre wordpress, dans `/wordpress/wp-content/themes`.
