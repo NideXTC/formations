@@ -19,17 +19,39 @@ show('Texte à afficher');
 // 0123456..
 
 
-echo 'Exercice 3 <br>' ;
+echo 'Exercice 3 <br>';
 for ($i = 0; $i < 10; $i++) {
     echo $i;
 }
 
 echo '<br>';
-$j=0;
-while($j<10){
+$j = 0;
+while ($j < 10) {
     echo $j;
     $j++;
 }
+
+echo '<br>Exercice 4 <br>';
+$array = ['a', 'b', 'c'];
+
+$size = sizeof($array);
+for ($i = 0; $i < $size; $i++) {
+    echo $array[$i];
+}
+
+echo '<br>';
+foreach ($array as $val) {
+    echo $val;
+}
+echo '<br>';
+foreach ($array as $index => $val) {
+    echo $index . ' ' . $val;
+}
+
+
+
+
+
 
 
 
