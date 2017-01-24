@@ -49,6 +49,34 @@ foreach ($array as $index => $val) {
 }
 
 
+// ET logique
+if (true && true) {
+
+}
+
+// OU logic
+if (true ||  true) {
+
+}
+
+
+echo '<br> EXERCICE 5 <br>';
+
+$string = 'Coucou Test =)';
+$size = strlen($string);
+
+for ($i = 0; $i < $size; $i++) {
+    $ascii = ord($string[$i]);
+
+    if($ascii > 96 && $ascii < 122){
+        // lettre en minuscule
+       echo  chr($ascii - 32); // lettre en mascule
+    } else {
+        echo $string[$i]; // Les autres caractères 
+    }
+}
+
+
 
 
 
