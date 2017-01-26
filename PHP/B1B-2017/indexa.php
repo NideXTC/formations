@@ -72,11 +72,21 @@ for ($i = 0; $i < $size; $i++) {
         // lettre en minuscule
        echo  chr($ascii - 32); // lettre en mascule
     } else {
-        echo $string[$i]; // Les autres caractères 
+        echo $string[$i]; // Les autres caractères
     }
 }
 
+echo '<br> EXERCICE 6 <br>';
 
+
+function fibonacci($start, $next, $limit){
+    echo $start . ' ';
+    if($limit != 0) {
+        fibonacci($next, $start + $next, --$limit);
+    }
+}
+
+fibonacci(1, 1, 9);
 
 
 
