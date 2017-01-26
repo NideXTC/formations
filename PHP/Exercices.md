@@ -84,10 +84,6 @@ Enregistrer le contenu de la sessions dans un fichier `test.txt`.
 
 Créer un lien pour déconnecter l'utilisateur, tout en restant sur la même page (par exemple : `<a href="page1.php?deco=true">Déconnexion</a>`).
 
+# Exercice 13 ([aide](http://php.net/manual/fr/features.file-upload.post-method.php))
 
-
-
-
-
-
-
+Créer un upload de fichiers sécurisé (vérifier le type MIME & l'extension du fichier). 
