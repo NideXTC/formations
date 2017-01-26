@@ -87,4 +87,4 @@ Créer un lien pour déconnecter l'utilisateur, tout en restant sur la même pag
 # Exercice 13 ([aide](http://php.net/manual/fr/features.file-upload.post-method.php))
 
 Créer un upload de fichiers sécurisé (vérifier le type MIME & l'extension du fichier). 
-Pour vérifier le type MIME du fichier il faut passer par la fonction [finfo_file](http://php.net/manual/fr/function.finfo-file.php).
+Pour vérifier le type MIME du fichier il faut passer par la fonction [finfo_file](http://php.net/manual/fr/function.finfo-file.php) ou [mime-content-type](http://php.net/manual/fr/function.mime-content-type.php).
