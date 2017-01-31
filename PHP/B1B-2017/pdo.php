@@ -13,8 +13,38 @@ try {
     echo $e->getMessage();
 }
 
-$stmt = $dbh->prepare('SELECT * FROM users ;');
-$stmt->execute();
-echo '<pre>';
-var_dump($stmt->fetchAll());
-echo '</pre>';
+$stmt = $dbh->prepare('SELECT * FROM users WHERE id = ?;');
+$stmt->execute([1]);
+$users = $stmt->fetchAll();
+?>
+<table border="1">
+    <tr>
+        <th>#</th>
+        <th>Nom</th>
+        <th>Email</th>
+        <th>Mot de passe</th>
+    </tr>
+
+    <?php
+    foreach ($users as $user){
+        echo '
+        <tr>
+            <td>'.$user['id'].'</td>
+            <td>'.$user['name'].'</td>
+            <td>'.$user['email'].'</td>
+            <td>'.$user['password'].'</td>
+        </tr>';
+    }
+?>
+
+</table>
+
+
+
+
+
+
+
+
+
+
