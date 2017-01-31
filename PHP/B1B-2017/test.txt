@@ -1,0 +1,17 @@
+Array
+(
+    [nom] => a
+    [prenom] => a
+    [email] => a
+    [password] => a
+    [a] => a
+    [b] => b
+    [c] => c
+    [group] => Array
+        (
+            [0] => a
+            [1] => b
+            [2] => c
+        )
+
+)
