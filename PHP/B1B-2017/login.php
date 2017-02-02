@@ -21,6 +21,7 @@ if (!empty($_POST)) {
     if (count($users) > 0) {
         // Si l'utilisateur existe -> créer la variable $_SESSION['connected'] avec un bool
         $_SESSION['connected'] = true;
+        $_SESSION['id'] = $users[0]['id'];
         header('Location:admin.php');
     }
 }
