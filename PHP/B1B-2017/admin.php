@@ -1,21 +1,34 @@
 <?php
 
-
 require 'connect.php';
 
-echo $_SESSION['id']; // L'identifiant de l'utilisateur
+
+if (empty($_SESSION['connected'])) {
+    header('Location:login.php');
+}
 
 
-// SELECT * FROM users WHERE id = :id -> $user
-
+$stmt = $dbh->prepare('SELECT * FROM users WHERE id = :id');
+$stmt->execute([
+    ':id' => $_SESSION['id']
+]);
+$user = $stmt->fetch();
 
 // <?=  -> <?php echo
-
 ?>
 
 
 <form action="" method="post">
-    <input type="text" name="name" value="<?= $user['name'] ?>">
+    <label>
+        Nom :
+        <input type="text" name="name" value="<?= $user['name'] ?>">
+    </label>
+    <br>
+    <label>
+        Email :
+        <input type="text" name="email" value="<?= $user['email'] ?>">
+    </label>
+
 
     <button type="submit">Valider</button>
 </form>
