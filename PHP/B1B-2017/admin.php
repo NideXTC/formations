@@ -8,6 +8,19 @@ if (empty($_SESSION['connected'])) {
 }
 
 
+
+
+if(!empty($_POST)){
+    echo 'UPDATE users SET name = "'.$_POST['name'].'", email = "'.$_POST['email'].'" WHERE id = "'.$_SESSION['id'].'"';
+    $stmt = $dbh->prepare('UPDATE users SET name = :name, email = :email WHERE id = :id');
+    $stmt->execute([
+        ':name' => $_POST['name'],
+        ':email' => $_POST['email'],
+        ':id' => $_SESSION['id']
+    ]);
+}
+
+
 $stmt = $dbh->prepare('SELECT * FROM users WHERE id = :id');
 $stmt->execute([
     ':id' => $_SESSION['id']
