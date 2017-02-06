@@ -10,6 +10,8 @@ if (empty($_SESSION['connected'])) {
 if(!empty($_GET['action']) && $_GET['action'] == 'del'
     && !empty($_GET['id'])){
     // SUPPRESSION DE L'UTILISATEUR
+    $delStmt = $dbh->prepare('DELETE FROM users WHERE id = :id');
+    $delStmt->execute([':id' => $_GET['id']]);
 }
 
 
