@@ -27,12 +27,7 @@
 Ce lien sera par exemple `<a href="delete.php?action=del&id=1">Supprimer</a>`. 
 Il suffira ensuite de détecter la présence de `$_GET['action']` et `$_GET['id']` pour supprimer l'utilisateur. 
   
-8 - Comme pour le client, créer une interface pour ajouter/modifier/supprimer un produit. Pour cela, il est nécessaire de créer une nouvelle table `products` avec id - INT(11), name - VARCHAR(255), price - INT(11), picure - TEXT.
+8 - Comme pour le client, créer une interface pour ajouter/modifier/supprimer un produit 
 
 9 - Créer une page `product.php` qui appellera un produit par son `id`, pour cela il faudra appeler la page _via_ 
-par exemple `product.php?id=1` pour récupérer le premier produit en BDD.
-   
-10 - Rajouter un bouton sur la page `product.php` pour ajouter le produit au panier (`$_SESSION['panier']`) et créer un page 
-`panier.php` qui affichera l'intégralité du panier.
- 
-11 - Ajouter un paiement [Stripe](https://stripe.com/checkout) de demo sur la page. 
+par exemple `product.php?id=1` pour récupérer le premier produit en BDD.   

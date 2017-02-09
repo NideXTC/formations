@@ -36,7 +36,7 @@ if (!empty($_POST)) {
         }
     }
 
-    // Enregistrement du produit avec le nom de la photo si il y a eu un upload 
+    // Enregistrement du produit avec le nom de la photo si il y a eu un upload
     $stmt = $dbh->prepare('INSERT INTO products VALUES(NULL, :name, :price, :picture)');
     $stmt->execute([
         ':name' => $_POST['name'],

@@ -7,7 +7,6 @@ ini_set('error_reporting', E_ALL);
 session_start();
 
 
-
 // Si le post n'est pas vide
 if (!empty($_POST['nom']) && !empty($_POST['email'])) {
 
@@ -26,7 +25,7 @@ if (!empty($_POST['nom']) && !empty($_POST['email'])) {
     echo 'Le prénom est : ' . htmlentities($_POST['prenom']) . '<br>';
     echo 'L\'email est : ' . htmlentities($_POST['email']) . '<br>';
     echo 'Le password est : ' . htmlentities($_POST['password']) . '<br>';
-} elseif(!empty($_POST)) {
+} elseif (!empty($_POST)) {
     echo 'erreur';
 }
 ?>
