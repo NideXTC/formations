@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -7,25 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        input[type="text"].error {
+        input.error {
             border : 4px solid red;
         }
-        
-        .toto {
-            background: blue;
-        }
+
     </style>
 </head>
 <body>
 
-<?php $error = $_GET['error'] ?>
-
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam aspernatur dignissimos doloremque ducimus eaque eligendi eos iusto laboriosam maiores minima molestiae, mollitia, perspiciatis quaerat repellendus sed tempore veniam voluptates!
-
-<input type="text" name="" class="<?= ($error)?'error':'' ?>" placeholder="toto">
-
-<div class="<?= ($a)?'toto':'' ?>"> TEST </div>
+<form action="">
+    <input type="text" name="test" class="<?= (isset($_GET['test']) && empty($_GET['test']))?'error':'' ?>" value="<?= $_GET['test'] ?>">
+    <button type="submit">Valider</button>
+</form>
 
 </body>
 </html>
