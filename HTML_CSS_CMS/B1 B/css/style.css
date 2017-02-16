@@ -1,0 +1,83 @@
+body {
+    background-image: url('../img/drop-of-water-1728002_1920.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    font-weight: bold; 
+    font-size: 30px; 
+    color: blue;
+    text-align: center;
+    font-family: "arial black";
+}
+
+/** 
+H1    
+    - Mettre en gras 
+    - Changer la taille du texte (30px)
+    - Changer la couleur 
+
+NAV 
+    - Fond de couleur 
+    - Lien alignés (display : inline-block) sur nav ul li 
+    - Retirer les puces (list-style : none)
+    
+    A 
+        - Sans soulignement 
+        - Couleur verte 
+
+FOOTER 
+
+    
+**/ 
+
+nav {
+    background: red;
+}
+
+nav ul li {
+    display: inline-block;
+    background: white;
+}
+
+
+nav ul li a {
+    padding-right: 50px;       
+}
+
+article {
+    background-color: red; 
+    /*display: inline-block;*/
+    
+    height: 300px;
+    margin : auto;
+    
+    padding: 10px;
+    
+    /*border-style: solid;
+    border-color: black;
+    border: 1px; */ 
+    
+    border : 1px solid black;
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

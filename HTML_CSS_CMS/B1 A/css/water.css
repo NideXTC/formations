@@ -1,0 +1,115 @@
+@keyframes water {
+    0% {
+        top: 10px; 
+    }
+    49% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+        top: 50%; 
+    }
+    100% {
+        opacity: 0;
+        top: 50%;
+    }
+}
+
+@keyframes wave1 { 
+    0%{ 
+        opacity: 0; 
+    }
+    49% {
+        opacity: 0;
+    }
+    50% { 
+        opacity: 1; 
+        
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+@keyframes wave2 { 
+    0%{ 
+        opacity: 0; 
+    }
+    49% {
+        opacity: 0;
+    }
+    50% { 
+        opacity: 1; 
+        
+    }
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+@keyframes wave3 { 
+    0%{ 
+        opacity: 0; 
+    }
+    49% {
+        opacity: 0;
+    }
+    50% { 
+        opacity: 1; 
+        
+    }
+    100% {
+        opacity: 0;
+        transform: scale(3);
+    }
+}
+
+.water { 
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    background: blue;
+    position: absolute; 
+    top: 100px;
+    left: 50%; 
+    margin-left: -25px;
+    animation: water 2s linear infinite;
+}
+
+
+.wave {
+    border-radius: 50%;
+    width: 90px; 
+    height: 50px;
+    border: 2px solid blue;
+    left: calc(50% - 45px);
+    top : 50%;
+    position: absolute;
+    opacity: 0;
+}
+
+
+.wave1 {
+    animation: wave1 2s linear infinite; 
+}
+
+.wave2 {
+    animation: wave2 2s linear infinite; 
+}
+
+.wave3 {
+    animation: wave3 2s linear infinite; 
+}
+
+
+
+
+
+
+
+
+
+
+

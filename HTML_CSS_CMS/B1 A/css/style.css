@@ -1,0 +1,213 @@
+body {
+    background-image: url('http://www.w3schools.com/css/trolltunga.jpg');
+    background-repeat: no-repeat;  
+    background-size: cover;
+    color: white;
+    padding: 0; 
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+} 
+
+
+.toto {
+    width: 200px; 
+    height: 200px; 
+    background: red;
+    margin: auto;
+}
+
+@media screen and (max-width:200px) {
+    .toto {
+        background: blue;
+    }
+}
+
+@media screen and (min-width:201px) and (max-width:400px)   {
+    .toto {
+        background: black;
+    }
+}
+
+@media screen and (min-width:401px) and (max-width:600px)   {
+    .toto {
+        background: green;
+    }
+}
+
+
+
+
+
+article {
+    margin-bottom: 5px;
+    background: white;
+    color: black;
+    padding: 20px;
+    display: inline-block; 
+    width: 45%;
+    /*padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;*/
+}
+
+@media screen and (max-width:860px) {
+    article {
+        width: 100%;
+    }
+}
+
+table td .tata {
+    background: red;
+}
+
+table td button {
+    background: red;
+}
+
+table td button:hover {
+    background: yellow;
+}
+
+table td button:active {
+    background: green;
+}
+
+
+
+table td.tata {
+    background: blue;
+}
+
+/*
+table.t1 td{
+background: red;
+}
+
+table.t2 td{
+background: yellow;
+}*/
+
+h1#title {
+    text-align: center; 
+    color: lightgray; 
+    font-size: 20px; 
+    font-weight: bold;
+    font-family: 'Taviraj', serif;
+}
+
+nav {
+    /*
+    - Prend toute la largeur
+    - Les éléments sont collés 
+    - Fond de couleur rouge 
+
+
+    */ 
+}
+
+
+
+/* FORM */ 
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 50%;
+}
+
+input[type="text"] {
+    width: 150px;
+    padding: 0;
+    border-radius: 3px;
+    /* background: transparent; */
+}
+
+input[type="text"]:active, input[type="text"]:focus {
+    border : 2px solid blue;
+}
+
+input[type="text"]:hover {
+    border-color: lightblue;
+}
+
+
+nav {
+    background: white;
+    text-align: center;
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav li a {
+    color: yellow;
+    text-decoration: none;
+    height: 50px;
+    display: block;
+    line-height: 50px;
+    text-align: center;
+}
+
+nav li {
+    background: red;
+    display: inline-block;
+    width: 300px;
+    height: 50px;
+    transition: background 0.5s;
+}
+
+@media screen and (min-width:617px) and (max-width:923px) {
+    nav li {
+        width: 100px;
+    }
+}
+@media screen and  (max-width:617px) {
+    nav li {
+        width: 100%;
+    }
+}
+
+
+
+footer {
+    position:fixed; 
+    bottom: 0;
+    background: red;
+    width: 100%;
+    color: black;
+    
+}
+
+/*
+nav li:last-child {
+    float: right
+}
+*/
+
+nav li:hover {
+    background: green;
+}
+
+
+nav li:active {
+    background: purple;
+}
+
+
+
+
+
+
+
+
+
+
+
+

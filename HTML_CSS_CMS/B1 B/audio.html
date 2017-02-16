@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <audio src="audio.mp3"  ></audio>
+    <input type="range" class="volume" value="10" min="0" max="10">	
+    <progress value="0" min="0" max="12" ></progress>
+
+ 
+	<script type="text/javascript">
+
+		var audio = document.querySelector('audio');  
+		var play = document.querySelector('.play'); 
+		var volume = document.querySelector('.volume'); 
+		var time = document.querySelector('.time'); 
+		var time2 = document.querySelector('.time2'); 
+
+		play.addEventListener('click', e => {
+			e.preventDefault(); 
+			if(play.getAttribute('data-play') == '1'){
+				audio.pause(); 
+				play.setAttribute('data-play', 0);
+				play.innerHTML = 'Play';
+			} else {
+				audio.play(); 	
+				play.setAttribute('data-play', 1);
+				play.innerHTML = 'Pause';
+			}
+		}); 
+
+		volume.addEventListener('change', _ => audio.volume = volume.value/10);
+
+		audio.addEventListener('timeupdate', e =>{
+          time.value = audio.currentTime;  
+          time2.value = audio.currentTime; 
+            document.querySelector('.valeur').innerHTML =  Math.round(audio.currentTime);
+            
+        });
+
+		audio.addEventListener('canplay', _ => {
+          time.max = audio.duration;
+          time2.max = audio.duration;  
+        });
+
+		time.addEventListener('click', _ => audio.currentTime = time.value);
+	</script>
+</body>
+</html>

@@ -48,7 +48,7 @@ var schema = new Schema({
 });
 
 // Nous exportons notre modèle avec comme nom "User", 'users' sera le nom de notre "table"
-exports.model = mongoose.model('User', schema, 'users'); 
+module.exports = mongoose.model('User', schema, 'users'); 
 ```
 
 Ce schéma nous donne accès à une liste de [fonctions](http://mongoosejs.com/docs/api.html) pour accéder aux informations contenues dans la base de données. 
@@ -72,10 +72,8 @@ module.exports = app;
 Nous allons désormais pouvoir nous servir de ces fonctions dans notre controlleur _Users.js_.
 
 ```
-require('../models/User');
-
 var mongoose = require('mongoose'),
-    User = mongoose.model('User');
+    User = require('../models/User');
 
 
 var Users = {
