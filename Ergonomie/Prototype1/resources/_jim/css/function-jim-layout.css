@@ -1,0 +1,962 @@
+.button-icon,
+#user-dialog .warning,
+#user-dialog #close-button,
+#comments-page-counter-img,
+#comments-switch-img,
+#zoom-slider-plus,
+#zoom-slider-minus,
+#infoContent #toggle-panel-btn span,
+.sidepanelTab  .tabImage,
+#infoContent #filterImage,
+#closefilterImage,
+#highlight-menu-img,
+.topBarToggle span,
+#filterDialogImage,
+#filterCloseButton,
+#requirementCloseButton,
+#sidepanel #user-image,
+.gesturecontrol span.customSelectImage,
+.user-comment-img {
+    background: url("./images/jimsprite.png");
+}
+
+#comments-separator1, .ui-scenario.ui-page-active .Page {
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  -ms-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+#topBarInfo, #commentsBackground, .transitiontop, #toppanel, #top-bar-show {
+    -webkit-transition: top 0.5s ease;
+    -moz-transition: top 0.5s ease;
+    -o-transition: top 0.5s ease;
+    transition: top 0.5s ease;
+}
+
+#sidepanel #selectedSeparationBar {
+    -webkit-transition: left 0.5s ease;
+    -moz-transition: left 0.5s ease;
+    -o-transition: left 0.5s ease;
+    transition: left 0.5s ease;
+}
+
+#tabGroup .tabText, #infoContent #info, #canvasname {
+  -webkit-transition: color 0.5s ease;
+  -moz-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+  -ms-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) 
+{ 
+	.button-icon,
+	#user-dialog .warning,
+	#user-dialog #close-button,
+	#comments-page-counter-img,
+	#comments-switch-img,
+	#zoom-slider-plus,
+	#zoom-slider-minus,
+	#sidepanel .tabImage,
+	#infoContent #toggle-panel-btn span,
+	#infoContent #filterImage,
+	#closefilterImage,
+	#highlight-menu-img,
+	.topBarToggle span,
+	#filterDialogImage,
+	#filterCloseButton,
+	#sidepanel #user-image,
+    .gesturecontrol span.customSelectImage,
+    .user-comment-img {
+	    background: url("./images/jimsprite@2x.png");
+	    background-size:256px 188px;
+	}
+	
+	#jim-mainWindow #infoContent #logo div {background-image: url('./../images/sidepanel/logo@2x.png');}
+	#jim-mainWindow #infoContent #logo div.whiteIMG {background-image: url('./../images/sidepanel/logo-white@2x.png');}
+}
+
+/* start sidepanel */
+#sidepanel { right:0px; background-color: #374141; height: 100%; width: 0px; font-size: 10px; font-family: 'OpenSans-Regular'; color: #707070; float:right; overflow:auto;}
+#sidepanel .title { color: #e86630; text-transform: capitalize; font-family:'OpenSans-SemiBold'; font-size: 13px; margin-left: 3px; margin-top:10px; }
+#sidepanel #info .title { float:left; width:72px; margin-top:0px; }
+#sidepanel #canvasname { margin-left:3px;}
+/* start jquery-ui overwrite */
+.ui-resizable-disabled .ui-resizable-handle, .ui-resizable-autohide .ui-resizable-handle { display: block; cursor: default; }
+.ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled { opacity: 1; }
+/* end jquery-ui overwrite */
+#sidepanel #logo { margin: 20px 0px 0px; }
+#sidepanel #info { display:block; height:30px; margin-bottom:10px; margin-top:6px; }
+#sidepanel #info .line { background-color:#e6e6e6; width:1px; height:37px; margin-right: 6px; float:left; }
+#sidepanel #info li span { padding-left: 4px; }
+.styled-select {border:1px solid #D5D5D5; border-radius:2px; float:left; overflow:hidden; background-color:#D5D5D5; }
+#sidepanel .styled-select { width:100px; position:relative; height:30px; }
+#sidepanel select:focus { outline:none; }
+
+#sidepanel .section {overflow: hidden;}
+#sidepanel .section, #sidepanel .sidepanelTab.active {background-color: #282E2F;}
+#sidepanel .sidepanelTab.active .sidePanelTabBar {position: absolute; width: 4px; height: 45px;  background-color: #1FB7BE;}
+#sidepanel .sectionSeparator {width: 100%; background-color: #282E2F; height: 1px;}
+
+#sidepanel.open .ui-resizable-handle{
+    display:block !important;
+}
+
+#sidepanel.close .ui-resizable-handle{
+    display:none !important;
+}
+
+#sidepanel.opening{
+    width:250px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#sidepanel.close{
+    width:0px;
+    overflow:hidden;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#sidepanel.reflow{
+     -webkit-transform: translateZ(0); /* to refresh page scrollbars on webkit */
+}
+
+#sidepanel #sidepanelTabs {
+    height: 45px;
+    width: 100%;
+    background-color: #2D2D2D;
+}
+
+#sidepanel #tabSeparationBar {
+    height: 2px;
+    width: 100%;
+    background-color: #2D3337;
+}
+
+#sidepanel #selectedSeparationBar {
+    position:absolute;
+    left: 0px;
+    height: 2px;
+    width: 50%;
+    background-color: #21C0C0;
+}
+
+#sidepanel #tabGroup {
+    height: 45px;
+    width: 100%;
+}
+
+#sidepanel .sidepanelTab {
+    width:  100%;
+    height: 45px;
+    cursor: pointer;
+}
+
+.noScenarios .sidepanelTab { cursor: default; }
+.noScenarios #sidepanel #scenarioTab { display: none; }
+.noScenarios #sidepanel #selectedSeparationBar { width: 100%; }
+
+#sidepanel .tabImage {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-left: 12px;
+    margin-top: 14px;
+}
+
+.noScenarios #sidepanel .tabImage {
+    margin-left: 15px;
+}
+
+#sidepanel #screenTab.active .tabImage {background-position: -41px -166px;}
+#sidepanel #screenTab .tabImage {background-position: -59px -166px;}
+#sidepanel #scenarioTab.active .tabImage {background-position: -3px -166px;}
+#sidepanel #scenarioTab .tabImage {background-position: -21px -166px;}
+#sidepanel #requirementsTab.active .tabImage {background-position: -78px -168px;}
+#sidepanel #requirementsTab .tabImage {background-position: -98px -168px;}
+
+#sidepanel .tabText{
+    position: absolute;
+    margin-left: 10px;
+    line-height: 47px;
+    color: #A2B5B9;
+}
+
+#sidepanel .active .tabText {
+    color: #FFFFFF;
+    font-family: 'OpenSans-SemiBold';
+}
+
+/* Show requirements Dialog */
+#jim-body .requirementComponentsDialog {
+    width: 350px;
+}
+.requirementComponentsDialog.active {display: block;}
+
+#requirementComponentsTitle {
+    text-align: left;
+    margin: 20px 15px 10px 15px;
+    font-size: 11.25pt;
+}
+
+#requirementTableLabels {
+    padding: 10px 15px 0 19px;
+    background-color: #EEEEEE;
+}
+
+#requirementComponentLabel {
+    float: left;
+    font-size: 8.25pt;
+}
+
+#requirementComponentsList > *:nth-child(even) {
+    background-color: #F4F5F6;
+}
+
+#requirementComponentsContainer {
+    height: 350px;
+    background-color: #EEEEEE;
+    padding: 5px 15px 15px 15px;
+}
+
+#requirementComponentsList {
+    height: 345px;
+    background-color: #FFFFFF;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 2px;
+    font-size: 8.25pt;
+}
+
+#requirementColumnSeparator {
+    position: absolute;
+    width: 1px;
+    height: 348px;
+    left: 174px;
+    background-color: #EEEEEE;
+}
+
+.requirementDialogComponent {height: 25px; padding-left: 5px;}
+.requirementDialogComponent > div {text-align: left; overflow: hidden; white-space: nowrap; line-height: 23px;}
+
+.requirementDialogComponent > *:first-child {
+    float: left;
+    width: 165px;
+    color: #019090;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.requirementDialogComponent > *:last-child {padding-left: 4px; width: 124px;}
+
+.requirementComponentSeparator {background-color: #808080; height: 1px; width: 100%;}
+
+.dialogShadow {width: 100%; height: 100%; top: 0px; left: 0px; background-color: #5E5E5E; z-index: 3; opacity: 0.6; display: none; position: absolute;}
+.dialogShadow.active {display: block;}
+
+/* END requirement dialog */
+
+.topBarToggle{
+    width: 60px;
+    height: 17px;
+    margin: 0px auto 0px auto;
+    z-index: 9999;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 2px 2px 0px 2px;
+    border-color: #EFEFEF;
+}
+
+#top-bar-hide {
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  -ms-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  margin-top: 28px;
+}
+
+#top-bar-show {
+    top: -22px;
+    position: absolute;
+    left: 50%;
+    background-color: #FFFFFF;
+    border-width: 0px 2px 2px 2px;
+    -webkit-transform: translate(-50%,0);
+    -moz-transform: translate(-50%,0);
+    -o-transform: translate(-50%,0);
+    -ms-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+}
+
+#top-bar-show.open {
+    top: 0px;
+}
+
+.topBarToggle span {
+    background-position: -98px -90px;
+    display: inline-block;
+    margin-left: 25px;
+    margin-top: 1px;
+    width: 13px;
+    height: 15px;
+}
+
+#top-bar-hide span { 
+    margin-left: 22px;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+#topBarInfo {
+    width: 100%;
+    display: block;
+    position: absolute;
+}
+
+#topBarInfo.open{
+    top: 0px;
+}   
+
+#topBarInfo.close{
+    top: -47px;
+}
+
+#commentsBackground {
+    position: absolute;
+    top: -45px;
+    height: 45px;
+    width: 100%;
+    background-color: #10d1d1;
+}
+
+#topInfo {
+    background-color: #FFFFFF;
+    color: #000000;
+    font-family: 'OpenSans-SemiBold';
+    font-size: 10px;
+    height: 45px;
+    width: 100%;
+}
+
+#barHotspot {
+    width: 25%;
+    height: 25px;
+    left: 50%;
+    display: none;
+    position: absolute;
+    z-index: 2;
+    -webkit-transform: translate(-50%,0);
+    -moz-transform: translate(-50%,0);
+    -o-transform: translate(-50%,0);
+    -ms-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+}
+
+#barHotspot.active {
+    display: block;
+}
+
+#infoContent{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    color: #707070;
+    position:relative;
+    z-index: 1;
+}
+#topSeparationLine{
+    background-color: #EFEFEF;
+    height: 2px;
+    width: 100%;
+    top: 45px;
+    position:absolute;
+    z-index:3;
+    display:none;
+}
+
+.showComments #topSeparationLine{
+    display:block;
+}
+
+#bottomSeparationLine{
+    background-color: #10d1d1;
+    height: 0px;
+    bottom:0;
+    width: 100%;
+    position:absolute;
+    bottom:0;
+    display:none
+    -webkit-transition: height 0.5s ease;
+    -moz-transition: height 0.5s ease;
+    -o-transition: height 0.5s ease;
+    transition: height 0.5s ease;;
+}
+
+.showComments #bottomSeparationLine{
+    display:inline;
+}
+
+#bottomSeparationLine.active{
+    height: 8px;
+}
+
+#infoContent .comments-separator{
+    background-color: #AAAAAA;
+    display: inline-block;
+    margin-top: 2px;
+    height: 22px;
+    top: 0;
+    vertical-align: top;
+    width: 1px;
+}
+
+#infoContent .leftcontrols .comments-separator{
+    margin-left: 10px;
+    margin-top: 11px;
+}
+
+#infoContent #logo div.whiteIMG {
+    background-image: url('./../images/sidepanel/logo-white.png');
+}
+
+#infoContent #logo div {
+    background-image: url('./../images/sidepanel/logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    height: 35px;
+    top: 5px;
+    left: 11px;
+    width: 125px;
+}
+
+#infoContent #toggle-panel-btn {
+    display:inline-block;
+    margin-left:15px;
+    margin-top: 6px;
+    vertical-align: top;
+}
+
+#infoContent #info { display:inline-block; font-family: 'OpenSans-SemiBold'; height:26px; padding-top:6px; margin-right:10px;
+    text-transform: uppercase;
+}
+#infoContent  span { text-overflow: ellipsis; -o-text-overflow: ellipsis; -webkit-text-overflow: ellipsis; white-space: nowrap; overflow: hidden; display:inline-block;}
+.leftcontrols  span { font-size: 10px; }
+#infoContent span.light {margin-top:-2px;}
+#infoContent #projectname, #infoContent .filterText {color: #000000; margin-left: 2px;}
+#infoContent #scenarioName {color: #21C0C0; text-decoration: underline; cursor: pointer; vertical-align: bottom; margin-right: 2px;}
+#infoContent .filterText {display: none;}
+#infoContent #filterImage {background-position: -204px -34px; width: 10px; height: 8px; margin-left: 3px; margin-right: 3px;}
+#closefilterImage {background-position: -228px -35px; width: 8px; height: 7px; margin-left: 4px; cursor: pointer;} 
+#closefilterImage.whiteIMG {background-position: -237px -35px;}
+#infoContent #highlight-button { display:inline-block; font-family: 'OpenSans-Regular'; width:170px; padding-top:0px; padding-bottom:0px; padding-left:5px; cursor:pointer;}
+#infoContent .highlight{
+    display: inline-block;
+    vertical-align:top;
+    height:28px;
+    display:none;
+    margin-right:5px;
+    padding-right: 5px;
+    padding-top:1px;
+}
+
+#comments-page-counter-img span {
+    margin-top:-1px;
+}
+
+#infoContent .highlight.open{
+    background-color:#F5F5F5;
+}
+
+#infoContent #highlight-select{
+    display: inline-block;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+#infoContent #highlight-select:hover, #toggle-panel-btn:hover, .topBarToggle:hover, #infoContent #scenarioName:hover, #closefilterImage:hover {
+    opacity: 0.75;
+}
+
+#highlight-menu{
+    background-color: #F5F5F5;
+    display: block;
+    height: auto;
+    left: 1070px;
+    position: absolute;
+    width: 190px;
+    z-index: 110;
+    top: 39px;
+    display:none;
+    list-style:none;
+    font-family: 'OpenSans-Regular';
+}
+
+#highlight-menu-img {
+    background-position: -98px -90px;
+    position: relative;
+    margin-left: 2px;
+    top: 3px;
+    width: 12px;
+    height: 16px;
+}
+
+#highlight-menu li{
+    border-bottom: 1px solid #E5E5E5;
+    cursor: pointer;
+    padding: 9px 15px;
+    color: #707070;
+}
+
+#highlight-menu li:last-child{
+    border-bottom: none;
+    cursor: pointer;
+    padding: 9px 15px;
+}
+
+#highlight-menu li:hover{
+    background-color:#EBEBEB;
+    color: #9B9B9B;
+}
+
+#infoContent #commentscontrol { 
+    display: inline-block;
+    padding: 6px 53px 2px 15px;
+    height: 26px;
+    vertical-align:bottom;
+}
+
+.rightcontrols{
+    display: inline-block;
+    float: right;
+    font-family: 'OpenSans-Regular';
+    margin-right: 18px;
+    margin-top: -37px;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.leftcontrols{
+    position: absolute;
+    left: 0; 
+    font-family:'OpenSans-Regular';
+    display:inline-block;
+    white-space: nowrap;
+    margin-top: 2px;
+}
+
+#topInfo .info-text-label{
+    display:inline-block;
+    margin-top:8px;
+    margin-left:10px;
+    vertical-align:top;
+}
+
+.verticalSeparator{
+    width:1px;
+    background-color: #909090;
+    height:30px;
+    display:inline-block;
+    margin-left:10px;
+    vertical-align:bottom;
+}
+
+span.customSelect.changed {
+/* You can use this if you want a different style after user has made a selection */
+}
+
+.customSelectFocus {
+/* You can use this if you want a different style after user has made a selection */
+}
+
+.customSelectOpen {
+/* You can use this if you want a different style after user has made a selection */
+}
+
+
+/* We can style the inner box, too */
+.customSelectInner {
+}
+
+.highlight span.customSelect {
+/* Styles For Your Select Box */
+    background-color: #f5f0de;
+    width: 170px; 
+    font-size: 12px; 
+    color: #707070; 
+    font-family:'OpenSans-Regular';
+    height:17px;
+    white-space:nowrap;
+}
+
+#logo{
+    width: 125px;
+    margin: 0 5px;
+    height: 20px;
+    display:inline-block;
+    vertical-align:bottom;
+}
+
+#highlightSwitch {
+    display: inline-block; 
+    cursor: pointer; 
+    height: 10px;
+}
+
+#commentsSwitch{
+    display:inline-block;
+    cursor:pointer;
+    height:10px;
+}
+
+#comments-page-counter-img{
+    display:none;
+    vertical-align:top;
+    margin-right:5px;
+    text-align:center;
+}
+
+#comments-page-counter{
+    color:white;
+    font-size:10px;
+    font-family:'OpenSans-SemiBold';
+    margin-top:1px;
+    vertical-align:top;
+}
+
+#tutorial-ui{
+    bottom: 0;
+    height: auto;
+    overflow: auto;
+    position: absolute;
+    top: 45px;
+    width: 100%;
+    z-index: 107;
+    display:none;
+    margin-top:8px;
+    margin-bottom:8px;
+}
+
+#tutorial-grey-layer{
+    background-color: #242424;
+    height:100%;
+    width: 100%;
+    opacity:0.5;
+    opacity: 0.5; 
+    filter: alpha(opacity = "50"); 
+    -ms-filter: alpha(opacity = "50");
+}
+
+#tutorial-img-wrap{
+    bottom: 0;
+    width: 864px;
+    height: 260px;
+    position: absolute;
+    top: 0;
+    left:0;
+    right:0;
+    margin:auto;
+}
+
+#tutorial-img{
+    width: 100%;
+    height: 100%;
+    background: url("./images/help.png") no-repeat scroll;
+}
+
+.offline #tutorial-img{
+    width:332px;
+    margin-left:58px;
+    height:100%;
+    background-position:0px -72px;
+}
+
+.button-icon{
+    display:inline-block;
+    margin-right:6px;
+    float:left;
+    vertical-align:middle;
+}
+
+#user-dialog { position: absolute; top: 30%; left: 34%; background-color: #FFFFFF; box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.05); width: 280px; min-height:400px; color: #606060; font-family: 'OpenSans-Regular'; font-size:12px; }
+#user-dialog #content { padding: 20px 30px; overflow:hidden; text-align:center; margin-top:15px;}
+#user-dialog #close-button{
+    margin:15px;
+    right:0px;
+    position:absolute;
+    cursor:pointer;
+}
+#user-dialog .title {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+#user-dialog #user-img-wrapper{
+    display: block;
+    margin: 10px auto;
+    height:145px;
+    width:145px;
+    position:relative;
+    clip-path: circle(10px,10px,50px,50px);
+    border-radius:50%;
+    border:5px solid #CCCCCC;
+}
+#user-dialog #dialog-user-img{
+    height:100%;
+    width:100%;
+    position:absolute;
+    top:0px;
+    left:0px;
+    border-radius:50%;
+}
+#user-dialog #dialog-user-img.nopicture{
+    height:155px;
+    width:155px;
+    top:-5px;
+    left:-5px;
+}
+#user-dialog #change-img-clipping{
+    bottom: 0;
+    height: 40px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+#user-dialog #change-img-button{
+    background-color: #21C0C0;
+    border-radius: 50%;
+    height: 145px;
+    left: 0;
+    opacity: 0.7; 
+    filter: alpha(opacity = "70"); 
+    -ms-filter: alpha(opacity = "70");
+    position: absolute;
+    top: -105px;
+    width: 100%;
+}
+#user-dialog #change-img-clipping span{
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: 'OpenSans-SemiBold';
+    font-size: 10px;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 9px;
+    white-space: nowrap;
+    width: 145px;
+}
+#user-dialog .input-file {
+    border: 1px solid #AAAAAA;
+    height:40px;
+    width:100%;
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    cursor:pointer;
+    opacity:0;
+    filter: alpha(opacity = "0"); 
+    -ms-filter: alpha(opacity = "0");
+}
+#user-dialog #remove-button{
+    color: #21C0C0;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto;
+    text-decoration: underline;
+    white-space: nowrap;
+    width: 85px;
+}
+#user-dialog .input-text {
+    display: block;
+    font-size: 15px;
+    margin: 25px auto 6px;
+    border: 1px solid #AAAAAA;
+    height:35px;
+    width:100%;
+    text-align:center;
+}
+#user-dialog .button { color: #FFFFFF; background-color:#F23E41; width:100%; height:35px; margin: 10px auto; display: block; cursor:pointer;}
+#user-dialog #dialog-save { border: 0 none; font-family: 'OpenSans-SemiBold';}
+#user-dialog .warning{margin-right:5px; display:inline-block; vertical-align:middle; margin-top:-3px;}
+
+.arrow{background-position:0px 0px;width:7px;height:4px;}
+.gestures{background-position:0px -34px;width:16px;height:17px;}
+.light{background-position:-16px -34px;width:20px;height:21px;}
+.menu_dotgrey{background-position:-53px -34px;width:8px;height:8px;}
+#infoContent #toggle-panel-btn span.menu_off{background-position:-78px -74px;width:18px;height:14px;}
+#infoContent #toggle-panel-btn span.menu_off.whiteIMG {background-position: -78px -58px;}
+#infoContent #toggle-panel-btn span {cursor:pointer;}
+.morecomments{background-position:-142px -34px;width:20px;height:19px;}
+#comments-switch-img.off{background-position: 0px -88px;}
+#comments-switch-img.on{background-position: -34px -88px;}
+#comments-switch-img { position: absolute; width: 34px; height: 17px; right: 72px; top: 15px;}
+#comments-page-counter-img.newcomments_notification_red{background-position:-182px -34px;width:19px;height:21px;}
+#control-bar .rotate{background-position:-112px -70px;width:14px;height:14px; margin-top:2px;}
+#control-bar .zoom{background-position:-142px -70px;width:16px;height:16px; margin-top:7px;}
+#user-dialog #close-button {background-position:-187px 0px;width:8px;height:7px;}
+.warning{background-position:-126px -70px !important;width:16px;height:15px;}
+
+/*** Scenarios Layout ***/
+.scenarioShadow {width: 100%; height: 100%; top: 0px; left: 0px; z-index: 3; opacity: 0.6; display: none; position: absolute; background-color: #5E5E5E;}
+#scenarioBgBox { background-color: #F1F1F1; width: 100%; height: 100%; position:absolute; left:0px; top:0px;}
+#scenarioWrapper {margin: 15px auto auto; position: relative; z-index: 2;}
+
+.filterDialog, .requirementComponentsDialog {
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    background-color: #FFFFFF;
+    z-index: 4;
+    display: none;
+    position: absolute;
+    font-family: 'OpenSans-Regular';
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.filterDialog.active { display: block; }
+
+.filterDialog .filterDialogText {
+    width: 411px;
+    position: absolute;
+    left: 20px;
+    top: 45px;
+}
+
+#filterDialogImage {
+    background-position: -4px -109px;
+    width: 51px;
+    height: 51px;
+    margin: 15px auto 7px auto;
+}
+
+#filterDialogTitle {
+    text-align: center;
+    font-family: 'OpenSans-SemiBold';
+    font-size: 10pt;
+}
+
+#filterDialogText {
+    margin: 7px 35px;
+    display: block;
+    line-height: 16px;
+}
+
+#filterDialogButtons {
+    margin: 20px;
+}
+
+#filterCloseButton, #requirementCloseButton {
+    background-position: -228px -35px;
+    position: absolute;  
+    height: 10px;
+    right: 7px;
+    top: 7px;
+    width: 10px;
+    cursor: pointer;
+}
+
+.filterDialog #startScenarioButton {background: #21C0C0;}
+.filterDialog #openPageButton {background: #B1B1B1;}
+
+.filterDialog > span, .filterDialog > div {display: block;}
+
+.scenarioButton {
+    width: 150px;
+    height: 25px;
+    left: 54px;
+    top: 140px;
+    line-height: 23px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 5px;
+    color: #FFFFFF;
+}
+.scenarioButton:hover {opacity: 0.75;}
+
+.scenarioHide > div {opacity: 0;}
+
+#scenarioThumbnail {
+    width: 685px;
+    height: 400px;
+    left: 60px;
+    position: absolute;
+    z-index: 6;
+    top: 55px;
+    background-color: white;
+    pointer-events: none;
+    box-shadow: 0px 0px 30px rgba(127,127,127,0.3);
+}
+
+#scenarioThumbnail > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+#thumbnailPos {
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    z-index: 7;
+}
+
+#thumbnailTriangle {
+    width: 50px;
+    top: 5px;
+    height: 50px;
+    pointer-events: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 7;
+}
+
+#thumbnailTriangle:after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 37.5px;
+    left: 12px;
+    background: #FFFFFF;
+    box-shadow: 1px 1px 20px rgba(127,127,127,0.3);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}

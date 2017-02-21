@@ -1,0 +1,11 @@
+.highlightEffect {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #21c0c0;
+    opacity: 0;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #11b0b0;
+    z-index: 998;
+}

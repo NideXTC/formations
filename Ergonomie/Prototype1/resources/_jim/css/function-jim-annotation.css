@@ -1,0 +1,486 @@
+#sidepanel #navigation { 
+    height:100%; 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: 
+    border-box; box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#sidepanel #user-info{
+    height:46px;
+    padding:15px 15px 15px 10px;
+    font-family: 'OpenSans-Regular';
+    background-color: #374141;
+}
+.offline #sidepanel #user-info{
+    display:none;
+}
+
+#sidepanel #user-image {
+    float: left;
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#sidepanel #user-image{
+    background-position: -186px -56px;
+    border: 1px solid #374141.;
+}
+
+#sidepanel #user-image.userImage {
+    background-position: inherit;
+    background-size: 50px 50px;
+    border: 1px solid #505050;
+    border-radius: 50%;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+}
+
+#sidepanel #user-image.nopicture{
+    background-color: rgba(0, 0, 0, 0);
+    border: 0 none;
+}
+
+#sidepanel #user-name{
+    font-family:'OpenSans-SemiBold';
+    font-size:13px;
+    color:white;
+    position:absolute;
+    white-space:nowrap;
+}
+    
+#sidepanel #user-email{
+    font-size:11px;
+    color:#2FA3A2;
+    position:absolute;
+    top:35px;
+}
+
+#sidepanel #user-config{
+    left: 50px;
+    position: absolute;
+    top: 50px;
+}
+
+#sidepanel #user-config {
+   cursor:pointer;
+}
+
+#sidepanel .button, #dialog .button, .replier .button, .editormode .button{
+  cursor: pointer;
+  display: inline-block;
+  padding: 1px 20px;
+  color: #707070;
+  line-height: normal;
+  font-family: 'OpenSans-Regular';
+  font-size:11px;
+}
+
+#toppanel .button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 17px;
+  color: #707070;
+  line-height: normal;
+  font-family: 'OpenSans-Regular';
+  font-size:11px;
+}
+
+#commentscontrol, #scenarioName {
+  -webkit-transition: color 0.5s ease, opacity 0.5s ease;
+  -moz-transition: color 0.5s ease, opacity 0.5s ease;
+  -o-transition: color 0.5s ease, opacity 0.5s ease;
+  -ms-transition: color 0.5s ease, opacity 0.5s ease;
+  transition: color 0.5s ease, opacity 0.5s ease;
+}
+
+.highlight, .gesturecontrol span, #rotateDevice {
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  -ms-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+#toppanel .panel-separator, .comments-separator {
+  -webkit-transition: background-color 0.5s ease, opacity 0.5s ease;
+  -moz-transition: background-color 0.5s ease, opacity 0.5s ease;
+  -o-transition: background-color 0.5s ease, opacity 0.5s ease;
+  -ms-transition: background-color 0.5s ease, opacity 0.5s ease;
+  transition: background-color 0.5s ease, opacity 0.5s ease;
+}
+
+#topSeparationLine {
+  -webkit-transition: background-color 0.5s ease;
+  -moz-transition: background-color 0.5s ease;
+  -o-transition: background-color 0.5s ease;
+  -ms-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+}
+
+#toppanel.add-comment .panel-separator {
+  background-color: #D0D0D0;
+}
+
+#toppanel.add-comment #rotateDevice, #toppanel.add-comment .customSelect {
+  opacity: 0.4;
+  cursor: default;
+}
+
+#toppanel.add-comment #gestureTool {
+  cursor: default;
+}
+
+#simulation-btns .button.selected, #dialog .button.selected, #toppanel .button.selected, .replier .button.selected, .editormode .button.selected{ 
+  background-color: #494D50;
+}
+#simulation-btns .button.selected:hover, #dialog .button.selected:hover, #toppanel .button.selected, .replier .button.selected:hover, .editormode .button.selected:hover{ 
+  color: #FFFFFF;
+}
+
+#sidepanel .button:active, #dialog .button:active, #toppanel .button:active { opacity:0.75; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=75)"; filter: alpha(opacity=75); }
+#sidepanel .tabs:active { opacity:0.75; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=75)"; filter: alpha(opacity=75); }
+
+/* start root */
+.groupComments .root { position: relative; background-color: #FFFFFF; color: #4F4F4F; border-bottom: 1px solid #DDDDDD;}
+.groupComments .root .comment { border-top: 1px dotted #e6e6e6; position:relative;}
+.groupComments .root .replier { border-top: 1px dotted #e6e6e6; padding:15px 15px 10px; }
+.groupComments .root .comment .comment-content { padding:15px 15px 10px; }
+.groupComments .root:last-child { border-bottom: 0 none;}
+.groupComments .root.closed { background-color: #FFFFFF;}
+.groupComments .root.closed .attachment:hover { color: #666666; }
+.groupComments .root.closed .text { text-overflow: ellipsis; -o-text-overflow: ellipsis; -webkit-text-overflow: ellipsis; overflow: hidden;}
+/*.groupComments .root.closed.unread .text { font-weight: bold; }*/
+.groupComments .root.scoped, .groupComments .root.searched { display: none; }
+
+.groupComments .root > .comment .viewmode .actions {display:none;}
+.groupComments .root > .replies .comment .viewmode .actions {display:none;}
+.groupComments .root.closed > .comment .actions {display:inline;}
+.groupComments .root > .replies .comment:last-child .actions{display:inline;}
+.groupComments .root.replying .comment .viewmode .actions{display:none;}
+.groupComments .root.replying > .replies .comment .viewmode .actions{display:none;}
+.groupComments .comment.editing { background-color: #CEECEC;}
+.groupComments .comment.editing .delete, .groupComments .comment.editing .edit{display:none;}
+
+/* start visibility settings */
+.groupComments .root.closed > .comment .total { display: none; }
+.groupComments .root.closed.hasReplies > .comment .total { display: inline; }
+.groupComments .root > .date, .groupComments .root > .replies, .groupComments .root > .replier, .groupComments .comment .viewmode, .groupComments .comment.editor .editormode { display: block; }
+.groupComments .root > .comment .total, .groupComments .root.closed > .replies, .groupComments .root > .replier, .groupComments .comment.editor > .date, .groupComments .comment.editor .viewmode, .groupComments .comment .editormode { display: none; }
+.groupComments .total-wrap {display:none;}
+.groupComments .hasReplies .total-wrap{display:inline-block;}
+
+.replies .comment {background-color:#F6F6F6;}
+
+/* start comment fields */
+.groupComments { overflow-y: auto; font-family:'OpenSans-Regular';}
+.groupComments .author { font-size:14px; font-family:'OpenSans-SemiBold'; color:#21C0C0; display:inline-block; max-width:158px; overflow:hidden; vertical-align:bottom; white-space:nowrap;}
+.groupComments .delete, .groupComments .edit { font-size:8px; color:#535353; display:inline-block; margin-left:6px; vertical-align:middle; cursor:pointer;}
+.groupComments .actions, .groupComments .editormode .actions { color: #7B7979; float: left; width:180px; font-size:11px; margin-left:-48px; position:relative;}
+.groupComments .editormode .actions{width:236px;}
+.groupComments .actions .reply a{ vertical-align:top;}
+.groupComments .action { cursor: pointer;}
+.groupComments .action:hover { color: #000000; }
+.groupComments .date {font-size:11px; color:#999999; display:block;}
+.groupComments .text { margin-bottom: 10px; font-size:12px; word-wrap: break-word;}
+.groupComments .annotation {padding: 3px; width: 181px; max-width:181px; min-width:181px; min-height:40px; height:65px; color: #707070; font-family: 'OpenSans-Regular'; font-size: 11px; border:0 none; margin-top:5px;}
+.groupComments .replier .annotation {margin-left:10px; margin-top:0px;}
+.groupComments .viewmode .filename { vertical-align:middle; display:inline-block; text-decoration: none; text-overflow:ellipsis; white-space: nowrap; overflow:hidden; color:#21C0C0; font-size:11px; font-family:'OpenSans-Regular'; cursor:pointer !important;}
+.groupComments .actions .filename { text-decoration: none; text-overflow:ellipsis; white-space: nowrap; overflow:hidden; width: 85px; color:#21C0C0; font-size:11px; font-family:'OpenSans-Regular'; }
+.groupComments .viewmode .attachment-wrap{ display: block; margin-bottom: 10px; margin-left: 2px; overflow: hidden; white-space: nowrap;} 
+.groupComments .attachment:hover { color: #c6c6c6; }
+.groupComments .root .attachment {cursor:pointer;}
+.groupComments .root img.attachment {display:block;}
+.groupComments img.attachment {max-width:170px; height:80px; margin-bottom:10px;}
+.groupComments .comment, .groupComments .replier { border-top: 1px dotted #a7a7a7; }
+.groupComments .root > .comment { border-top: none !important; margin-top: 0px; } /* overwrite */
+.groupComments .comment .viewmode { margin-top:4px; text-overflow:ellipsis; }
+.groupComments .comment .viewmode .a { font-size:12px; margin-bottom: 6px; }
+.groupComments .replier .actions form.attachment, .groupComments .editormode .actions form.attachment{ margin-top: 10px; }
+.groupComments .replier .actions { color: #7B7979; float: left; width:100%; font-size:11px; margin-left:0px; position:relative;}
+.groupComments .replier .filename, .groupComments .editormode .filename{color:#494D50;display: inline-block; vertical-align: middle;}
+.expand-btn{cursor: pointer; color:#738F8F; font-size:11px; float:right; display:none; font-family:'OpenSans-SemiBold';}
+.groupComments .hasReplies .expand-btn {display:inline;}
+.groupComments .root .replier{ background-color:#21C0C0; position:relative;}
+.groupComments .actions .reply-img{ margin-right:5px; margin-top:1px; display:inline-block;}
+.groupComments .actions .reply {display: inline-block; vertical-align: middle;}
+.groupComments .actions .total-img{ margin-right:5px; margin-top:-1px; display:inline-block; vertical-align:middle;}
+.groupComments .actions .total{margin-right:8px;}
+.groupComments .expand-btn-img{margin-right:5px; display:inline-block; vertical-align:middle;}
+.groupComments .expand-btn-text{display:inline-block; vertical-align:middle;}
+.groupComments .warning{ margin-right:5px; display:inline-block; vertical-align:middle; margin-top:-3px;}
+
+.groupComments .replier .user-comment-img {
+    border: 1px solid #21C0C0;
+}
+
+.groupComments .user-comment-img {
+    background-position: -191px -109px;
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin-top: 3px;
+    border: 1px solid #FFFFFF;
+}
+
+.groupComments .user-comment-img.userImage {
+    background-position: 0px 0px;
+    background-size: 40px 40px;
+    border-radius:50%;
+    -webkit-background-clip: padding-box; 
+    -moz-background-clip: padding; 
+    background-clip: padding-box;
+    border: 1px solid #DDDDDD;
+    background-color:#FFFFFF;
+}
+
+.groupComments .user-comment-img.firer{
+    cursor:pointer !important;
+}
+
+.groupComments .user-comment-img-add{
+    background-color: #FF0000;
+    left: 13px;
+    position: absolute;
+    top: 48px;
+    cursor:pointer !important;
+}
+
+.groupComments .user-comment-content{
+    margin-left:50px;
+}
+
+.offline .groupComments .user-comment-content{
+    margin-left:0px;
+}
+
+.offline .groupComments .user-comment-img{
+    display:none;
+}
+
+/* start attachment form */
+#sidepanel form.attachment { position: relative; margin-top:-1px; height:20px; overflow:hidden; text-overflow: ellipsis; width: 110px; float:left; text-align:left; }
+#dialog form.attachment { position: relative; margin-left: 10px; margin-top:8px; float:left; overflow:hidden; text-overflow: ellipsis; width: 130px; }
+.replier form.attachment, .editormode form.attachment { position: relative; margin-top:10px; float:left; overflow:hidden; text-overflow: ellipsis; width: 110px; }
+form.attachment .file { position: absolute; top: 0; left: 0; height: 13px; opacity: 0; filter: alpha(opacity = "0"); -ms-filter: alpha(opacity = "0"); cursor: pointer; width:100px;}
+.groupComments form.attachment { display: inline; }
+.replier form.attachment, .editormode form.attachment { top: -1px; } 
+.groupComments form.attachment .file { left: -10px\9; /* IE only */ }
+#dialog form.attachment .file { left: -20px\9; /* IE only */ }
+form.attachment .delete_attach{
+    display: none;
+    vertical-align: middle;
+    cursor:pointer;
+}
+
+form.attachment.attachment-set .delete_attach{
+    display:inline-block;
+}
+
+/* start helper classes */
+#blockui { position: absolute; top: 0; left: 0; right: 0; bottom: 0; height: 100%; width: 100%; z-index: 100000; }
+.commentpanel { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: lightGrey; opacity: .4; filter: alpha(opacity = "40"); -ms-filter: alpha(opacity = "40"); z-index: 3; }
+.search-highlight { background-color: #ffff00; }
+.groupComments .root .search-highlight { color: #2e2e2e; }
+.add-comment .ui-page { cursor: default !important; }
+.add-comment .ui-page .firer { cursor: crosshair !important; }
+.offline .add-comment .ui-page { cursor: default !important; }
+.offline .add-comment .ui-page .firer { cursor: default !important; }
+.current-element { outline: 3px solid #21C0C0; }
+.over-current-element { outline: 3px solid #21CACA; }
+
+/* start dialog */
+#dialog { position: absolute; top: 40%; left: 34%; background-color: #ffffff; box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.05); width: 280px; min-width:280px; color: #606060; font-family: 'OpenSans-SemiBold'; font-size:12px; }
+#dialog #dialog-close { cursor: pointer; float: right; width: 16px; height: 16px; background: transparent url("../images/comments/sprite.png") -7px -22px no-repeat scroll; }
+#dialog #content { padding: 0px 10px 10px 0px; background-color:#21C0C0; overflow:hidden;}
+#dialog .annotation { border: 0 none; color: #707070; font-size: 11px; padding: 10px; width: 100%; height:88px; font-size:11px; font-family: 'OpenSans-Regular'; resize:none; min-width:270px; }
+#dialog .filename { font-family: 'OpenSans-SemiBold'; font-size:11px; color:#606060; width: 100px; display:inline-block; overflow:hidden; text-overflow:ellipsis; vertical-align:middle; white-space:nowrap;}
+#dialog form.attachment .file, .replier form.attachment .file .editormode form.attachment { left: 19px; width:93px; }
+#dialog .button , .replier .button, .editormode .button{ margin: 6px 0 0 5px; float: right; color: #FFFFFF; }
+#dialog-cancel, #dialog #dialog-cancel, .message button { background-color: transparent; border: 0 none; font-family: 'OpenSans-SemiBold'; text-decoration:underline; padding-left:2px; padding-right:2px; color:#FFFFFF}
+.editing #dialog-cancel{color:#21C0C0;}
+#dialog-cancel {width:50px;}
+#dialog-save { border: 0 none; font-family: 'OpenSans-SemiBold';}
+.attachment-img { display:inline-block; vertical-align:middle; margin-right:5px;}
+
+/* start messages */
+.message { font-family: 'OpenSans-Regular'; clear: both; color: #ffffff; padding: 3px 10px; }
+.message .container { clear: both; position: relative; font-size:11px; }
+.message .close { position: absolute; top: 0px; right: 0px; cursor:pointer; }
+.message strong { margin-right: 5px; }
+.error { background-color: #EF4747; font-family: 'OpenSans-Regular';}
+.error .notice { width: 90%; display:inline-block; white-space:nowrap; }
+.feedback { background-color: #EF4747;}
+.feedback .notice { display:inline; margin-right:10px; }
+.feedback button { font-size: 11px; cursor:pointer;}
+.feedback .ok { display:inline;}
+.feedback .cancel { display:inline;}
+
+/* hide comment elements for annotated */
+.review.offline #simulation-btns, .review.offline .reply, .review.offline .reply-separator, .review.offline .edit, .review.offline .delete, .review.offline .replier { display: none; }
+.simulation.offline #simulation-btns, .simulation.offline .reply, .simulation.offline .reply-separator, .simulation.offline .edit, .simulation.offline .delete, .simulation.offline .replier { display: none; }
+
+/*balloons*/
+.comment-balloon{
+    position:absolute !important;
+    top:10px;
+    left:10px;
+    background-color:black;
+    z-index:105;
+    text-align:center;
+    vertical-align:middle;
+    cursor:pointer;
+}
+.comment-balloon input{
+    display:none;
+}
+.comment-balloon span{
+    top:5px;
+    left:-2px;
+    font-size:14px; 
+    font-family:'OpenSans-SemiBold';
+    font-weight:bold;
+    color:#FFFFFF;
+    position:relative;
+}
+
+.comments-layer{
+    display:none;
+}
+
+.comments-dialog-layer{
+    display:none;
+}
+
+.group .comment-balloon{
+    pointer-events: auto;
+}
+
+/*Callouts*/
+.groupComments{
+    top:10px;
+    left:10px;
+    width:270px;
+    background-color:white;
+    padding:0px;
+    font-family:'OpenSans-Regular';
+    box-shadow: 0 0 19px 1px #999999;
+}
+.groupComments input.hidden{
+    display:none;
+}
+.callout-right .notch{
+    position: absolute;
+    top: 20px;
+    right:-10px;
+    margin: 0;
+    border-top: 10px solid transparent;
+    border-left: 10px solid #FFFFFF;
+    border-right: 0;
+    border-bottom: 10px solid transparent;
+    padding: 0;
+    width: 5;
+    height: 5;
+}
+.callout-left .notch{
+    position: absolute;
+    top: 20px;
+    left: -10px;
+    margin: 0;
+    border-top: 10px solid transparent;
+    border-left: 0;
+    border-right: 10px solid #FFFFFF;
+    border-bottom: 10px solid transparent;
+    padding: 0;
+    width: 5;
+    height: 5;
+}
+.callout-wrap{
+    position:absolute;
+    top:10px;
+    left:10px;
+    background-color:white;
+    z-index:110;
+    display:none;
+}
+
+/*SPRITES*/
+#sidepanel #user-config,
+.groupComments .delete, 
+.groupComments .edit,
+.groupComments .actions .reply-img,
+.groupComments .actions .total-img,
+.groupComments .expand-btn-img,
+.groupComments .warning,
+.groupComments .user-comment-img-add,
+form.attachment .delete_attach,
+.attachment-img,
+.groupComments .root.closed .icon,
+.comment-balloon
+{
+    background: url("./images/jimsprite.png");
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) 
+{ 
+	#sidepanel #user-config,
+	.groupComments .delete, 
+	.groupComments .edit,
+	.groupComments .actions .reply-img,
+	.groupComments .actions .total-img,
+	.groupComments .expand-btn-img,
+	.groupComments .warning,
+	.groupComments .user-comment-img-add,
+	form.attachment .delete_attach,
+	.attachment-img,
+	.groupComments .root.closed .icon,
+	.comment-balloon
+	{
+	    background: url("./images/jimsprite@2x.png");
+	    background-size:256px 188px;
+    }
+}
+
+
+#sidepanel #user-config.menu_edituser{background-position:-69px -34px;width:12px;height:12px;}
+.comment-balloon.bullet_one{background-position:-15px 0px;width:35px;height:34px;}
+.comment-balloon.bullet_two{background-position:-113px 0px;width:51px;height:34px;}
+.comment-balloon.bullet_three{background-position:-50px 0px;width:63px;height:34px;}
+.groupComments .actions .reply-img{background-position:-96px -70px;width:16px;height:13px;}
+.groupComments .actions .comments{background-position:-176px 0px;width:11px;height:12px;}
+.groupComments .collapse{background-position:-164px 0px;width:12px;height:8px;}
+.groupComments .expand{background-position:-215px 0px;width:12px;height:8px;}
+.groupComments .root.closed .icon { background-position: -34px -23px; }
+.attachment-img{background-position:-7px 0px !important;width:8px;height:18px;}
+.delete_attach{background-position:-187px 0px !important;width:8px;height:7px;}
+.delete_topic{background-position:-195px 0px !important;width:9px;height:8px;}
+.edit_topic{background-position:-204px 0px !important;width:11px;height:10px;}
+.warning{background-position:-126px -70px !important;width:16px;height:15px;}
+.user_picture_more{background-position:-171px -70px !important;width:12px;height:12px;}
+.viewmode .attachment-img{background-position:-158px -70px !important;width:13px;height:16px;}
+/*END SPRITES*/
+
+/*LAYOUT CHANGES */
+
+.commentsMode .highlight, .commentsMode #top-bar-hide, .commentsMode #comments-separator1 {opacity:0;}
+.commentsMode .comments-separator:not(#comments-separator1) {background-color: #FFFFFF;}
+.commentsMode #infoContent #scenarioName {color: #FFFFFF;}
+.commentsMode #canvasname {color: #000000;}
+.commentsMode #highlight-select, .commentsMode #top-bar-hide {cursor: default;}
+.commentsMode #commentsBackground {top: 0px;}
+.commentsMode #topSeparationLine {background-color: #10d1d1;}
+.commentsMode #bottomSeparationLine {height: 8px;}
+.commentsMode #commentscontrol {color: #000000;}
+
+.commentsMode .ui-scenario.ui-page-active {pointer-events: none;}
+
+/*END LAYOUT CHANGES */

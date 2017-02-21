@@ -1,0 +1,105 @@
+/*** Scenarios ***/
+
+.ui-scenario.ui-page-active {background-color: #D8D8D8;}
+#scenarioWrapper > div {position: absolute; display: table;}
+.transitionWrapper > svg {overflow: visible;}
+
+/* Nodes */
+#scenarioWrapper .Page[value] {cursor: pointer;}
+#scenarioWrapper .Page[value]:hover {opacity: 0.5;}
+#scenarioWrapper .nodeImage, #scenarioWrapper .pageImage {width: 100%;}
+#scenarioWrapper .nodeName {margin: 6px auto 4px auto; text-align: center;}
+#scenarioWrapper .nodeImage div {width: 36px; height: 36px; margin: 4px auto 0px auto;}
+
+#scenarioWrapper .scenarioScreenThumbnail { 
+    margin: 4px auto 0 auto;
+    display: block;
+    position: relative;
+}
+#scenarioWrapper img.scenarioScreenThumbnail {border: 1px solid #82888c;}
+#scenarioWrapper .scenarioDevice {margin: 4px auto 0 auto;}
+
+/* Note */
+#scenarioWrapper .Note {background-color: #EBECA3;}
+#scenarioWrapper .Note .valignmiddle {vertical-align: middle;}
+#scenarioWrapper .Note .valigntop {vertical-align: top;}
+#scenarioWrapper .Note .valignbottom {vertical-align: bottom;}
+#scenarioWrapper .Note .haligncenter { text-align: center;}
+#scenarioWrapper .Note .halignleft { text-align: left;}
+#scenarioWrapper .Note .halignright { text-align: right;}
+#scenarioWrapper .Note .clipping {margin: 5px;}
+#scenarioWrapper .Note .content > div {display: table-cell;}
+
+/* Image */
+#scenarioWrapper .Image > img {    
+    margin: 4px 4px 0 4px;
+}
+#scenarioWrapper .Image > .nodeName { height: 14px; }
+#scenarioWrapper div.scenarioScreenThumbnail {overflow: hidden; display: inline-block; background-repeat: no-repeat;}
+#scenarioWrapper .Image > svg {
+    position: relative;
+    margin: 4px 4px 0 4px;
+}
+
+/* Default images*/
+#scenarioWrapper .Decision .nodeImage div { background: url("../../../resources/_jim/images/scenarios/decision.png") no-repeat right;}
+#scenarioWrapper .Action .nodeImage div { background: url("../../../resources/_jim/images/scenarios/action.png") no-repeat right;}
+#scenarioWrapper .Page .nodeImage div { background: url("../../../resources/_jim/images/scenarios/screen.png") no-repeat right;}
+
+/* Transition */
+#scenarioWrapper .scenarioEdge {position: absolute;}
+#scenarioWrapper .scenarioEdgeLine {position: absolute; height: 2px; background-color: #21C0C0;}
+#scenarioWrapper .transitionNameContainer {position: absolute; white-space: nowrap; margin: 4px; font-size: 0; transform: translate(-50%,-50%);}
+#scenarioWrapper .transitionNameContainer > * {display: inline-block; vertical-align: middle;}
+#scenarioWrapper .transitionWarning {
+    width: 18px;
+    height: 18px;
+    padding-right: 5px;
+    background: url("../../../resources/_jim/images/scenarios/warning.png") no-repeat left;
+}
+
+/* Thumbnail */
+#scenarioThumbnail #scenarioWrapper {
+  transform-origin: 50% 50%;
+  position: absolute;
+  margin: 0 0 0 0;
+  left: 50%;
+  top: 50%;
+}  
+
+/* Mobile */
+#scenarioWrapper .customDevicePart {position:absolute;}
+
+#scenarioWrapper .tlDevice.androidDevice.sclandscape {background-image: url("../../../resources/_jim/images/mobile/devices/android_phone_downleft_landscape.png");}
+#scenarioWrapper .tcDevice.androidDevice.sclandscape {background-image: url("../../../resources/_jim/images/mobile/devices/android_phone_left_landscape.png");}
+#scenarioWrapper .trDevice.androidDevice.sclandscape {background-image: url("../../../resources/_jim/images/mobile/devices/android_phone_upleft_landscape.png");}
+
+#scenarioWrapper .clDevice.androidDevice.sclandscape {background-image: url("../../../resources/_jim/images/mobile/devices/android_phone_horiz_landscape.png");}
+#scenarioWrapper .crDevice.androidDevice.sclandscape {background-image: url("../../../resources/_jim/images/mobile/devices/android_phone_horiz_landscape.png");}
+
+#scenarioWrapper .blDevice.androidDevice.sclandscape {background-image: url("../../../resources/_jim/images/mobile/devices/android_phone_downright_landscape.png");}
+#scenarioWrapper .bcDevice.androidDevice.sclandscape {background-image: url("../../../resources/_jim/images/mobile/devices/android_phone_right_landscape.png");}
+#scenarioWrapper .brDevice.androidDevice.sclandscape {background-image: url("../../../resources/_jim/images/mobile/devices/android_phone_upright_landscape.png");}
+
+#scenarioWrapper .tlDevice.androidDevice {background-image: url("../../../resources/_jim/images/mobile/devices/android_phone_upleft.png");}
+#scenarioWrapper .tcDevice.androidDevice {background-image: url("../../../resources/_jim/images/mobile/devices/android_phone_horiz.png");}
+#scenarioWrapper .trDevice.androidDevice {background-image: url("../../../resources/_jim/images/mobile/devices/android_phone_upright.png");}
+
+#scenarioWrapper .clDevice.androidDevice {background-image: url("../../../resources/_jim/images/mobile/devices/android_phone_left.png");}
+#scenarioWrapper .crDevice.androidDevice {background-image: url("../../../resources/_jim/images/mobile/devices/android_phone_right.png");}
+
+#scenarioWrapper .blDevice.androidDevice {background-image: url("../../../resources/_jim/images/mobile/devices/android_phone_downleft.png");}
+#scenarioWrapper .bcDevice.androidDevice {background-image: url("../../../resources/_jim/images/mobile/devices/android_phone_horiz.png");}
+#scenarioWrapper .brDevice.androidDevice {background-image: url("../../../resources/_jim/images/mobile/devices/android_phone_downright.png");}
+
+#scenarioWrapper .tlDevice {background-image: url("../../../resources/_jim/images/mobile/devices/custom_upleft.png");}
+#scenarioWrapper .tcDevice {background-image: url("../../../resources/_jim/images/mobile/devices/custom_horiz.png");}
+#scenarioWrapper .trDevice {background-image: url("../../../resources/_jim/images/mobile/devices/custom_upright.png");}
+
+#scenarioWrapper .clDevice {background-image: url("../../../resources/_jim/images/mobile/devices/custom_vert.png");}
+#scenarioWrapper .crDevice {background-image: url("../../../resources/_jim/images/mobile/devices/custom_vert.png");}
+
+#scenarioWrapper .blDevice {background-image: url("../../../resources/_jim/images/mobile/devices/custom_downleft.png");}
+#scenarioWrapper .bcDevice {background-image: url("../../../resources/_jim/images/mobile/devices/custom_horiz.png");}
+#scenarioWrapper .brDevice {background-image: url("../../../resources/_jim/images/mobile/devices/custom_downright.png");}
+
