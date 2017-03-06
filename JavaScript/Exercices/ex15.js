@@ -3,4 +3,5 @@ setTimeout(function(){
 },2000);
 
 
-setTimeout(_ => console.log('coucou2'), 1000);
+// arrow function syntax 
+setTimeout(_ => console.log('coucou2'), 2000);
