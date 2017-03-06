@@ -122,7 +122,7 @@ Afficher en console la valeur arrondie de PI à la valeur supérieure et inféri
 
 Écrire une regexp pour ressortir le mot "yolo" (le mot cherché est en minuscule) dans la chaîne "FOEIJFOEZIJFEYOLOFEZKUHFEI" .
 
-#### Exercice 4.5
+#### Exercice 4.5 ([aide](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/match))
 
 Écrire une regexp pour ressortir les chaînes de caractères dans la chaîne "fezf1548ffdsaf515154v54654" et sortir les valeurs en console.
 
