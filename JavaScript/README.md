@@ -182,7 +182,7 @@ Afficher en console la date sous la forme "23/10/2015".
 
 Afficher en console la date sous la forme "23 octobre 2015" (en français).
 
-## Objets ([aide](http://www.w3schools.com/json/json_syntax.asp) & [aide](http://www.w3schools.com/json/default.asp))
+## Objets ([aide](https://www.w3schools.com/js/js_json_syntax.asp) & [aide](https://www.w3schools.com/js/js_json_objects.asp))
 
 #### Exercice 8.1
 

@@ -45,7 +45,7 @@ Nous avons les boutons suivants :
 <button class="redirect">Redirect</button>
 ```
 
-Nous souhaitons rediriger l'utilisateur sur une autre page, seulement losqu'il clique sur le bouton avec la classe `redirect`. 
+Nous souhaitons rediriger l'utilisateur sur une autre page, seulement lorsqu'il clique sur le bouton avec la classe `redirect`. 
 
 #### Exercice 5 ([aide](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/map))
 
