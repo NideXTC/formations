@@ -1,7 +1,7 @@
 #### Exercice 1 ([aide](https://developer.mozilla.org/en-US/docs/Web/Events) & [aide](https://developer.mozilla.org/en-US/docs/Web/Events/keyup))
 
 Nous avons le formulaire suivant : 
-```
+```html
 <form> 
 	<input type="text" name="name">
 	<button type="submit">Valider</button>
