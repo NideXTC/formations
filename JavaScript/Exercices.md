@@ -45,4 +45,45 @@ Nous avons les boutons suivants :
 <button class="redirect">Redirect</button>
 ```
 
-Nous souhaitons rediriger l'utilisateur sur une autre page seulement losqu'il clique sur le bouton avec la classe `redirect`. 
+Nous souhaitons rediriger l'utilisateur sur une autre page, seulement losqu'il clique sur le bouton avec la classe `redirect`. 
+
+#### Exercice 5 ([aide](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/map))
+
+
+Nous avons l'objet suivant : 
+```
+[
+	{
+		nb : 2, 
+		value : 10
+	},
+	{
+		nb : 5, 
+		value : 20
+	}
+]
+```
+
+Nous souhaitons, sans modifier l'objet d'origine et sans créer de nouvelle variable, resortir un tableau avec `nb x value`. 
+Votre valeur doit être `[20, 100]` à la fin. 
+
+#### Exercice 6 ([aide](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/filter))
+
+
+Nous avons l'objet suivant : 
+```
+[
+	{
+		nb : 2, 
+		value : 10
+	},
+	{
+		nb : 5, 
+		value : 20
+	}
+]
+```
+
+Nous souhaitons, sans modifier l'objet d'origine et sans créer de nouvelle variable, ne faire ressortir dans un tableau, que les éléments avec une `value` supérieure à 15. 
+
+
