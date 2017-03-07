@@ -51,7 +51,7 @@ Nous souhaitons rediriger l'utilisateur sur une autre page, seulement losqu'il c
 
 
 Nous avons l'objet suivant : 
-```
+```json
 [
 	{
 		nb : 2, 
@@ -71,7 +71,7 @@ Votre valeur doit être `[20, 100]` à la fin.
 
 
 Nous avons l'objet suivant : 
-```
+```json
 [
 	{
 		nb : 2, 
