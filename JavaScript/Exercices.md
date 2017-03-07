@@ -16,7 +16,7 @@ Nous souhaitons afficher en console la valeur du input à chaque nouvelle lettre
 
 Nous avons le formulaire suivant : 
 
-```
+```html
 <form> 
 	<input type="text" name="name">
 	<button type="submit">Valider</button>
@@ -29,7 +29,7 @@ Afficher une alerte si le formulaire est vide au moment de l'envoi du formulaire
 
 Nous avons le bouton suivant : 
 
-```
+```html
 <button>Redirect</button>
 ```
 
@@ -40,7 +40,7 @@ Nous souhaitons rediriger l'utilisateur sur une autre page quand il clique sur c
 
 Nous avons les boutons suivants : 
 
-```
+```html
 <button class="not-redirect">Not redirect</button>
 <button class="redirect">Redirect</button>
 ```
