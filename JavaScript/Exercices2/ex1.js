@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<form> 
+    <input type="text" name="name">
+    <button type="submit">Valider</button>
+</form>
+
+<script type="text/javascript">
+	var input = document.querySelector('input[name="name"]'); 
+	
+	input.addEventListener('keyup', function(){
+			console.log(input.value); 
+	}); 
+</script>
+
+</body>
+</html>
