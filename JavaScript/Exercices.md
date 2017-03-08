@@ -84,6 +84,8 @@ Nous avons l'objet suivant :
 ]
 ```
 
+
+
 Nous souhaitons, sans modifier l'objet d'origine et sans créer de nouvelle variable, ne faire ressortir dans un tableau, que les éléments avec une `value` supérieure à 15. 
 
-
+// Promises, AJAX, CSS, jQuery, API(geoloc, workers, canvas, audio/video, ws, file ...)
