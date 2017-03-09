@@ -20,13 +20,14 @@
 
     // ES5
     console.log(
-        json.map(function(obj){
-        return obj.nb * obj.value
-    })
+        json.filter(function(student){
+            return student.value > 15;
+        })
     );
 
     // ES6
-    console.log(json.map(obj => obj.nb * obj.value));
+    console.log(json.filter(student => student.value > 15));
+
 
 
 </script>
