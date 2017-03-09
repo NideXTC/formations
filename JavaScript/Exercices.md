@@ -187,7 +187,8 @@ Créer une boucle sans fin qui affiche à chaque tour un message _via_ un Worker
 
 #### Exercice 15 ([aide](https://developer.mozilla.org/fr/docs/WebSockets))
 
-Implémenter un websocket sur l'adresse 'ws://echo.websocket.org/' puis :    
+Implémenter un websocket sur l'adresse 'ws://echo.websocket.org/' puis : 
+
 * Envoyer un message via le WS 
 * Afficher en console le résultat de la réponse 
 
