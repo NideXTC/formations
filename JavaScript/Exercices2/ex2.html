@@ -4,7 +4,13 @@
 </form>
 
 <script>
+
+
     var form = document.querySelector('form');
+
+    form.onsubmit = function(){}; 
+
+
     form.addEventListener('submit', function(e) {
         // On bloque le comportement par défaut de l'élément
         e.preventDefault();

@@ -109,4 +109,52 @@ var students = [{
 Nous souhaitons, sans modifier l'objet d'origine, sans créer de nouvelle variable et sans utiliser de boucle, afficher la somme de toutes les notes.
 
 
+
+#### Exercice 8 ([aide](https://developer.mozilla.org/fr/docs/Web/API/HTMLElement/style)) 
+
+
+Nous avons le formulaire suivant : 
+
+```html
+<form> 
+	<input type="text" name="name">
+	<button type="submit">Valider</button>
+</form>
+```
+
+Passer la bordure du input en rouge si le formulaire est vide au moment de l'envoi.
+
+
+#### Exercice 9 ([aide](https://developer.mozilla.org/fr/docs/Web/API/Element/classList) ) 
+
+Nous avons le code suivant : 
+
+```html
+<style type="text/css">
+	.un {
+		height: 100px;
+		width: 100px;
+		background: red; 
+	}
+</style>
+<div class="un"></div>
+<button>Change</button>
+```
+
+Au premier clique sur le bouton, le JS doit retirer la classe `un` de la div et au clique suivant, la classe doit revenir.  
+
+
+#### Exercice 10 ([aide](https://developer.mozilla.org/fr/docs/Web/API/Element/innertHTML) ) 
+
+Nous avons le code suivant : 
+
+```html
+<span class="normal"></span>
+<span class="append"></span>
+<button>Add</button>
+```
+
+Au clique sur bouton, le JS doit ajouter "coucou" à l'intérieur des span, cependant dans la span.append, le texte doit se rajouter à la suite du précédent.   
+
+
 // Promises, AJAX, CSS, jQuery, API(geoloc, workers, canvas, audio/video, ws, file ...)
