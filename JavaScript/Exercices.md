@@ -170,7 +170,7 @@ En utilisant l'API de http://jsonplaceholder.typicode.com, ajouter un article (P
 
 Afficher dans la page la longitude et latitude de l'utilisateur. 
 
-#### Exercice 14 ([aide](https://developer.mozilla.org/fr/docs/Using_geolocation))
+#### Exercice 14 ([aide](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial))
 
 
 Nous avons le code suivant : 
