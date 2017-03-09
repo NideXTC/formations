@@ -164,7 +164,7 @@ En utilisant l'API de http://jsonplaceholder.typicode.com, récupérer la liste 
 
 #### Exercice 11 ([aide](https://developer.mozilla.org/fr/docs/AJAX/Premiers_pas) & [aide](https://openclassrooms.com/courses/ajax-et-l-echange-de-donnees-en-javascript/l-objet-xmlhttprequest-1)) 
 
-En utilisant l'API de http://jsonplaceholder.typicode.com, rAjouter un article (POST).
+En utilisant l'API de http://jsonplaceholder.typicode.com, ajouter un article (POST).
 
 #### Exercice 12 ([aide](https://developer.mozilla.org/fr/docs/Using_geolocation))
 
