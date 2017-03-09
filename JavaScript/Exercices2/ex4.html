@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button class="not-redirect">Not redirect</button>
+<button class="redirect">Redirect</button>
+
+<script>
+    document
+        .querySelector('button.redirect')
+        .addEventListener('click', () => location.href = "http://www.google.com");
+
+    // Nouvelle fenêtre
+    document
+        .querySelector('button.not-redirect')
+        .addEventListener('click', () => window.open("http://www.google.com"));
+
+
+</script>
+
+</body>
+</html>
