@@ -185,12 +185,12 @@ Dessiner un rectangle dans ce canvas.
 
 Créer une boucle sans fin qui affiche à chaque tour un message _via_ un Worker. 
 
-#### Exercice 16 ([aide](https://developer.mozilla.org/fr/docs/WebSockets))
+#### Exercice 16 ([aide](https://developer.mozilla.org/fr/docs/WebSockets) & [aide](https://developer.mozilla.org/fr/docs/Web/API/notification))
 
 Implémenter un websocket sur l'adresse 'ws://echo.websocket.org/' puis : 
 
 * Envoyer un message via le WS 
-* Afficher en console le résultat de la réponse 
+* Afficher _via_ une notification le résultat de la réponse 
 
 
 #### Exercice 17 ([aide](https://openclassrooms.com/courses/dynamisez-vos-sites-web-avec-javascript/l-api-file))
@@ -206,3 +206,6 @@ Nous avons le code suivant :
 ```
 
 Grâce au input type file, afficher la taille du fichier et son type. 
+
+
+
