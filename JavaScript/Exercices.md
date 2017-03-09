@@ -108,6 +108,8 @@ var students = [{
 
 Nous souhaitons, sans modifier l'objet d'origine, sans créer de nouvelle variable et sans utiliser de boucle, afficher la somme de toutes les notes.
 
+__/!\\__ Vous devez faire un `map` avant votre `reduce` pour récupérer un tableau de valeurs __/!\\__
+
 
 
 #### Exercice 8 ([aide](https://developer.mozilla.org/fr/docs/Web/API/HTMLElement/style)) 
