@@ -87,3 +87,25 @@ Nous avons l'objet suivant :
 Nous souhaitons, sans modifier l'objet d'origine et sans créer de nouvelle variable, ne faire ressortir dans un tableau, que les éléments avec une `value` supérieure à 15. 
 
 
+#### Exercice 7 ([aide](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/reduce)) 
+
+
+Nous avons le tableau suivant : 
+```js
+[{
+	name : "Bob", 
+	exam : 4	
+},{
+	name : "Martin", 
+	exam : 10	
+},{
+	name : "Jean", 
+	exam : 8	
+}]
+```
+
+Nous souhaitons, sans modifier l'objet d'origine, sans créer de nouvelle variable et sans utiliser de boucle, afficher la somme de toutes les notes.
+
+
+
+
