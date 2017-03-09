@@ -51,8 +51,8 @@ Nous souhaitons rediriger l'utilisateur sur une autre page, seulement lorsqu'il 
 
 
 Nous avons l'objet suivant : 
-```json
-[
+```js
+var json = [
 	{
 		nb : 2, 
 		value : 10
@@ -61,7 +61,7 @@ Nous avons l'objet suivant :
 		nb : 5, 
 		value : 20
 	}
-]
+];
 ```
 
 Nous souhaitons, sans modifier l'objet d'origine et sans créer de nouvelle variable, resortir un tableau avec `nb x value`. 
@@ -71,8 +71,8 @@ Votre valeur doit être `[20, 100]` à la fin.
 
 
 Nous avons l'objet suivant : 
-```json
-[
+```js
+var json = [
 	{
 		nb : 2, 
 		value : 10
@@ -81,7 +81,7 @@ Nous avons l'objet suivant :
 		nb : 5, 
 		value : 20
 	}
-]
+];
 ```
 
 Nous souhaitons, sans modifier l'objet d'origine et sans créer de nouvelle variable, ne faire ressortir dans un tableau, que les éléments avec une `value` supérieure à 15. 
@@ -93,7 +93,8 @@ Nous souhaitons, sans modifier l'objet d'origine et sans créer de nouvelle vari
 
 Nous avons le tableau suivant : 
 ```js
-[{
+
+var students = [{
 	name : "Bob", 
 	exam : 4	
 },{
@@ -102,7 +103,7 @@ Nous avons le tableau suivant :
 },{
 	name : "Jean", 
 	exam : 8	
-}]
+}];
 ```
 
 Nous souhaitons, sans modifier l'objet d'origine, sans créer de nouvelle variable et sans utiliser de boucle, afficher la somme de toutes les notes.
