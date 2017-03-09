@@ -158,19 +158,19 @@ Nous avons le code suivant :
 
 Au clique sur bouton, le JS doit ajouter "coucou" à l'intérieur des span, cependant dans la span.append, le texte doit se rajouter à la suite du précédent.   
 
-#### Exercice 10 ([aide](https://developer.mozilla.org/fr/docs/AJAX/Premiers_pas) & [aide](https://openclassrooms.com/courses/ajax-et-l-echange-de-donnees-en-javascript/l-objet-xmlhttprequest-1)) 
+#### Exercice 11 ([aide](https://developer.mozilla.org/fr/docs/AJAX/Premiers_pas) & [aide](https://openclassrooms.com/courses/ajax-et-l-echange-de-donnees-en-javascript/l-objet-xmlhttprequest-1)) 
 
 En utilisant l'API de http://jsonplaceholder.typicode.com, récupérer la liste des articles (GET).
 
-#### Exercice 11 ([aide](https://developer.mozilla.org/fr/docs/AJAX/Premiers_pas) & [aide](https://openclassrooms.com/courses/ajax-et-l-echange-de-donnees-en-javascript/l-objet-xmlhttprequest-1)) 
+#### Exercice 12 ([aide](https://developer.mozilla.org/fr/docs/AJAX/Premiers_pas) & [aide](https://openclassrooms.com/courses/ajax-et-l-echange-de-donnees-en-javascript/l-objet-xmlhttprequest-1)) 
 
 En utilisant l'API de http://jsonplaceholder.typicode.com, ajouter un article (POST).
 
-#### Exercice 12 ([aide](https://developer.mozilla.org/fr/docs/Using_geolocation))
+#### Exercice 13 ([aide](https://developer.mozilla.org/fr/docs/Using_geolocation))
 
 Afficher dans la page la longitude et latitude de l'utilisateur. 
 
-#### Exercice 13 ([aide](https://developer.mozilla.org/fr/docs/Using_geolocation))
+#### Exercice 14 ([aide](https://developer.mozilla.org/fr/docs/Using_geolocation))
 
 
 Nous avons le code suivant : 
@@ -181,11 +181,11 @@ Nous avons le code suivant :
 
 Dessiner un rectangle dans ce canvas. 
 
-#### Exercice 14 ([aide](https://developer.mozilla.org/fr/docs/Utilisation_des_web_workers))
+#### Exercice 15 ([aide](https://developer.mozilla.org/fr/docs/Utilisation_des_web_workers))
 
 Créer une boucle sans fin qui affiche à chaque tour un message _via_ un Worker. 
 
-#### Exercice 15 ([aide](https://developer.mozilla.org/fr/docs/WebSockets))
+#### Exercice 16 ([aide](https://developer.mozilla.org/fr/docs/WebSockets))
 
 Implémenter un websocket sur l'adresse 'ws://echo.websocket.org/' puis : 
 
@@ -193,7 +193,7 @@ Implémenter un websocket sur l'adresse 'ws://echo.websocket.org/' puis :
 * Afficher en console le résultat de la réponse 
 
 
-#### Exercice 16 ([aide](https://openclassrooms.com/courses/dynamisez-vos-sites-web-avec-javascript/l-api-file))
+#### Exercice 17 ([aide](https://openclassrooms.com/courses/dynamisez-vos-sites-web-avec-javascript/l-api-file))
 
 
 Nous avons le code suivant : 
