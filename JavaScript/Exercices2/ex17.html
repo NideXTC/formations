@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="">
+    <input type="file" multiple="multiple" name="" id="">
+</form>
+
+<script>
+    document
+        .querySelector('input')
+        .addEventListener('change', function () {
+            console.log(this.files);
+            console.log(this.files[0].size, this.files[0].type);
+
+        });
+</script>
+</body>
+</html>
+
+
