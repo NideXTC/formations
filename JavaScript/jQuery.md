@@ -1,6 +1,6 @@
 # jQuery 
 
-#### Exercice 1 ([aide](https://api.jquery.com/keyup/))
+#### Exercice 1 ([aide](https://api.jquery.com/keyup/) & [aide](https://api.jquery.com/val/))
 
 Nous avons le formulaire suivant : 
 ```html
