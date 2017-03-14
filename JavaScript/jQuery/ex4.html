@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style type="text/css">
+    .un {
+        height: 100px;
+        width: 100px;
+        background: red;
+    }
+</style>
+<div class="un"></div>
+<button>Change</button>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+<script>
+    $('button').click(function(){
+        // addClass() & removeClass()
+        $('div').toggleClass('un');
+    });
+</script>
+</body>
+</html>
+
+
+
+
+
+
