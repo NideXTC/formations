@@ -63,7 +63,7 @@ Nous avons le code suivant :
 Au premier clique sur le bouton, le JS doit retirer la classe `un` de la div et au clique suivant, la classe doit revenir.  
 
 
-#### Exercice 5 ([aide](http://api.jquery.com/html/) ) 
+#### Exercice 5 ([aide](http://api.jquery.com/html/) & [aide](http://api.jquery.com/append/)) 
 
 Nous avons le code suivant : 
 
