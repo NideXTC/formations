@@ -44,4 +44,4 @@ if(!empty($_POST['login']) && $_POST['login'] == 'root@toor.us' && !empty($_POST
 
 ```
 
-Vous pouvez lancer un serveur php en ligne de commande via la commande `php -s localhost` en étant dans votre dossier contenant le fichier php. 
+Vous pouvez lancer un serveur php en ligne de commande via la commande `php -S localhost` en étant dans votre dossier contenant le fichier php ([doc](http://php.net/manual/fr/features.commandline.webserver.php)). 
