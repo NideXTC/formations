@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="" method="post">
+    <input type="text" name="title">
+    <textarea name="body" cols="30" rows="10"></textarea>
+    <button type="submit">Envoyer</button>
+</form>
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+<script>
+
+    /*$.ajax({
+        url: "http://jsonplaceholder.typicode.com/posts",
+        method: "POST",
+        data: {
+            title: 'Mon super titre',
+            body: 'Mon super texte de body'
+        }
+    }).done(function (data) {
+        console.log(data);
+    });*/
+
+
+    $('form').submit(function (e) {
+        e.preventDefault();
+        $.post(
+            "http://jsonplaceholder.typicode.com/posts"
+            , $('form').serialize()
+            , function (data) {
+                console.log(data);
+                //TODO penser à vider le formulaire
+            });
+    });
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
