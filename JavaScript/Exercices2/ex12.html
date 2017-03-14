@@ -45,14 +45,15 @@
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4) {
             console.log(xhr.responseText);
-
+            console.log(xhr.status);
             console.log(typeof xhr.responseText);
             var json = JSON.parse(xhr.responseText);
             console.log(typeof json);
         }
     };
-    xhr.open('GET', 'http://jsonplaceholder.typicode.com/posts/1', true);
-    xhr.send(null);
+    xhr.open('POST', 'http://jsonplaceholder.typicode.com/posts', true);
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    xhr.send("title=monSuperTitre&body=TESTtest");
 
 
 </script>
