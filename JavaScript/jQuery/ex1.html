@@ -5,10 +5,28 @@
     <title>Title</title>
 </head>
 <body>
+    <form>
+        <input type="text" name="name">
+        <button type="submit">Valider</button>
+    </form>
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script>
-    // TODO
+    $('input[type="text"]').keyup(function(){
+        console.log("keyup selector : ", $('input[type="text"]').val());
+        console.log("keyup $(this) : ",$(this).val());
+    });
+
+    $('input[type="text"]').on('keyup',function(){
+        console.log("on $(this): ",$(this).val());
+    });
+
 </script>
 </body>
 </html>
+
+
+
+
+
+
