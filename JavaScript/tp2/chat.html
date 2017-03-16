@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<style type="text/css">
+
+		* {
+			box-sizing: border-box;
+			outline: none;
+			font-family: 'Open Sans', sans-serif;
+		}
+
+		body {
+			padding: 0;
+			margin: 0;
+		}
+		.messages {
+			padding: 0;
+			margin: 0;
+			height: calc(100vh - 100px); 
+			width: 100vw;
+			background: lightgrey; 
+		}
+
+		form {
+			height: 100px; 
+			width: 100vw;
+		}
+
+		form > textarea {
+			width: calc(100vw - 95px); 
+			height: 80px; 
+			margin-top: 8px;
+			margin-left: 8px;
+			resize: none;
+			padding: 5px;
+		}
+
+		form > button {
+			height: 80px; 
+			margin-top: 8px;
+			vertical-align: top;
+			background: #2196f3;
+			border: none; 
+			width: 75px;
+			margin-right: 7px;
+			cursor: pointer;
+			color: white; 
+			font-size: 15px;
+		}
+
+		form > button:hover {
+			background: #03a9f4;
+		}
+
+		form > button:active {
+			background: #00bcd4;
+		}
+
+		ul.messages {
+			padding-top: 10px;
+			overflow: auto;
+		}
+
+		ul.messages > li {
+			width: 90vw; 
+			background: white; 
+			min-height: 30px;
+			margin:  0 0 10px 10px; 
+			padding: 5px;
+		}
+
+		.disabled {
+			top: 0;
+			left: 0; 
+			width: 100vw; 
+			height: 100vh; 
+			background: rgba(0,0,0,0.5);
+			position: fixed;
+			z-index: 1000;
+		}
+	</style>
+</head>
+<body>
+<div class="disabled"></div>
+
+<ul class="messages">
+	<li>Message de test</li>
+</ul>
+<form>
+	<textarea placeholder="message" name="send"></textarea>
+	<button type="submit">Envoyer</button>
+</form>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js
+"></script>
+<script type="text/javascript">
+	
+</script>
+</body>
+</html>
