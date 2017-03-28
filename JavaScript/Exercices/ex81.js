@@ -18,3 +18,6 @@ const obj2 = {
         }
     ]
 };
+
+console.table(obj);
+console.table(obj2.students);
