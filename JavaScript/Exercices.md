@@ -156,7 +156,13 @@ Nous avons le code suivant :
 <button>Add</button>
 ```
 
-Au clique sur bouton, le JS doit ajouter "coucou" à l'intérieur des span, cependant dans la span.append, le texte doit se rajouter à la suite du précédent.   
+Au clique sur bouton, le JS doit écrire "coucou" à l'intérieur des span, cependant dans la span.append, le texte doit se rajouter à la suite du précédent. Par exemple après trois cliques, vous auriez : 
+
+```html
+<span class="normal">coucou</span>
+<span class="append">coucoucoucoucoucou</span>
+<button>Add</button>
+```
 
 #### Exercice 11 ([aide](https://developer.mozilla.org/fr/docs/AJAX/Premiers_pas) & [aide](https://openclassrooms.com/courses/ajax-et-l-echange-de-donnees-en-javascript/l-objet-xmlhttprequest-1)) 
 
