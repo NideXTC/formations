@@ -5,25 +5,22 @@
     <title>Title</title>
 </head>
 <body>
-<input type="text" name="toto">
 
-<button id="toto" >Test</button>
+<form>
+    <input type="text" name="name">
+    <button type="submit">Valider</button>
+</form>
 
 <script>
-    //document.querySelector('input');
-    //document.querySelector('input[name="toto"]');
+    const input = document.querySelector('input');
 
-    var button = document.querySelector('#toto');
-
-    button.addEventListener('click', function(){
-        alert('Click');
+    //ES5
+    input.addEventListener('keyup', function () {
+        console.log('ES5', input.value);
     });
 
-    button.onclick = function(){
-        alert('Click');
-    };
-
-
+    // ES6
+    input.addEventListener('keyup', _ => console.log('ES6', input.value));
 
 </script>
 </body>
