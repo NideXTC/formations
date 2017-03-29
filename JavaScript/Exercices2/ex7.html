@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    var students = [{
+        name: "Bob",
+        exam: 4
+    }, {
+        name: "Martin",
+        exam: 10
+    }, {
+        name: "Jean",
+        exam: 8
+    }];
+
+
+    // ES5
+    console.log(
+        students
+            .map(function (obj) {
+                return obj.exam
+            })
+            .reduce(function(acc, curr){
+                return acc + curr;
+            })
+    );
+
+    // ES6
+    console.log(
+        students
+            .map(obj => obj.exam)
+            .reduce((acc, curr) => acc + curr)
+    );
+
+
+</script>
+</body>
+</html>
