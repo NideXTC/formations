@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    var json = [
+        {
+            nb : 2,
+            value : 10
+        },
+        {
+            nb : 5,
+            value : 20
+        }
+    ];
+
+    // ES5
+    console.log(json.map(function(obj){
+       return (obj.nb * obj.value);
+    }));
+
+    // ES6
+    console.log(json.map(obj => obj.nb * obj.value));
+
+
+</script>
+</body>
+</html>

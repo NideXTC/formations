@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button class="not-redirect">Not redirect</button>
+<button class="redirect">Redirect</button>
+
+<script>
+
+        // ES 5
+        document
+            .querySelector('button.redirect')
+            .addEventListener('click',function () {
+               location.href = 'http://www.google.com';
+               // Nouvel Onglet
+               window.open('http://www.google.com');
+            });
+
+        // ES 6
+        document
+            .querySelector('button.redirect')
+            .addEventListener('click', _ => location.href = 'http://www.google.com');
+
+</script>
+</body>
+</html>
