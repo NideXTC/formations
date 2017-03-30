@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    const worker = new Worker('test.js');
+
+    // écouter les messages -- onmessage
+
+    // Syntax 1
+    worker.onmessage = function(e){
+        console.log(' 1 : ' + e.data);
+    };
+
+    // Syntax 2
+    worker.addEventListener('message', function(e){
+        console.log(' 2 : ' +e.data);
+    });
+
+</script>
+
+</body>
+</html>

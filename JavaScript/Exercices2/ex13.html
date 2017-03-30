@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<span></span>
+
+
+<script>
+    navigator.geolocation.getCurrentPosition(function(position) {
+        document
+            .querySelector('span')
+            .innerHTML = position.coords.latitude +', '+position.coords.longitude;
+    });
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
