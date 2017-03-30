@@ -32,15 +32,14 @@
 
     var xhr = getXMLHttpRequest();
 
-    xhr.open('GET','http://jsonplaceholder.typicode.com/posts/1',true);
+    xhr.open('POST','http://jsonplaceholder.typicode.com/posts',true);
     xhr.onreadystatechange = function(){
         if(xhr.readyState == 4){
             console.log(JSON.parse(xhr.responseText));
-
-
         }
     };
-    xhr.send(null)
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.send('title=titre&body=corpsDeTexte');
 </script>
 </body>
 </html>
