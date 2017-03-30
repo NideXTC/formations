@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    const ws = new WebSocket('wss://echo.websocket.org/');
+
+    ws.onopen = function () {
+        ws.send('Test');
+    };
+
+    ws.onmessage = function (event) {
+        console.log(event.data);
+
+        if (Notification.permission === "granted") {
+            // Si c'est ok, créons une notification
+            var notification = new Notification(event.data);
+        }
+
+        if (Notification.permission !== 'denied') {
+            Notification.requestPermission(function (permission) {
+                if (!('permission' in Notification)) {
+                    Notification.permission = permission;
+                }
+                if (permission === "granted") {
+                    var notification = new Notification(event.data);
+                }
+            });
+        }
+
+    };
+
+
+</script>
+
+</body>
+</html>

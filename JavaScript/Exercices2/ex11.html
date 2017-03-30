@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    function getXMLHttpRequest() {
+        var xhr = null;
+
+        if (window.XMLHttpRequest || window.ActiveXObject) {
+            if (window.ActiveXObject) {
+                try {
+                    xhr = new ActiveXObject("Msxml2.XMLHTTP");
+                } catch(e) {
+                    xhr = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+            } else {
+                xhr = new XMLHttpRequest();
+            }
+        } else {
+            alert("Votre navigateur ne supporte pas l'objet XMLHTTPRequest...");
+            return null;
+        }
+
+        return xhr;
+    }
+
+    var xhr = getXMLHttpRequest();
+
+    xhr.open('GET','http://jsonplaceholder.typicode.com/posts/1',true);
+    xhr.onreadystatechange = function(){
+        if(xhr.readyState == 4){
+            console.log(JSON.parse(xhr.responseText));
+
+
+        }
+    };
+    xhr.send(null)
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
