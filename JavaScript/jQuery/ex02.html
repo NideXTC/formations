@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form>
+    <input type="text" name="name">
+    <button type="submit">Valider</button>
+</form>
+
+<script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+<script>
+    $('form').submit(function (e) {
+        if ($('input').val() == '') {
+            e.preventDefault();
+            alert('Vide');
+        }
+    });
+
+    $('form').on('submit', function (e) {
+        if ($('input').val() == '') {
+            e.preventDefault();
+            alert('Vide');
+        }
+    });
+</script>
+</body>
+</html>
