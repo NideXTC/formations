@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<span class="normal"></span><br>
+<span class="append"></span><br>
+<button>Add</button>
+
+<script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+<script>
+    $('button').click(function(){
+        $('span.normal').html('coucou<br>');
+        //$('span.normal').text('coucou<br>');
+
+        $('span.append').append('coucou');
+    });
+
+    $('button').on('click',function(){
+        $('span.normal').html('coucou');
+        $('span.append').append('coucou');
+    });
+
+</script>
+</body>
+</html>
