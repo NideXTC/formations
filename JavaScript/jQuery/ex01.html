@@ -6,9 +6,19 @@
 </head>
 <body>
 
+<form>
+    <input type="text" name="name">
+    <button type="submit">Valider</button>
+</form>
+
 <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
 <script>
-    //TODO
+    const input = $('input');
+
+    input.keyup(function(){
+        console.log(input.val())
+    });
+
 </script>
 </body>
 </html>
