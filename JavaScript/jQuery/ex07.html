@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+<script>
+
+    $.post('http://jsonplaceholder.typicode.com/posts', {
+        title: ' mon titre ',
+        body: ' mon corps de message '
+    }, function (data) {
+        console.log(data);
+    });
+
+    $.ajax({
+        url: 'http://jsonplaceholder.typicode.com/posts',
+        method: 'POST',
+        data: {
+            title: ' mon titre ',
+            body: ' mon corps de message '
+        }
+    }).done(function (data) {
+        console.log(data);
+    });
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
