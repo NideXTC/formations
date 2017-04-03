@@ -19,7 +19,7 @@ Dans le formulaire suivant, nous souhaitons passer la connexion en AJAX pour fai
 	}
 </style>
 
-<span class="errors"></span>
+<span class="error"></span>
 <form method="POST">
 	<input type="text" name="login">
 	<input type="text" name="password">
