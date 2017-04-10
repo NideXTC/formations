@@ -1,8 +1,0 @@
-.radiobutton { border:1px solid #4c4c4c; width:16px; height:16px; }
-.checkbox { border:1px solid #4c4c4c; }
-
-.radiobuttonlist input[type="radio"] { border:1px solid #4c4c4c; width:16px; height:16px; }
-.checkboxlist input[type="checkbox"] { border:1px solid #4c4c4c; }
-
-.datarow input.radiobutton { border:1px solid #4c4c4c; }
-.datarow input.checkbox { border:1px solid #4c4c4c; }

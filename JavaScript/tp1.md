@@ -6,7 +6,7 @@ Dans le formulaire suivant, nous souhaitons passer la connexion en AJAX pour fai
 * Le `ajax_login.php` doit être appelé depuis un script AJAX.
 * Les deux champs ne doivent pas être vides.
 * Le champ de login est un mail, vous devrez vérifier _via_ une regexp que le mail est valide
-* Si un des champs est vide, il doit y avoir un message du type `Le champs login est vide` ; si les deux champs sont vides, il doit y avoir deux messages. 
+* Si un des champs est vide, il doit y avoir un message du type `Le champs login est vide` ; si les deux champs sont vides, il doit y avoir deux messages (dans `span.error`). 
 * En cas de champ vide, il doit avoir une bordure rouge pour montrer rapidement à l'utilisateur où est l'erreur. 
 * Si tout est correct, l'utilisateur sera redirigé sur https://www.google.fr
 
