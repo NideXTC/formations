@@ -3,7 +3,7 @@
 
 https://github.com/NideXTC/CoursYNov/
 
-#### WINDOWS 
+#### WINDOWS ([EasyPHP](https://bitbucket.org/easyphp/easyphp-devserver/downloads/EasyPHP-Devserver-17.0-setup.exe))
 
 E (avec le carré rouge) en bas en droite -> Open dashboard 
 
