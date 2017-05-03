@@ -4,7 +4,7 @@
 
 * [hostinger](https://www.hostinger.fr/)
 
-* **Pour du test seulement** : [dotTK](http://dot.tk)
+* **Pour du test seulement** : [dotTK](http://dot.tk), [myGA](http://my.ga)
 
 
 
@@ -48,6 +48,9 @@ Ouvrez un éditeur de texte et remplacez l'URL locale par l'URL distante, par ex
 * Allez ensuite dans PHPMyAdmin et faites `importer` et choisissez votre fichier. 
 
 * Éditez votre fichier `wp-config.php` qui est à la racine de votre serveur (accessible par filezilla)
+
+
+
 
 
 
