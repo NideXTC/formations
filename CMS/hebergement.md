@@ -34,7 +34,7 @@
 
 #### En local 
 
-Allez sur PHPMyAdmin, sélectionnez votre base de données et faites `exporter`. 
+Allez sur PHPMyAdmin, sélectionnez votre base de données et faites `exporter`, cliquez ensuite sur `personnaliser` puis cliquez sur `diriger la sortie vers un fichier` et ensuite faites `executer`.
 
 Ouvrez un éditeur de texte et remplacez l'URL locale par l'URL distante, par exemple : `http://localhost/wordpress` par `http://monsite.fr`. 
 
