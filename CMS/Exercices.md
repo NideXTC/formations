@@ -62,20 +62,20 @@ Volet de gauche -> Clik sur "Nouvelle base de données" -> Vous lui donnez un no
 
 #### Windows : 
 
-Nom de la base de données : [ce que vous avez rentré dans PhpMyAdmin]
-Utilisateur : root 
-mot de passe : [vide]
-Adresse de la base : localhost 
-prefix : wp_
+Nom de la base de données : [ce que vous avez rentré dans PhpMyAdmin]    
+Utilisateur : root     
+mot de passe : [vide]    
+Adresse de la base : localhost     
+prefix : wp_    
 
 
 #### Mac : 
 
-Nom de la base de données : [ce que vous avez rentré dans PhpMyAdmin]
-Utilisateur : root 
-mot de passe : root
-Adresse de la base : localhost 
-prefix : wp_
+Nom de la base de données : [ce que vous avez rentré dans PhpMyAdmin]    
+Utilisateur : root     
+mot de passe : root    
+Adresse de la base : localhost     
+prefix : wp_    
 
 
 ## Page d'admin : 
