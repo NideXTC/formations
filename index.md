@@ -6,8 +6,8 @@
 # Workshop _sécurité_
 
 * Sécurité (PPT) : [télécharger](https://github.com/NideXTC/formations/blob/master/workshops/S%C3%A9curit%C3%A9.pptx?raw=true)
-* Sécurité (PDF) : [voir](https://github.com/NideXTC/formations/blob/master/workshops/S%C3%A9curit%C3%A9.pdf) | [télécharger](https://github.com/NideXTC/formations/blob/master/workshops/S%C3%A9curit%C3%A9.pdf?raw=true)
-* Code + VM : [voir](https://github.com/NideXTC/formations/tree/master/workshops/s%C3%A9curit%C3%A9) | [télécharger](https://github.com/NideXTC/formations/blob/master/workshops/securite.zip?raw=true)
+* Sécurité (PDF) : [voir](https://github.com/NideXTC/formations/blob/master/workshops/S%C3%A9curit%C3%A9.pdf) / [télécharger](https://github.com/NideXTC/formations/blob/master/workshops/S%C3%A9curit%C3%A9.pdf?raw=true)
+* Code + VM : [voir](https://github.com/NideXTC/formations/tree/master/workshops/s%C3%A9curit%C3%A9) / [télécharger](https://github.com/NideXTC/formations/blob/master/workshops/securite.zip?raw=true)
 
 
 # Workshop _référencement naturel_
@@ -17,12 +17,12 @@
 # Cours _JavaScript_
 
 * JavaScript (PPT) : [télécharger](https://github.com/NideXTC/formations/blob/master/JavaScript/JavaScript.pptx?raw=true)
-* JavaScript (PDF) : [voir](https://github.com/NideXTC/formations/blob/master/JavaScript/JavaScript.pdf) | [télécharger](https://github.com/NideXTC/formations/blob/master/JavaScript/JavaScript.pdf?raw=true)
+* JavaScript (PDF) : [voir](https://github.com/NideXTC/formations/blob/master/JavaScript/JavaScript.pdf) / [télécharger](https://github.com/NideXTC/formations/blob/master/JavaScript/JavaScript.pdf?raw=true)
 
 # Cours _NodeJS_
 
 * NodeJS (keynote) : [télécharger](https://github.com/NideXTC/formations/blob/master/NodeJS/NodeJS.key?raw=true)
-* NodeJS (PDF) : [voir](https://github.com/NideXTC/formations/blob/master/NodeJS/NodeJS.pdf) | [télécharger](https://github.com/NideXTC/formations/blob/master/NodeJS/NodeJS.pdf?raw=true)
+* NodeJS (PDF) : [voir](https://github.com/NideXTC/formations/blob/master/NodeJS/NodeJS.pdf) / [télécharger](https://github.com/NideXTC/formations/blob/master/NodeJS/NodeJS.pdf?raw=true)
 
  ---
 
@@ -39,7 +39,7 @@
 # Cours _HTML/CSS_
 
 * HTML/CSS (PPT) : [télécharger](https://github.com/NideXTC/formations/blob/master/HTML_CSS_CMS/HTML_CSS.pptx?raw=true)
-* HTML/CSS (PDF) : [voir](https://github.com/NideXTC/formations/blob/master/HTML_CSS_CMS/HTML_CSS.pdf) | [télécharger](https://github.com/NideXTC/formations/blob/master/HTML_CSS_CMS/HTML_CSS.pdf?raw=true)
+* HTML/CSS (PDF) : [voir](https://github.com/NideXTC/formations/blob/master/HTML_CSS_CMS/HTML_CSS.pdf) / [télécharger](https://github.com/NideXTC/formations/blob/master/HTML_CSS_CMS/HTML_CSS.pdf?raw=true)
 
 # Cours _PHP_
 
@@ -67,7 +67,7 @@
 # Cours _Design Patterns_
 
 * Keynote : [télécharger](https://github.com/NideXTC/formations/blob/master/Design%20Patterns/Design%20patterns.key?raw=true)
-* PDF : [voir](https://github.com/NideXTC/formations/blob/master/Design%20Patterns/Design%20patterns.pdf) | [télécharger](https://github.com/NideXTC/formations/blob/master/Design%20Patterns/Design%20patterns.pdf?raw=true)
+* PDF : [voir](https://github.com/NideXTC/formations/blob/master/Design%20Patterns/Design%20patterns.pdf) / [télécharger](https://github.com/NideXTC/formations/blob/master/Design%20Patterns/Design%20patterns.pdf?raw=true)
 
 ---
 
