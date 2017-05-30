@@ -77,4 +77,4 @@
 
 # Cours _Algo_
 
-Base du pseudo-code : [voir](https://github.com/NideXTC/formations/tree/master/Algo)
+* Base du pseudo-code : [voir](https://github.com/NideXTC/formations/tree/master/Algo)
