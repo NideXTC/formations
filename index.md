@@ -1,7 +1,7 @@
 # Workshop _scraping_
 
 * Scrap (PPT) : [télécharger](https://github.com/NideXTC/formations/blob/master/workshops/scrap.pptx?raw=true)    
-* Scrap (PDF) : [voir](https://github.com/NideXTC/formations/blob/master/workshops/scrap.pdf) | [télécharger](https://github.com/NideXTC/formations/blob/master/workshops/scrap.pdf?raw=true)
+* Scrap (PDF) : [voir](https://github.com/NideXTC/formations/blob/master/workshops/scrap.pdf) / [télécharger](https://github.com/NideXTC/formations/blob/master/workshops/scrap.pdf?raw=true)
 
 # Workshop _sécurité_
 
