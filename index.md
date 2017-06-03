@@ -1,23 +1,16 @@
-# Workshop _scraping_
 
-* Scrap (PPT) : [télécharger](https://github.com/NideXTC/formations/blob/master/workshops/scrap.pptx?raw=true)    
-* Scrap (PDF) : [voir](https://github.com/NideXTC/formations/blob/master/workshops/scrap.pdf) / [télécharger](https://github.com/NideXTC/formations/blob/master/workshops/scrap.pdf?raw=true)
-
-# Workshop _sécurité_
-
-* Sécurité (PPT) : [télécharger](https://github.com/NideXTC/formations/blob/master/workshops/S%C3%A9curit%C3%A9.pptx?raw=true)
-* Sécurité (PDF) : [voir](https://github.com/NideXTC/formations/blob/master/workshops/S%C3%A9curit%C3%A9.pdf) / [télécharger](https://github.com/NideXTC/formations/blob/master/workshops/S%C3%A9curit%C3%A9.pdf?raw=true)
-* Code + VM : [voir](https://github.com/NideXTC/formations/tree/master/workshops/s%C3%A9curit%C3%A9) / [télécharger](https://github.com/NideXTC/formations/blob/master/workshops/securite.zip?raw=true)
-
-
-# Workshop _référencement naturel_
-
-* SEO (PPT) : [télécharger](https://github.com/NideXTC/formations/blob/master/MajDev/SEO.pptx?raw=true)
 
 # Cours _JavaScript_
 
 * JavaScript (PPT) : [télécharger](https://github.com/NideXTC/formations/blob/master/JavaScript/JavaScript.pptx?raw=true)
 * JavaScript (PDF) : [voir](https://github.com/NideXTC/formations/blob/master/JavaScript/JavaScript.pdf) / [télécharger](https://github.com/NideXTC/formations/blob/master/JavaScript/JavaScript.pdf?raw=true)
+* Initiation au JavaScript (exercices) : [voir](https://github.com/NideXTC/formations/blob/master/JavaScript/README.md)
+* Boilerplate pour "Initiation au JavaScript" : [télécharger](https://github.com/NideXTC/formations/blob/master/JavaScript/Boilerplate.zip?raw=true)
+* JavaScript avancé (modification du DOM, Programmation fonctionnelle, AJAX, API JS) : [voir](https://github.com/NideXTC/formations/blob/master/JavaScript/Exercices.md)
+* jQuery : [voir](https://github.com/NideXTC/formations/blob/master/JavaScript/jQuery.md)
+* TP1 :  [consigne](https://github.com/NideXTC/formations/blob/master/JavaScript/tp1.md) / [assets](https://github.com/NideXTC/formations/tree/master/JavaScript/tp1)
+* TP2 :  [consigne](https://github.com/NideXTC/formations/blob/master/JavaScript/tp2.md)/ [assets](https://github.com/NideXTC/formations/tree/master/JavaScript/tp2)
+* TP3 :  [consigne](https://github.com/NideXTC/formations/blob/master/JavaScript/tp3.md) / [assets](https://github.com/NideXTC/formations/tree/master/JavaScript/tp3)
 
 # Cours _NodeJS_
 
@@ -48,7 +41,16 @@
 * Le protocole HTTP (PPT) : [télécharger](https://github.com/NideXTC/formations/blob/master/PHP/PPT/3%20-%20Formation%20PHP%20-le%20protocole%20HTTP.pptx?raw=true)
 * L’utilisation des SGBD avec PDO (PPT) : [télécharger](https://github.com/NideXTC/formations/blob/master/PHP/PPT/4%20-%20Formation%20PHP%20-l%E2%80%99utilisation%20des%20sgbd%20avec%20pdo.pptx?raw=true)
 * Introduction à l'objet (PPT) : [télécharger](https://github.com/NideXTC/formations/blob/master/PHP/PPT/5%20-%20Formation%20PHP%20-introduction%20%C3%A0%20l'objet.pptx?raw=true)
+* Exercices : [voir](https://github.com/NideXTC/formations/blob/master/PHP/Exercices.md)
+* TP : [voir](https://github.com/NideXTC/formations/blob/master/PHP/tp1.md)
 
+
+# Cours _Ergonomie_
+
+* Ergonomie (PPT) : [télécharger](https://github.com/NideXTC/formations/blob/master/Ergonomie/Ergonomie.pptx?raw=true)
+* Ergonomie (PDF) : [voir](https://github.com/NideXTC/formations/blob/master/Ergonomie/Ergonomie.pdf) / [télécharger](https://github.com/NideXTC/formations/blob/master/Ergonomie/Ergonomie.pdf?raw=true)
+* Benchmark vide : [télécharger](https://github.com/NideXTC/formations/blob/master/Ergonomie/bench%20(vide).xlsx?raw=true) 
+* Exemple de Zoning : [voir](https://github.com/NideXTC/formations/blob/master/Ergonomie/zoning.png)
 
 # Cours _Majeur dev_
 
@@ -78,3 +80,19 @@
 # Cours _Algo_
 
 * Base du pseudo-code : [voir](https://github.com/NideXTC/formations/tree/master/Algo)
+
+# Workshop _scraping_
+
+* Scrap (PPT) : [télécharger](https://github.com/NideXTC/formations/blob/master/workshops/scrap.pptx?raw=true)    
+* Scrap (PDF) : [voir](https://github.com/NideXTC/formations/blob/master/workshops/scrap.pdf) / [télécharger](https://github.com/NideXTC/formations/blob/master/workshops/scrap.pdf?raw=true)
+
+# Workshop _sécurité_
+
+* Sécurité (PPT) : [télécharger](https://github.com/NideXTC/formations/blob/master/workshops/S%C3%A9curit%C3%A9.pptx?raw=true)
+* Sécurité (PDF) : [voir](https://github.com/NideXTC/formations/blob/master/workshops/S%C3%A9curit%C3%A9.pdf) / [télécharger](https://github.com/NideXTC/formations/blob/master/workshops/S%C3%A9curit%C3%A9.pdf?raw=true)
+* Code + VM : [voir](https://github.com/NideXTC/formations/tree/master/workshops/s%C3%A9curit%C3%A9) / [télécharger](https://github.com/NideXTC/formations/blob/master/workshops/securite.zip?raw=true)
+
+
+# Workshop _référencement naturel_
+
+* SEO (PPT) : [télécharger](https://github.com/NideXTC/formations/blob/master/MajDev/SEO.pptx?raw=true)
