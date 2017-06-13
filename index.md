@@ -85,6 +85,7 @@
 
 * Scrap (PPT) : [télécharger](https://github.com/NideXTC/formations/blob/master/workshops/scrap.pptx?raw=true)    
 * Scrap (PDF) : [voir](https://github.com/NideXTC/formations/blob/master/workshops/scrap.pdf) / [télécharger](https://github.com/NideXTC/formations/blob/master/workshops/scrap.pdf?raw=true)
+* Exemple d'utilisation sur Booking : [avec Scrap](https://github.com/NideXTC/formations/blob/master/workshops/scrap/booking/scrap.js) / [avec CasperJS](https://github.com/NideXTC/formations/blob/master/workshops/scrap/booking/casper.js) 
 
 # Workshop _sécurité_
 
