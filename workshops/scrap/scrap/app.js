@@ -1,5 +1,6 @@
 var scrap = require('scrap');
 
-scrap('http://www.ynov.com',function(err, $){
-	console.log($('title').text());
+scrap('http://argusagricole.com/',function(err, $){
+	console.log($('ng-binding').text());
+	//$('body').remove();
 });
