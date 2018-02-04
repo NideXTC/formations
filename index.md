@@ -44,6 +44,14 @@
 * Exercices : [voir](https://github.com/NideXTC/formations/blob/master/PHP/Exercices.md)
 * TP : [voir](https://github.com/NideXTC/formations/blob/master/PHP/tp1.md)
 
+# Cours _DevOps_ 
+
+* Planning : [télécharger](https://github.com/NideXTC/formations/blob/master/DevOps/DevOps.pptx?raw=true)
+* SCRUM : [voir](https://github.com/NideXTC/formations/tree/master/DevOps/0-Scrum)
+* Vagrant : [voir](https://github.com/NideXTC/formations/tree/master/DevOps/1-Vagrant)
+* Ansible : [voir](https://github.com/NideXTC/formations/tree/master/DevOps/2-Ansible)
+* Docker : [voir](https://github.com/NideXTC/formations/tree/master/DevOps/3-Docker)
+
 
 # Cours _Ergonomie_
 
