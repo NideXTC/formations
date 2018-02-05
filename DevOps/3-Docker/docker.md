@@ -13,8 +13,7 @@ Il va falloir tout d'abord installer [Docker CE](https://www.docker.com/communit
 
 ## Mise en place d'un environnement Node
 
-Nous allons partir d'un script NodeJS simple :
-
+Nous allons partir d'un script NodeJS simple dans un fichier `index.js` :
 ```
 var app = require('express')();
 
