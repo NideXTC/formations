@@ -8,7 +8,7 @@
 
 * Créer un container avec un serveur web nginx _from scratch_ 
 * Copier un fichier html depuis votre ordinateur vers le container distant  [aide](https://docs.docker.com/engine/reference/commandline/cp/)
-* Ajouter un volume à ce container (ce volume doit être stocké dans le `/use/share/nginx/html`)
+* Ajouter un volume à ce container (ce volume doit être stocké dans le `/usr/share/nginx/html`)
 * Visualiser les modifications _via_ un diff [aide](https://docs.docker.com/engine/reference/commandline/diff/)
 * Faire un commit de vos modifications [aide](https://docs.docker.com/engine/reference/commandline/commit/)
 * Exporter ce container [aide](https://docs.docker.com/engine/reference/commandline/export/)
