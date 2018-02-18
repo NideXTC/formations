@@ -13,8 +13,7 @@ Il va falloir tout d'abord installer [Docker CE](https://www.docker.com/communit
 
 ## Mise en place d'un environnement Node
 
-Nous allons partir d'un script NodeJS simple :
-
+Nous allons partir d'un script NodeJS simple dans un fichier `index.js` :
 ```
 var app = require('express')();
 
@@ -51,7 +50,7 @@ RUN apt-get install curl -y
 RUN curl -sL https://deb.nodesource.com/setup_5.x | bash -
 RUN apt-get install -y nodejs
 RUN apt-get install -y build-essential
-COPY package.json /src/package.json
+COPY ./package.json /src/package.json
 RUN cd /src
 RUN npm install --production
 COPY . /src
