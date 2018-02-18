@@ -1,46 +1,46 @@
-				             _   _           _           _  _____       
-				            | \ | |         | |         | |/ ____|      
-				      ______|  \| | ___   __| | ___     | | (___ ______ 
+				             _   _           _           _  _____
+				            | \ | |         | |         | |/ ____|
+				      ______|  \| | ___   __| | ___     | | (___ ______
 				     |______| . ` |/ _ \ / _` |/ _ \_   | |\___ \______|
-				            | |\  | (_) | (_| |  __/ |__| |____) |      
-				            |_| \_|\___/ \__,_|\___|\____/|_____/       
-                                                    
-                                                    
-                                                    
+				            | |\  | (_) | (_| |  __/ |__| |____) |
+				            |_| \_|\___/ \__,_|\___|\____/|_____/
+
+
+
 # Exercices - 3
 
 ## MongoDB
 
-Nous allons maintenant installer la base de données NoSQL MongoDB. 
+Nous allons maintenant installer la base de données NoSQL MongoDB.
 
-Pour cela, sur : 
+Pour cela, sur :
 * Windows -> [ici](https://www.mongodb.org/downloads?_ga=1.106157894.453929076.1445029065#production)
 * Mac -> via homebrew `brew install mongodb` / [manuellement](http://docs.mongodb.org/master/tutorial/install-mongodb-on-os-x/?_ga=1.38942950.453929076.1445029065#install-mongodb-manually)
 * Linux -> [ici](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/#install-mongodb)
 
-Pour lancer le serveur MongoDB, il faut faire sur : 
+Pour lancer le serveur MongoDB, il faut faire sur :
 * Mac : `$ mongod`
 * Linux : `$ service mongod start`
 * Windows : Lancer le fichier mongod.exe
 
-Attention, sur windows, si MongoDB vous prévient qu'il n'y a pas de dossier `/data/db` il faut jouer la commande `mongod --dbpath "c://data/db"` dans le dossier MongoDB. 
+Attention, sur windows, si MongoDB vous prévient qu'il n'y a pas de dossier `/data/db` il faut jouer la commande `mongod --dbpath "c://data/db"` dans le dossier MongoDB.
 
 ## Mongoose
 
-Nous allons désormais passer aux modèles, pour cela nous allons nous servir de Mongoose. Il faut donc l'installer via : 
+Nous allons désormais passer aux modèles, pour cela nous allons nous servir de Mongoose. Il faut donc l'installer via :
 
 ```
 $ npm install mongoose --save
 ```
 
-Nous allons ensuite créer notre modèle dans `app/models/User.js` avec : 
+Nous allons ensuite créer notre modèle dans `/models/User.js` avec :
 
 ```
-var mongoose = require('mongoose'), // Nous appelons le module mongoose
+const mongoose = require('mongoose'), // Nous appelons le module mongoose
     Schema = mongoose.Schema; // Nous créons un schéma mongoose
 
 
-var schema = new Schema({
+const schema = new Schema({
     name: {type: String, required: true},
     firstName: {type: String, required: true},
     email: {type: String, required: true},
@@ -48,36 +48,36 @@ var schema = new Schema({
 });
 
 // Nous exportons notre modèle avec comme nom "User", 'users' sera le nom de notre "table"
-module.exports = mongoose.model('User', schema, 'users'); 
+module.exports = mongoose.model('User', schema, 'users');
 ```
 
-Ce schéma nous donne accès à une liste de [fonctions](http://mongoosejs.com/docs/api.html) pour accéder aux informations contenues dans la base de données. 
+Ce schéma nous donne accès à une liste de [fonctions](http://mongoosejs.com/docs/api.html) pour accéder aux informations contenues dans la base de données.
 
-Nous devons, pour commencer, mettre en place la connection à notre base dans le fichier `app.js`, en fin de fichier il faut donc rajouter : 
+Nous devons, pour commencer, mettre en place la connection à notre base dans le fichier `app.js`, en fin de fichier il faut donc rajouter :
 
 ```
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://localhost/morpion', function(err) {
+mongoose.connect('mongodb://localhost/projet', function(err) {
   if (err) { throw err; }
-}); 
+});
 
 module.exports = app;
-``` 
+```
 
 **/!\ Pensez bien à démarrer votre serveur MongoDB avant de lancer NodeJS sinon il renverra une erreur /!\**
 
 Nous allons désormais pouvoir nous servir de ces fonctions dans notre controlleur _Users.js_.
 
 ```
-var mongoose = require('mongoose'),
+const mongoose = require('mongoose'),
     User = require('../models/User');
 
 
-var Users = {
-    index: function (req, res) {
+const Users = {
+    index: (req, res) => {
 
         User.find({}, function (err, users) {
             if (err) throw err;
@@ -91,9 +91,9 @@ var Users = {
             active: 'account'
         });
     },
-    create: function (req, res) {
+    create: (req, res) => {
 
-        var u = new User({
+        const u = new User({
             name: req.body.name,
             firstName: req.body.firstname,
             email: req.body.email
@@ -107,7 +107,7 @@ var Users = {
 
         res.end();
     },
-    update: function (req, res) {
+    update: (req, res) => {
 
         User.findById(req.params.id, function (err, user) {
             if (err) throw err;
@@ -126,7 +126,7 @@ var Users = {
 
         res.end();
     },
-    delete: function (req, res) {
+    delete: (req, res) => {
 
         User.findById(req.params.id, function (err, user) {
             if (err) throw err;
@@ -151,7 +151,7 @@ module.exports = Users;
 __________
 __________
 
-## Liens utiles 
+## Liens utiles
 
 #### NodeJS
 

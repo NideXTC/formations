@@ -1,12 +1,12 @@
-				             _   _           _           _  _____       
-				            | \ | |         | |         | |/ ____|      
-				      ______|  \| | ___   __| | ___     | | (___ ______ 
+				             _   _           _           _  _____
+				            | \ | |         | |         | |/ ____|
+				      ______|  \| | ___   __| | ___     | | (___ ______
 				     |______| . ` |/ _ \ / _` |/ _ \_   | |\___ \______|
-				            | |\  | (_) | (_| |  __/ |__| |____) |      
-				            |_| \_|\___/ \__,_|\___|\____/|_____/       
-                                                    
-                                                    
-                                                    
+				            | |\  | (_) | (_| |  __/ |__| |____) |
+				            |_| \_|\___/ \__,_|\___|\____/|_____/
+
+
+
 # Exercices - 4
 
 ## Socket.IO
@@ -14,7 +14,7 @@
 [Socket.IO](http://socket.io/) est un framework NodeJS qui va nous permettre de faire du temps réel grâce aux websockets. Il faudra donc qu'il soit disponible côté serveur & côté client. Nous souhaitons pour commencer, afficher le nombre de personnes connectées au site.
 
 
-Commençons par le front. Nous allons utiliser le CDN de Socket.IO en front et nous allons rajouter jQuery. Nous allons donc modifier le fichier `app/views/layout.jade` par : 
+Commençons par le front. Nous allons utiliser le CDN de Socket.IO en front et nous allons rajouter jQuery. Nous allons donc modifier le fichier `app/views/layout.jade` par :
 
 ```
 doctype html
@@ -24,7 +24,7 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    
+
     span.connected
       = 'Il y a actuellement '
       span.connected-number 0
@@ -36,25 +36,25 @@ html
   script(src='/javascripts/app.js')
 ```
 
-Puis nous allons créer un fichier `public/javascripts/app.js` avec : 
+Puis nous allons créer un fichier `public/javascripts/app.js` avec :
 
 ```
 var socket = io(); // On se connecte au socket du serveur pour avoir les informations en temps réel
 
-// Si le socket nous informe qu'il y a une notification qui se nomme UserState, il executera le callback. 
+// Si le socket nous informe qu'il y a une notification qui se nomme UserState, il executera le callback.
 socket.on('UserState', function (data) {
 	// nous insérons dans la span la valeur envoyée par le socket
     $('.connected-number').text(data);
 });
 ```
 
-Passons côté serveur. En ligne de commande faire (dans votre dossier _morpion_) : 
+Passons côté serveur. En ligne de commande faire (dans votre dossier _morpion_) :
 
 ```
 $ npm install socket.io --save
 ```
-Le paramètre _--save_ permet de rajouter ce paquet dans le package.json, la prochaine fois que vous ferez un `npm install` Socket.IO sera donc téléchargé et installé.  
-Pour gagner en lisibilité dans notre code nous allons faire un fichier pour gérer les sockets, nous allons donc créer un dossier `app/sockets` et dans ce dossier vous allez créer un fichier _Base.js_ avec : 
+Le paramètre _--save_ permet de rajouter ce paquet dans le package.json, la prochaine fois que vous ferez un `npm install` Socket.IO sera donc téléchargé et installé.
+Pour gagner en lisibilité dans notre code nous allons faire un fichier pour gérer les sockets, nous allons donc créer un dossier `/sockets` et dans ce dossier vous allez créer un fichier _Base.js_ avec :
 
 ```
 module.exports = function(io) {
@@ -65,36 +65,34 @@ module.exports = function(io) {
             socket.emit('UserState', io.engine.clientsCount);
 
              socket.on('disconnect', function () {
-              // On prévient tout le monde qu'une personne s'est deconnectée 
+              // On prévient tout le monde qu'une personne s'est deconnectée
                 socket.broadcast.emit('UserState', io.engine.clientsCount);
             });
     });
-}; 
+};
 ```
 
-Nous allons désormais modifier notre fichier `bin/www` pour que notre fonction `set` soit appelé dès qu'un client se connecte au site, pour cela il faut ajouter ces lignes dans votre fichier sous `var server = http.createServer(app);` :
+Nous allons désormais modifier notre fichier `bin/www` pour que notre fonction `set` soit appelé dès qu'un client se connecte au site, pour cela il faut ajouter ces lignes dans votre fichier sous `const server = http.createServer(app);` :
 
 ```
-var io = require('socket.io')(server);
+const io = require('socket.io')(server);
 
 // Nous créons une accès au socket
-require('../app/sockets/Base')(io); 
-``` 
+require('../app/sockets/Base')(io);
+```
 
-Lancez votre serveur via : 
+Lancez votre serveur via :
 
 ```
 $ node bin/www
 ```
 
-Puis lancez plusieurs fenêtres Chrome sur `http://localhost:3000`. Vous voyez le nombre se modifier en temps réel ? Vous avez donc désormais votre première application en temps réel ! \o/ 
-
-<!-- En arrivant ici votre code devrait ressembler à ça : [github](https://github.com/NideXTC/CoursYNov/tree/d9e67368ea57896298808a502ede5f7857e5ee70/NodeJS/morpion) -->
+Puis lancez plusieurs fenêtres Chrome sur `http://localhost:3000`. Vous voyez le nombre se modifier en temps réel ? Vous avez donc désormais votre première application en temps réel ! \o/
 
 __________
 __________
 
-## Liens utiles 
+## Liens utiles
 
 #### NodeJS
 

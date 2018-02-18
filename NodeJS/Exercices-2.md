@@ -1,55 +1,55 @@
-				             _   _           _           _  _____       
-				            | \ | |         | |         | |/ ____|      
-				      ______|  \| | ___   __| | ___     | | (___ ______ 
+				             _   _           _           _  _____
+				            | \ | |         | |         | |/ ____|
+				      ______|  \| | ___   __| | ___     | | (___ ______
 				     |______| . ` |/ _ \ / _` |/ _ \_   | |\___ \______|
-				            | |\  | (_) | (_| |  __/ |__| |____) |      
-				            |_| \_|\___/ \__,_|\___|\____/|_____/       
-                                                    
-                                                    
-                                                    
+				            | |\  | (_) | (_| |  __/ |__| |____) |
+				            |_| \_|\___/ \__,_|\___|\____/|_____/
+
+
+
 # Exercices - 2
 
 ## Views
 
-Par convention nous utiliserons le nom du controlleurs en minuscule pour le nom du dossier. 
-Notre prochain controlleur s'appelle _Users.js_, nous allons donc créer le dossier _users_ dans `app/views`. Je rappelle que la syntaxe pour les fichiers est en [Jade](http://jade-lang.com/). 
+Par convention nous utiliserons le nom du controlleurs en minuscule pour le nom du dossier.
+Notre prochain controlleur s'appelle _Users.js_, nous allons donc créer le dossier _users_ dans `/views`. Je rappelle que la syntaxe pour les fichiers est en [Pug](https://pugjs.org).
 
-Créer ensuite un fichier _index.jade_ dans `app/views/users` avec : 
+Créer ensuite un fichier _index.jade_ dans `/views/users` avec :
 
 ```
 // Nous allons chercher le layout dans le dossier parent
 extends ../layout
 // nous déclarons le block qui sera inséré dans le layout
-block content 
+block content
 	// Nous affichons une variable title, le = nous permet d'échapper le caractère
-	h1=title 
+	h1=title
 ```
 
-## Controllers 
+## Controllers
 
- La création d'un objet est simplement un JSON, un simple {} est donc un objet. Nous allons maintenant créer un objet pour gérer nos utilisateurs. 
+ La création d'un objet est simplement un JSON (JavaScript Object Notation), un simple {} est donc un objet. Nous allons maintenant créer un objet pour gérer nos utilisateurs.
 
- Par convention un controlleur est toujours avec une majuscule et au pluriel. 
+ Par convention un controlleur est toujours avec une majuscule et au pluriel.
 
- Dans le dossier `app/controllers`, faire un fichier _Users.js_ avec : 
+ Dans le dossier `/controllers`, faire un fichier _Users.js_ avec :
 
 ```
-var Users = {
+const Users = {
 	/**
 	  * @param req La requête entrante
 	  * @param res Ce qui est renvoyé au navigateur
 	  */
-    index: function(req, res){
-      res.render('users/index', {"title":"Coucou"}); 
+    index: (req, res) => {
+      res.render('users/index', {"title":"Coucou"});
       // Nous allons donc appeler le fichier qui est dans app/views/users/index avec un tableau de valeurs
     },
-    create: function (req, res) { 
+    create:  (req, res) => {
 
     },
-    update: function (req, res) { 
+    update: (req, res) => {
 
     },
-    delete: function (req, res) { 
+    delete: (req, res) => {
 
     }
 };
@@ -57,32 +57,32 @@ var Users = {
 module.exports = Users; // L'exportation permet de rendre disponible ce fichier ailleurs grâce au require()
 ```
 
-## Routing 
+## Routing
 
-NodeJS nous permet de gérer plusieurs verbes HTTP, en effet, HTTP ne contient pas seulement GET & POST. 
+NodeJS nous permet de gérer plusieurs verbes HTTP, en effet, HTTP ne contient pas seulement GET & POST.
 
-Nous utiliserons donc : 
-* le _GET_ pour récuperer une information 
-* le _POST_ pour créer une information 
-* le _PUT_ pour modifier une information 
-* le _DELETE_ pour supprimer une information 
+Nous utiliserons donc :
+* le _GET_ pour récuperer une information
+* le _POST_ pour créer une information
+* le _PUT_ pour modifier une information
+* le _DELETE_ pour supprimer une information
 
-Souvenez-vous dans le fichier `app.js` à la racine nous avions : 
+Souvenez-vous dans le fichier `app.js` à la racine nous avions :
 
 ```
 app.use('/', routes);
 app.use('/users', users);
 ```
 
-Notre routeur _users_ sera donc appelé quand notre URL sera `monsite.com/users` 
+Notre routeur _users_ sera donc appelé quand notre URL sera `monsite.com/users`
 
-Nous allons désormais modifier notre fichier `app/routes/users.js` avec : 
+Nous allons désormais modifier notre fichier `/routes/users.js` avec :
 
 ```
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-var users = require('../controllers/Users'); // Nous allons récuperer notre controlleur fait précédement
+const users = require('../controllers/Users'); // Nous allons récuperer notre controlleur fait précédement
 
 /* GET Récupère la liste des utilisateurs */
 router.get('/', users.index);
@@ -91,7 +91,7 @@ router.get('/', users.index);
 router.post('/', users.create);
 
 /* PUT Modification d'un utilisateur */
-router.put('/:id(\\d+)', users.update); 
+router.put('/:id(\\d+)', users.update);
 
 /* DELETE Suppression d'un utilisateur */
 router.delete('/:id(\\d+)', users.delete);
@@ -101,13 +101,10 @@ module.exports = router;
 
 Ici le `:id(\\d+)` permettra de récupérer la valeur passé en url dans une variable _id_, le `(\\d+)` est une expression régulière pour dire qu'on ne veut que des chiffres. Si vous ne savez pas ce qu'est une expression régulière je vous invite à regarder ce memento : [ici](https://openclassrooms.com/courses/concevez-votre-site-web-avec-php-et-mysql/memento-des-expressions-regulieres).
 
-
-En arrivant ici votre code devrait ressembler à ça : [github](https://github.com/NideXTC/CoursYNov/tree/63560560eac1372a896d09a4cdda71dc49547fd1/NodeJS/morpion)
-
 __________
 __________
 
-## Liens utiles 
+## Liens utiles
 
 #### NodeJS
 

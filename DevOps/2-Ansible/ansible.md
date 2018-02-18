@@ -50,11 +50,11 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub root@[ip du serveur]
 ```
 
 
-Nous allons désormais placer l'ip de cette machine dans le fichier `/etc/ansible/host` :
+Nous allons désormais placer l'ip de cette machine dans le fichier `host` :
 
 ```
-mkdir /etc/ansible/
-vim /etc/ansible/hosts
+touch host
+vim hosts
 ```
 
 avec :
@@ -67,28 +67,22 @@ ip de notre serveur cible (ex: 210.158.154.156)
 Nous pouvons désormais tester notre connexion _via_ :
 
 ```
-ansible all -m ping -u root
+ansible-playbook -i hosts playbook.yml
 ```
 
 ## Playbook
 
 ```
-    ---
-    - hosts: webservers
-      vars:
-        http_port: 80
-        max_clients: 200
-      remote_user: root
-      tasks:
-      - name: ensure apache is at the latest version
-        yum: name=httpd state=latest
-      - name: write the apache config file
-        template: src=/srv/httpd.j2 dest=/etc/httpd.conf
-        notify:
-        - restart apache
-      - name: ensure apache is running (and enable it at boot)
-        service: name=httpd state=started enabled=yes
-      handlers:
-        - name: restart apache
-          service: name=httpd state=restarted
+---
+- hosts: default
+  vars:
+    http_port: 80
+    max_clients: 200
+  remote_user: root
+  tasks:
+  - name: ensure apache is at the latest version
+    apt: name=apache2 state=latest
+  - name: ensure apache is running (and enable it at boot)
+    service: name=apache2 state=started enabled=yes
+
 ```
