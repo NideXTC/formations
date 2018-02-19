@@ -251,7 +251,7 @@ var server = app.listen(3000,function(){
 
 ```
 
-### Exercice 9.3 
+### Exercice 9.3  [aide](http://expressjs.com/fr/4x/api.html#res.sendFile)
 
 _Pour cet exercice nous aurons besoin d'un petit 'logiciel' sur chrome qui s'appelle [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop), il nous permettra de tester nos URL._
 
