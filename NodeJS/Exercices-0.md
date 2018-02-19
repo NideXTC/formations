@@ -280,7 +280,7 @@ Nous souhaitons desormais que lorsque l'utilisateur envoie une requête _DELETE_
 {"bien" : "bien?"}
 ```
 
-### Exercice 9.5
+### Exercice 9.5 [aide](http://mongoosejs.com/) & [mlab](https://mlab.com/)
 
 Installez mongoose dans votre dossier avec la commande `npm install mongoose`.
 
