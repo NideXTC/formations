@@ -237,7 +237,7 @@ npm init -y
 
 Nous souhaitons installer Express et qu'en cas de suppression du dossier `node_modules` nous puissions tout télécharger simplement. Comment faire ? Quel fichier sera obligatoire ?
 
-### Exercice 9.2 [aide](http://expressjs.com/guide/routing.html)
+### Exercice 9.2 
 
 Installez express dans votre dossier avec la commande `npm install express --save`.
 Nous souhaitons modifier notre code suivant pour qu'il affiche un message lorsque la personne arrive sur la page avec son navigateur _(http://localhost:3000)_, faire un fichier `app.js` avec :
@@ -251,7 +251,7 @@ var server = app.listen(3000,function(){
 
 ```
 
-### Exercice 9.3
+### Exercice 9.3 [aide](http://expressjs.com/guide/routing.html)
 
 _Pour cet exercice nous aurons besoin d'un petit 'logiciel' sur chrome qui s'appelle [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop), il nous permettra de tester nos URL._
 
