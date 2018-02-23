@@ -14,18 +14,6 @@
 [Socket.IO](http://socket.io/) est un framework NodeJS qui va nous permettre de faire du temps réel grâce aux websockets. Il faudra donc qu'il soit disponible côté serveur & côté client. Nous souhaitons pour commencer, afficher le nombre de personnes connectées au site.
 
 
-Commençons par le front. Nous allons utiliser le CDN de Socket.IO en front et nous allons rajouter jQuery. Nous allons donc modifier le fichier `app/views/layout.jade` par :
-
-```
-doctype html
-html
-  head
-    meta(charset="UTF-8")
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-
-    span.connected
       = 'Il y a actuellement '
       span.connected-number 0
       = ' personnes connectés'
@@ -78,7 +66,7 @@ Nous allons désormais modifier notre fichier `bin/www` pour que notre fonction 
 const io = require('socket.io')(server);
 
 // Nous créons une accès au socket
-require('../app/sockets/Base')(io);
+require('../sockets/Base')(io);
 ```
 
 Lancez votre serveur via :
