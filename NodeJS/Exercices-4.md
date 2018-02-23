@@ -36,7 +36,7 @@ socket.on('UserState', function (data) {
 });
 ```
 
-Passons côté serveur. En ligne de commande faire (dans votre dossier _morpion_) :
+Passons côté serveur. En ligne de commande faire (dans votre dossier _monprojet_) :
 
 ```
 $ npm install socket.io --save
