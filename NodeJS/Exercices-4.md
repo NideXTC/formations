@@ -13,6 +13,9 @@
 
 [Socket.IO](http://socket.io/) est un framework NodeJS qui va nous permettre de faire du temps réel grâce aux websockets. Il faudra donc qu'il soit disponible côté serveur & côté client. Nous souhaitons pour commencer, afficher le nombre de personnes connectées au site.
 
+
+Commençons par le front. Nous allons donc modifier le fichier `/views/layout.pug` par :
+
 ```
 doctype html
 html
