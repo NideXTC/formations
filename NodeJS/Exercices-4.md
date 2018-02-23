@@ -31,9 +31,10 @@ html
       = ' personnes connectés'
 
     block content
-	script(src='/socket.io/socket.io.js')
-	script(src='https://code.jquery.com/jquery-1.11.3.min.js')
-	script(src='/javascripts/app.js')
+    
+    script(src='/socket.io/socket.io.js')
+    script(src='https://code.jquery.com/jquery-1.11.3.min.js')
+    script(src='/javascripts/app.js')
 ```
 
 Puis nous allons créer un fichier `public/javascripts/app.js` avec :
