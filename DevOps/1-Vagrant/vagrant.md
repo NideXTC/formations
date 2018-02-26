@@ -15,7 +15,7 @@ Pensez à vérifier que vagrant est disponible dans votre path en faisant dans v
 vagrant -v
 ```
 
-Pour simplifier la mise à jour des installation de VirtualBox, il est conseillé de faire : 
+Pour simplifier la mise à jour des installations de VirtualBox, il est conseillé de faire : 
 
 ```
 vagrant plugin install vagrant-vbguest
