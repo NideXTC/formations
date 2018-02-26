@@ -15,6 +15,12 @@ Pensez à vérifier que vagrant est disponible dans votre path en faisant dans v
 vagrant -v
 ```
 
+Pour simplifier la mise à jour des installation de VirtualBox, il est conseillé de faire : 
+
+```
+vagrant plugin install vagrant-vbguest
+```
+
 Vous devriez avoir quelque chose comme `Vagrant 2.0.1`.
 
 ## Initialisation
@@ -70,6 +76,7 @@ Toujours à l'intérieur de notre boucle nous allons placer la synchronisation d
  config.vm.synced_folder ".", "/vagrant", id: "vagrant-root",
     owner: "vagrant",
     group: "www-data",
+    type: "virtualbox",
     mount_options: ["dmode=775,fmode=664"]
 ```
 
