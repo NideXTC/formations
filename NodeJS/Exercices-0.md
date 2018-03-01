@@ -358,12 +358,12 @@ Grâce au [MethodOverride](https://github.com/expressjs/method-override) mettre 
 Créez un formulaire avec deux champs input:text pour saisir le nom et le prénom et l'envoyer sur la route _/showPost_.
 Afficher en console le résultat du POST.
 
-### Exercice 9.15
+### Exercice 9.15 ([aide](http://expressjs.com/en/api.html#req.query))
 
 Créez un formulaire avec deux champs input:text pour saisir le nom et le prénom et l'envoyer sur la route _/showGet_.
 Afficher en console le résultat du GET.
 
-### Exercice 9.16
+### Exercice 9.16 ([aide](http://expressjs.com/en/api.html#req.param))
 
 Créez une route du type `/number/1` où le nombre sera une variable `:id` et sera affiché sur la page. exemple :
 Sur la route `/number/1337` nous verrons sur la page :
