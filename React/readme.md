@@ -62,7 +62,7 @@ Tout cela opère grâce à un [webpack](https://webpack.js.org/) concocté aux p
 
 Les fichiers importants ici sont :
 * `public/index.html` : contient la `div` avec l'id _root_ dans laquelle sera injecté une partie de notre code.
-* `src/index.js` : importe tous les modules nécessaire et injecte le premier module dans notre page HTML
+* `src/index.js` : importe tous les modules nécessaires et injecte le premier module dans notre page HTML
 * `src/App.js` : notre premier composant, celui ne fait qu'afficher du HTML.
 
 
