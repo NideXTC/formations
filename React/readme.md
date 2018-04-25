@@ -58,7 +58,7 @@ yarn start
 
 Vous devriez désormais voir une fenêtre de navigateur se lancer avec une page d'accueil pour React.
 
-Tout cela opère grâce à un [webpack](https://webpack.js.org/) concocté aux petits oignos sous le capot. Tout ce dont vous avez besoin pour l'instant a été installé grâce à votre `create-react-app`.
+Tout cela opère grâce à un [webpack](https://webpack.js.org/) concocté aux petits oignons sous le capot. Tout ce dont vous avez besoin pour l'instant a été installé grâce à votre `create-react-app`.
 
 Les fichiers importants ici sont :
 * `public/index.html` : contient la `div` avec l'id _root_ dans laquelle sera injecté une partie de notre code.
