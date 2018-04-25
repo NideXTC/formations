@@ -28,6 +28,10 @@
 * Mise en place de tests unitaires : [voir](https://github.com/NideXTC/formations/blob/master/NodeJS/Exercices-6.md)
 * Déploiement du site + sécurité : [voir](https://github.com/NideXTC/formations/blob/master/NodeJS/Exercices-7.md)
 
+# Cours _React_ 
+
+* Installation de l'environnement et découverte de l'environnement de React : [voir](https://github.com/NideXTC/formations/blob/master/React/readme.md)
+* Exercices : [voir](https://github.com/NideXTC/formations/blob/master/React/exercices.md)
 
 # Cours _HTML/CSS_
 
