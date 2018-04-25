@@ -240,4 +240,50 @@ Après avoir cliqué sur le texte, l'état de la variable `maVariable` va change
 
 ## TODO :
 
-En reprenant votre exercice précédent, vous allez désormais permettre d'ajouter un prénom dans l'appel du composant. Votre appel de composant sera donc sous la forme `<Student name="Alexis">`et devra afficher `Bonjour Alexis !`.
+En reprenant votre exercice précédent, ajouter un bouton dans le composant. Au clic sur ce bouton, le prénom affiché passera automatiquement à `Toto`. 
+
+
+# Exercice 5 - Gestion d'un formulaire ([AIDE](https://reactjs.org/docs/forms.html))
+
+Il est possible d'afficher dans votre composant un formulaire, il faudra donc pouvoir écouter plusieurs événement tel que l'envoi du formulaire ou le changement d'informations au sein d'un champ _input_.
+
+Imaginons que nous souhaitions écouter le changement sur un champ _input_, le code serait :
+
+~~~
+import React, {Component} from 'react';
+
+class MonComposant extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      nouveauTexte : ''
+    };
+  }
+
+  handleChange(e) {
+    this.setState({
+      nouveauTexte : e.target.value
+    });
+  }
+
+  render() {
+    return(
+      <div>
+        {this.state.nouveauTexte}
+        <input onChange={this.handleChange.bind(this)} />
+      </div>
+      );
+  }
+}
+~~~
+
+Ici le `e` de la fonction `handleChange` correspond à l'événement, ici c'est un événement `change` qui sera récupéré.
+Il est par la suite possible de récupérer le contenu du champs _via_ `e.target.value`.
+
+Il serait donc possible de passer un `preventDefault()` pour bloquer le comportement par défaut de l'élément.
+
+## TODO :
+
+Créer un formulaire avec deux champs (nom & prénom).
+Prévenir l'utilisateur si les champs sont vides au moment de l'envoi du formulaire.
