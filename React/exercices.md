@@ -4,7 +4,7 @@
 La création d'un composant est assez simple, en effet il suffit de créer une classe qui étend la classe `React.Component`.
 Elle ressemblerait donc à :
 
-~~~
+```
 import React, {Component} from 'react';
 
 class MonComposant extends Component {
@@ -12,12 +12,12 @@ class MonComposant extends Component {
     return(<div> nouveau composant </div>);
   }
 }
-~~~
+```
 
 La syntaxe dans le return n'est pas du HTML, mais du [JSX](https://reactjs.org/docs/introducing-jsx.html), le JSX est une syntaxe qui nous simplifie l'écriture du code.
 Il est important de toujours mettre une balise JSX qui englobe tous les éléments, imaginons que nous ayons :
 
-~~~
+```
 import React, {Component} from 'react';
 
 class MonComposant extends Component {
@@ -28,13 +28,13 @@ class MonComposant extends Component {
       );
   }
 }
-~~~
+```
 
 **Ce code va retouner une erreur !**
 
 Il faudrait dans notre cas avoir :
 
-~~~
+```
 import React, {Component} from 'react';
 
 class MonComposant extends Component {
@@ -47,13 +47,13 @@ class MonComposant extends Component {
       );
   }
 }
-~~~
+```
 
 ----
 
 Si nous souhaitons désormais utiliser notre composant, il suffit de l'importer et d'utiliser la balise JSX. Par exemple :
 
-~~~
+```
 import React, {Component} from 'react';
 import MonComposant from './MonComposant';
 
@@ -66,7 +66,7 @@ class App extends Component {
       );
   }
 }
-~~~
+```
 
 ## TODO :
 
@@ -80,7 +80,7 @@ Pensez bien à faire l'import de ce nouveau composant dans votre fichier `App.js
 
 Il est possible de créer des propriétés sur notre nouveau composant, de la même façon que la balise `<img />` a une propriété `src=""`, pour cela, au moment de l'appel, il sera possible d'avoir quelque chose comme :
 
-~~~
+```
 import React, {Component} from 'react';
 import MonComposant from './MonComposant';
 
@@ -93,11 +93,11 @@ class App extends Component {
       );
   }
 }
-~~~
+```
 
 Il sera par la suite possible de récupérer le contenu de la propriété dans `this.props.[nom de la propriété]`, ce qui pourrait donner :
 
-~~~
+```
 import React, {Component} from 'react';
 
 class MonComposant extends Component {
@@ -109,7 +109,7 @@ class MonComposant extends Component {
       );
   }
 }
-~~~
+```
 
 ## TODO :
 
@@ -121,7 +121,7 @@ En reprenant votre exercice précédent, vous allez désormais permettre d'ajout
 Il est possible de récupérer des événements sur les composants, de la même façon qu'en javascript classique, par exemple avec `onChange`, `onSubmit`, `onClick` ...
 Il sera cependant nécessaire de lier l'événement avec une fonction _via_ un `bind`, par exemple :
 
-~~~
+```
 import React, {Component} from 'react';
 
 class MonComposant extends Component {
@@ -138,11 +138,11 @@ class MonComposant extends Component {
       );
   }
 }
-~~~
+```
 
 Il est aussi possible de faire autrement :
 
-~~~
+```
 import React, {Component} from 'react';
 
 class MonComposant extends Component {
@@ -164,7 +164,7 @@ class MonComposant extends Component {
       );
   }
 }
-~~~
+```
 
 ## TODO :
 
@@ -181,7 +181,7 @@ Le constructeur est la fonction qui sera appelée dès la création du composant
 
 À chaque utilisation du `state`, il sera obligatoire d'appeler `super()` dans le `constructor()`.
 
-~~~
+```
 import React, {Component} from 'react';
 
 class MonComposant extends Component {
@@ -201,7 +201,7 @@ class MonComposant extends Component {
       );
   }
 }
-~~~
+```
 
 
 ----
@@ -209,7 +209,7 @@ class MonComposant extends Component {
 
 Pour mettre à jour l'état, il ne nous sera pas possible d'écrire `this.state.maVariable = 'mon nouveau texte'`, il faudra obligatoirement passer par la fonction `this.setState({})`, qui va prendre en paramètre le nouveau JSON, par exemple :
 
-~~~
+```
 import React, {Component} from 'react';
 
 class MonComposant extends Component {
@@ -235,7 +235,7 @@ class MonComposant extends Component {
       );
   }
 }
-~~~
+```
 
 Après avoir cliqué sur le texte, l'état de la variable `maVariable` va changer et mettra automatiquement à jour le texte dans toutes les zones où elle est appellée.
 
@@ -250,7 +250,7 @@ Il est possible d'afficher dans votre composant un formulaire, il faudra donc po
 
 Imaginons que nous souhaitions écouter le changement sur un champ _input_, le code serait :
 
-~~~
+```
 import React, {Component} from 'react';
 
 class MonComposant extends Component {
@@ -277,7 +277,7 @@ class MonComposant extends Component {
       );
   }
 }
-~~~
+```
 
 Ici le `e` de la fonction `handleChange` correspond à l'événement, ici c'est un événement `change` qui sera récupéré.
 Il est par la suite possible de récupérer le contenu du champs _via_ `e.target.value`.
@@ -288,3 +288,40 @@ Il serait donc possible de passer un `preventDefault()` pour bloquer le comporte
 
 Créer un formulaire avec deux champs (nom & prénom).
 Prévenir l'utilisateur si les champs sont vides au moment de l'envoi du formulaire.
+
+# Exercice 6 - Cycle de vie ([AIDE](https://reactjs.org/docs/react-component.html#the-component-lifecycle))
+
+Tout au long de sa durée de vie, une application enverra des événements pour prévenir de certaines actions sur le composant. Il possible d'avoir un intéraction avec eux pour gérer au mieux.
+
+
+```
+import React, { Component } from 'react';
+
+class MonComposant extends Component {
+
+    componentWillMount() {
+        console.log('La création du composant va avoir lieu');
+    }
+
+    componentDidMount() {
+        console.log('La création du composant a eu lieu');
+    }
+
+    componentWillUnmount() {
+        console.log('Le composant va être retiré');
+    }
+
+    render() {
+        return (
+            <div>
+                <img src="https://www.sciencesetavenir.fr/assets/img/2017/03/29/cover-r4x3w1000-58dbbd655242b-capture-d-e-cran-2017-03-29-a-15-55-40.png" alt="chat" />
+            </div>
+        );
+    }
+}
+
+```
+
+## TODO :
+
+En reprenant l'exercice précédent, afficher une _alert_ lorsque le composant se met à jour.
