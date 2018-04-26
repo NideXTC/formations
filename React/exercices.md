@@ -325,3 +325,35 @@ class MonComposant extends Component {
 ## TODO :
 
 En reprenant l'exercice précédent, afficher une _alert_ lorsque le composant se met à jour.
+
+
+# Exercice 7 - récupération de données ([AIDE](https://github.com/axios/axios) + [AIDE](https://alligator.io/react/axios-react/))
+
+Pour récupérer des données, nous allons passer par de l'AJAX, de plus, nous allons simplifier cette opération en utilisant Axios. Par exemple :
+
+
+```
+import React, { Component } from 'react';
+import axios from 'axios';
+
+class MonComposant extends Component {
+
+  constructor(){
+    axios
+      .get('https://jsonplaceholder.typicode.com/posts')
+      .then(response => console.log(response.data));
+  }
+
+  render() {
+      return (
+          <div></div>
+      );
+  }
+}
+```
+
+## TODO :
+
+Récupérer la liste des posts sur `https://jsonplaceholder.typicode.com/posts` et les afficher dans une liste (`<ul><li></li></ul>`). Pour cela il faut passer par la méthode [map()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/map);
+
+
