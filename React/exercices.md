@@ -148,6 +148,7 @@ import React, {Component} from 'react';
 class MonComposant extends Component {
 
   constructor() {
+    super();
     this.fonctionAuClic = this.fonctionAuClic.bind(this);
   }
 
