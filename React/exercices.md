@@ -78,7 +78,7 @@ Pensez bien à faire l'import de ce nouveau composant dans votre fichier `App.js
 # Exercices 2 - Passer des propriétés ([AIDE](https://reactjs.org/tutorial/tutorial.html#passing-data-through-props))
 
 
-Il possible de créer des propriétés sur notre nouveau composant, de la même façon que la balise `<img />` a une propriété `src=""`, pour cela, au moment de l'appel, il sera possible d'avoir quelque chose comme :
+Il est possible de créer des propriétés sur notre nouveau composant, de la même façon que la balise `<img />` a une propriété `src=""`, pour cela, au moment de l'appel, il sera possible d'avoir quelque chose comme :
 
 ~~~
 import React, {Component} from 'react';
