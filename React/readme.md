@@ -81,3 +81,7 @@ Je vous invite à prendre un petit moment pour voir React d'un peu plus près av
 Désormais que vous comprenez un petit mieux tout ce petit monde, je vous invite à faire le tutoriel officiel de Facebook : https://reactjs.org/tutorial/tutorial.html
 
 
+## Ressources 
+
+* https://leanpub.com/redux-book
+* https://egghead.io/courses/getting-started-with-redux
