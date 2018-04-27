@@ -380,7 +380,7 @@ class App extends Component {
     }
 }
 
-export default Routing;
+export default App;
 ```
 
 Le `Switch` permet de ne prendre qu'une seule route et non pas toutes les routes dont l'URL correspond. 
@@ -416,7 +416,7 @@ class App extends Component {
     }
 }
 
-export default Routing;
+export default App;
 ```
 
 Ici il sera par exemple possible de récupérer la variable `productNumber` et celle-ci ne pourra être qu'un numéro grâce à la regex.
@@ -471,7 +471,7 @@ class App extends Component {
     }
 }
 
-export default Routing;
+export default App;
 ```
 
 Ici lorsque l'utilisateur sera sur la page `/page-de-contact`, le lien aura la classe CSS `active` en plus, ce qui permetttra de designer la page au mieux pour suivre la navigation de l'utilisateur. 
