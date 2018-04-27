@@ -459,12 +459,14 @@ class App extends Component {
     render() {
         return (
             <BrowserRouter>
-              <Switch>
+              <div> 
                 <NavLink to="/"> Accueil </NavLink>
                 <NavLink to="/page-de-contact"> Contact </NavLink>
-                <Route exact path="/" component={Home} />
-                <Route path="/page-de-contact" component={Contact} />
-              </Switch>
+                <Switch>
+                  <Route exact path="/" component={Home} />
+                  <Route path="/page-de-contact" component={Contact} />
+                </Switch>
+              </div>
             </BrowserRouter>
         );
     }
